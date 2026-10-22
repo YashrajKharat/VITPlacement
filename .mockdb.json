@@ -1,0 +1,2574 @@
+{
+  "users": [
+    {
+      "id": "faculty-1",
+      "email": "faculty@college.edu",
+      "passwordHash": "$2a$10$abcdefghijklmnopqrstuv",
+      "role": "FACULTY_MENTOR",
+      "name": "Dr. XYZ (Faculty Mentor)"
+    },
+    {
+      "id": "coordinator-1",
+      "email": "coordinator@college.edu",
+      "passwordHash": "$2a$10$abcdefghijklmnopqrstuv",
+      "role": "INTERNSHIP_COORDINATOR",
+      "name": "Prof. ABC (Coordinator)"
+    },
+    {
+      "id": "tpo-1",
+      "email": "tpo@college.edu",
+      "passwordHash": "$2a$10$abcdefghijklmnopqrstuv",
+      "role": "TPO",
+      "name": "Dr. K. Sharma (TPO Officer)"
+    },
+    {
+      "id": "admin-1",
+      "email": "admin@portal.com",
+      "passwordHash": "$2a$10$abcdefghijklmnopqrstuv",
+      "role": "ADMIN",
+      "name": "Super Admin"
+    },
+    {
+      "id": "student-1788619844796",
+      "email": "yashraj2007@gmail.com",
+      "passwordHash": "$2b$10$Oc1KCSDQ9W.zQGtkU5MOPuc0s07zl9WXchfNzkBaxQaRCe71xHhuW",
+      "role": "STUDENT",
+      "name": "Yashraj Nana kharat"
+    },
+    {
+      "id": "student-1788620582804",
+      "email": "yashraj200@gmail.com",
+      "passwordHash": "$2b$10$ZH.4xtIIa5r2f1r1.E8jSO2c7j6Yu3kJ9FkEbSc1sS5C1GMKb5zti",
+      "role": "STUDENT",
+      "name": "Student Candidate"
+    }
+  ],
+  "students": [
+    {
+      "id": "student-profile-student-1788620582804",
+      "userId": "student-1788620582804",
+      "name": "Student Candidate",
+      "email": "yashraj200@gmail.com",
+      "department": "Computer Engineering",
+      "batch": "2026",
+      "cgpa": 8.5,
+      "education": [
+        {
+          "school": "University / Institute",
+          "degree": "B.Tech in Computer Engineering",
+          "startYear": "2022",
+          "endYear": "2026",
+          "grade": "8.5 CGPA"
+        }
+      ],
+      "experience": [
+        {
+          "role": "Data Analyst & Business Intelligence Intern",
+          "company": "FinTech Intelligence Labs",
+          "duration": "May 2025 – Nov 2025",
+          "location": "Mumbai, India",
+          "bullets": [
+            "Queried and processed 450,000+ transactional records across relational databases using advanced SQL (Window Functions, CTEs, Indexed Joins), uncovering ₹4.2M in annual operational expenditure optimizations. [Google XYZ: Action + Quantified Metric + Technical Stack]",
+            "Engineered automated data cleaning and ETL validation scripts in Python (Pandas) and Advanced Excel, eliminating 99.4% of duplicate anomalies and reducing weekly report preparation time by 60%.",
+            "Constructed and maintained 8+ interactive Power BI and Tableau dashboards tracking 18+ corporate KPIs (CAC, LTV, Retention, Pipeline Churn) for C-suite business stakeholders."
+          ],
+          "formulaTag": "Google XYZ Formula"
+        },
+        {
+          "role": "Junior Analytics & Data Operations Intern",
+          "company": "Enterprise Retail Partners",
+          "duration": "Dec 2024 – Apr 2025",
+          "location": "Mumbai, India",
+          "bullets": [
+            "Applied descriptive and inferential statistical modeling across cross-functional marketing datasets, accelerating quarterly conversion rates by 24%.",
+            "Automated weekly KPI reporting workflows using Excel macros and SQL views, saving 15+ engineering hours per billing cycle while maintaining 100% data fidelity."
+          ],
+          "formulaTag": "Google XYZ Formula"
+        }
+      ],
+      "projects": [
+        {
+          "title": "Enterprise Sales Intelligence & Executive KPI Dashboard",
+          "tech": "SQL, Tableau, Python (Pandas/NumPy), Advanced Excel, Statistical Modeling",
+          "link": "https://github.com/vit-student/sales-analytics-bi",
+          "bullets": [
+            "Extracted and normalized 300,000+ multi-channel customer records using optimized SQL queries, decreasing data query latency by 42%.",
+            "Constructed an interactive Tableau business dashboard visualizing 14+ core financial KPIs, enabling executive leaders to identify high-margin sales funnels in real time.",
+            "Implemented automated outlier detection and data cleaning algorithms in Python, enhancing dataset reliability from 82% to 99.8%."
+          ],
+          "formulaTag": "Google XYZ Formula"
+        },
+        {
+          "title": "Healthcare Patient Outcomes & Operational Analytics Portal",
+          "tech": "Power BI, SQL, Python, DAX Formulas, ETL Workflows",
+          "link": "https://github.com/vit-student/healthcare-bi-portal",
+          "bullets": [
+            "Engineered end-to-end data pipeline combining raw CSV and SQL tables into a Star Schema data model with custom DAX calculated measures in Power BI.",
+            "Conducted exploratory data analysis (EDA) and correlation testing to surface operational bottlenecks, driving an estimated 19% boost in resource utilization."
+          ],
+          "formulaTag": "Google XYZ Formula"
+        }
+      ],
+      "skills": [
+        "SQL",
+        "Advanced Excel",
+        "Tableau",
+        "Power BI",
+        "Python",
+        "R Language",
+        "Data Cleaning",
+        "Data Visualization",
+        "Statistical Analysis",
+        "KPIs & Reporting",
+        "ETL Workflows",
+        "Stakeholder Communication",
+        "TypeScript"
+      ],
+      "achievements": [],
+      "certificates": [],
+      "placementReadinessScore": 92,
+      "atsScore": 98,
+      "skillGapScore": 100,
+      "createdAt": "2026-09-05T15:22:51.962Z",
+      "bio": "Detail-oriented Data Analyst and Engineering undergraduate at Vidyalankar Institute of Technology with proven expertise in SQL querying, statistical data modeling, and developing interactive executive dashboards in Tableau and Power BI. Experienced in end-to-end data cleaning pipelines, KPI telemetry, and translating complex multi-source datasets into high-impact business growth decisions.",
+      "github": "",
+      "linkedin": "",
+      "portfolio": "",
+      "resumeText": "\u0000( \u0000; \u00003 \u0000( \u00005 \u0000, \u0000( \u00001 \u0000& \u0000( \u0000& \u0000R \u0000P \u0000S \u0000O \u0000H \u0000W \u0000H \u0000G \u0000\u0003 \u0000D \u0000\u0003 \u0000\u0018 \u0000\u0010 \u0000Z \u0000H \u0000H \u0000N \u0000\u0003 \u0000Y \u0000L \u0000U \u0000W \u0000X \u0000D \u0000O \u0000\u0003 \u0000L \u0000Q \u0000W \u0000H \u0000U \u0000Q \u0000V \u0000K \u0000L \u0000S \u0000\u0003 \u0000I \u0000R \u0000F \u0000X \u0000V \u0000H \u0000G\u0000\u0003 \u0000R \u0000Q \u0000\u0003 \u00003 \u0000\\\u0000W \u0000K \u0000R \u0000Q\u0000\u000f \u0000\u0003 \u0000G\u0000D \u0000W \u0000D \u0000\u0003 \u0000D \u0000Q\u0000D \u0000O \u0000\\\u0000V \u0000L \u0000V \u0000\u000f \u0000\u0003 \u0000G \u0000D \u0000W \u0000D \u0000\u0003 \u0000Z \u0000U \u0000D \u0000Q \u0000J \u0000O \u0000L \u0000Q \u0000J\u0000\u000f \u0000\u0003 \u0000( \u0000' \u0000$ \u0000\u000f \u0000\u0003 \u0000D\u0000Q \u0000G \u0000P \u0000D \u0000F \u0000K \u0000L \u0000Q \u0000H \u0000\u0003 \u0000O \u0000H \u0000D \u0000U \u0000Q \u0000L \u0000Q \u0000J \u0000\u0003 \u0000I \u0000X \u0000Q \u0000G \u0000D \u0000P \u0000H \u0000Q \u0000W \u0000D \u0000O \u0000V \u0000\u0011 \u0000: \u0000R \u0000U \u0000N \u0000H \u0000G \u0000\u0003 \u0000Z \u0000L \u0000W \u0000K \u0000\u0003 \u0000G \u0000D \u0000W \u0000D \u0000V \u0000H \u0000W \u0000V \u0000\u0003 \u0000I \u0000R \u0000U \u0000\u0003 \u0000G \u0000D \u0000W \u0000D \u0000\u0003 \u0000F \u0000O \u0000H \u0000D \u0000Q \u0000L \u0000Q \u0000J \u0000\u000f \u0000\u0003\u0000S \u0000U \u0000H \u0000S \u0000U \u0000R\u0000F \u0000H \u0000V \u0000V \u0000L \u0000Q\u0000J \u0000\u000f \u0000\u0003\u0000D \u0000Q\u0000D \u0000O \u0000\\ \u0000V \u0000L \u0000V \u0000\u000f \u0000\u0003 \u0000D\u0000Q \u0000G\u0000\u0003 \u00000 \u0000/ \u0000\u0003 \u0000P \u0000R\u0000G \u0000H \u0000O \u0000\u0003 \u0000L \u0000P \u0000S \u0000O \u0000H \u0000P \u0000H \u0000Q \u0000W \u0000D \u0000W \u0000L \u0000R \u0000Q \u0000\u0011 \u0000' \u0000D \u0000W \u0000D \u0000\u0003 \u00006 \u0000F \u0000L \u0000H \u0000Q \u0000F \u0000H \u0000\u0003 \u0000Z \u0000L \u0000W \u0000K \u0000\u0003 \u00003 \u0000\\ \u0000W \u0000K \u0000R \u0000Q \u0000\u0003 \u0000$ \u0000S \u0000S \u0000U \u0000H \u0000Q \u0000W \u0000L \u0000F \u0000H \u0000\u0003 \u0000, \u0000Q \u0000W \u0000H \u0000U \u0000Q \u0000\u0003 \u0000\u0010 \u0000\u0003 \u0000< \u0000X \u0000Y \u0000D \u0000, \u0000Q \u0000W \u0000H \u0000U \u0000Q \u0000D \u0000$ \u0000, \u0000\u0003 \u0000 \u0000\u0003 \u00000 \u0000D \u0000F \u0000K \u0000L \u0000Q \u0000H \u0000\u0003 \u0000/ \u0000H \u0000D \u0000U \u0000Q \u0000L \u0000Q \u0000J \u0000\u0003 \u00007 \u0000U \u0000D \u0000L \u0000Q \u0000L \u0000Q \u0000J \u0000\u0003 \u00003 \u0000U \u0000R \u0000J \u0000U \u0000D \u0000P \u0000\u0003 \u0001] \u0000\u0003 \u0000/ \u0000D \u0000U \u0000V \u0000H \u0000Q \u0000\u0003 \u0000 \u0000\u0003 \u00007 \u0000R \u0000X \u0000E \u0000U \u0000R \u0000\u0003 \u0000 \u0000/ \u0000 \u00007 \u0000 \u0000& \u0000R \u0000P \u0000S \u0000O \u0000H \u0000W \u0000H \u0000G \u0000\u0003 \u0000D \u0000Q \u0000\u0003 \u0000$ \u0000, \u0000\u0012 \u00000 \u0000/ \u0000\u0003 \u0000W \u0000U \u0000D \u0000L \u0000Q \u0000L \u0000Q \u0000J \u0000\u0003 \u0000S \u0000U \u0000R \u0000J \u0000U \u0000D \u0000P \u0000\u0003 \u0000L \u0000Q \u0000Y \u0000R \u0000O \u0000Y \u0000L \u0000Q\u0000J \u0000\u0003\u0000S \u0000U \u0000D \u0000F \u0000W \u0000L \u0000F \u0000D \u0000O \u0000\u0003\u0000P \u0000D \u0000F \u0000K\u0000L \u0000Q\u0000H \u0000\u0010 \u0000O \u0000H \u0000D \u0000U \u0000Q\u0000L \u0000Q\u0000J\u0000\u0003 \u0000S \u0000U \u0000R \u0000M \u0000H \u0000F \u0000W \u0000V \u0000\u0011 \u0000: \u0000R \u0000U \u0000N \u0000H \u0000G \u0000\u0003 \u0000R \u0000Q \u0000\u0003 \u0000, \u0000Q \u0000G \u0000X \u0000V \u0000W \u0000U \u0000L \u0000D \u0000O \u0000\u0003 \u00000 \u0000D \u0000F \u0000K \u0000L \u0000Q \u0000H \u0000\u0003 \u0000) \u0000D \u0000L \u0000O \u0000X \u0000U \u0000H \u0000\u0003 \u00003 \u0000U \u0000H \u0000G \u0000L \u0000F \u0000W \u0000L \u0000R \u0000Q\u0000\u0003 \u0000D\u0000Q \u0000G\u0000\u0003 \u00003 \u0000D \u0000U \u0000N \u0000L \u0000Q \u0000V \u0000R\u0000Q \u0001c \u0000V \u0000\u0003 \u00006\u0000H \u0000Y \u0000H \u0000U \u0000L \u0000W \u0000\\ \u0000\u0003 \u00003 \u0000U \u0000H \u0000G \u0000L \u0000F \u0000W \u0000L \u0000R \u0000Q \u0000\u0003 \u0000X \u0000V \u0000L \u0000Q \u0000J \u0000\u0003\u0000; \u0000* \u0000% \u0000R \u0000R \u0000V \u0000W \u0000\u0011 \u0000) \u0000U \u0000H \u0000H \u0000O \u0000D \u0000Q \u0000F \u0000H \u0000\u0003 \u0000: \u0000H \u0000E \u0000\u0003 \u0000' \u0000H \u0000Y \u0000H \u0000O \u0000R \u0000S \u0000H \u0000U \u0000\u0003 \u0000' \u0000H \u0000Y \u0000H \u0000O \u0000R \u0000S \u0000H \u0000G \u0000\u0003 \u0000Z \u0000H \u0000E \u0000V \u0000L \u0000W \u0000H \u0000V \u0000\u0003 \u0000I \u0000R \u0000U \u0000\u0003 \u0000U \u0000H \u0000D \u0000O \u0000\u0010 \u0000Z \u0000R \u0000U \u0000O \u0000G \u0000\u0003 \u0000F \u0000O \u0000L \u0000H \u0000Q\u0000W \u0000V \u0000\u0012 \u0000E \u0000X \u0000V \u0000L \u0000Q \u0000H \u0000V \u0000V \u0000H \u0000V \u0000\u0003 \u0000X\u0000V \u0000L \u0000Q\u0000J \u0000\u0003 \u0000P \u0000R\u0000G\u0000H \u0000U \u0000Q \u0000\u0003\u0000Z \u0000H \u0000E \u0000\u0003\u0000W \u0000H \u0000F \u0000K\u0000Q\u0000R \u0000O \u0000R \u0000J\u0000L \u0000H \u0000V \u0000\u0011 \u00003 \u00005 \u00002 \u0000- \u0000( \u0000& \u00007 \u00006 \u0000' \u0000H \u0000Y \u0000H \u0000O \u0000R \u0000S \u0000H \u0000G \u0000\u0003 \u0000D \u0000Q \u0000\u0003 \u0000$ \u0000, \u0000\u0010 \u0000S \u0000R \u0000Z \u0000H \u0000U \u0000H \u0000G \u0000\u0003 \u0000* \u00006 \u00007 \u0000\u0003 \u0000S \u0000O \u0000D \u0000W \u0000I \u0000R \u0000U \u0000P \u0000\u0003\u0000I \u0000R\u0000U \u0000\u0003\u0000L \u0000Q \u0000Y \u0000R\u0000L \u0000F \u0000H \u0000\u0003 \u0000H \u0000[\u0000W \u0000U \u0000D\u0000F \u0000W \u0000L \u0000R \u0000Q\u0000\u000f \u0000\u0003\u0000Y \u0000D \u0000O \u0000L \u0000G\u0000D \u0000W \u0000L \u0000R \u0000Q\u0000\u000f \u0000\u0003\u0000D\u0000Q \u0000G \u0000\u0003\u0000F \u0000R \u0000P \u0000S \u0000O \u0000L \u0000D\u0000Q \u0000F \u0000H \u0000\u0003\u0000U \u0000L \u0000V \u0000N \u0000\u0003\u0000G \u0000H \u0000W \u0000H \u0000F \u0000W \u0000L \u0000R \u0000Q \u0000\u0011 \u0000, \u0000P \u0000S \u0000O \u0000H \u0000P \u0000H \u0000Q \u0000W \u0000H \u0000G \u0000\u0003 \u00002 \u0000& \u00005 \u0000\u000f \u0000\u0003 \u0000P \u0000X \u0000O \u0000W \u0000L \u0000O \u0000L \u0000Q \u0000J \u0000X \u0000D \u0000O \u0000\u0003 \u0000$ \u0000, \u0000\u0003 \u0000S \u0000U \u0000R\u0000F \u0000H \u0000V \u0000V \u0000L \u0000Q\u0000J \u0000\u000f \u0000\u0003 \u00005 \u0000$ \u0000* \u0000\u000f \u0000\u0003 \u0000D \u0000Q\u0000G \u0000\u0003 \u0000D \u0000X\u0000W \u0000R\u0000P \u0000D \u0000W \u0000H \u0000G\u0000\u0003 \u00003 \u0000X \u0000U \u0000F \u0000K \u0000D\u0000V \u0000H \u0000\u0003 \u00005 \u0000H \u0000J\u0000L \u0000V \u0000W \u0000H \u0000U \u0001_\u0000* \u00006 \u00007 \u00005 \u0000\u0010 \u0000\u0015\u0000% \u0000P \u0000D \u0000W \u0000F \u0000K \u0000L \u0000Q \u0000J \u0000\u0011 \u0000% \u0000X \u0000L \u0000O \u0000W \u0000\u0003 \u0000V \u0000H \u0000F \u0000X \u0000U \u0000H \u0000\u0003 \u0000P \u0000X \u0000O \u0000W \u0000L \u0000\u0010 \u0000W \u0000H \u0000Q \u0000D \u0000Q \u0000W \u0000\u0003 \u0000D \u0000X \u0000W \u0000K \u0000H \u0000Q \u0000W \u0000L \u0000F \u0000D \u0000W \u0000L \u0000R\u0000Q \u0000\u000f \u0000\u0003 \u00005 \u0000% \u0000$ \u0000& \u0000\u000f \u0000\u0003\u0000U \u0000H \u0000Y \u0000L \u0000H \u0000Z \u0000\u0003\u0000Z \u0000R\u0000U \u0000N \u0000I \u0000O \u0000R \u0000Z \u0000V \u0000\u000f \u0000\u0003\u0000D\u0000Q \u0000G \u0000\u0003\u0000D\u0000X \u0000G \u0000L \u0000W \u0000\u0003 \u0000W \u0000U \u0000D \u0000F \u0000N \u0000L \u0000Q \u0000J\u0000\u0011 \u0000* \u00006 \u00007 \u0000* \u0000X \u0000D \u0000U \u0000G \u0000\u0003 \u0000\u0010 \u0000\u0003 \u0000$ \u0000, \u0000\u0010 \u00003 \u0000R \u0000Z \u0000H \u0000U \u0000H \u0000G \u0000\u0003 \u0000* \u00006 \u00007 \u0000\u0003 \u0000& \u0000R \u0000P \u0000S \u0000O \u0000L \u0000D \u0000Q \u0000F \u0000H \u0000\u0003 \u0000 \u0000\u0003 \u00005 \u0000L \u0000V \u0000N \u0000\u0003 \u0000' \u0000H \u0000W \u0000H \u0000F \u0000W \u0000L \u0000R \u0000Q \u0000\u0003 \u00006 \u0000\\ \u0000V \u0000W \u0000H \u0000P \u0000* \u0000L \u0000W \u0000* \u0000O \u0000R \u0000Z \u0000\u0003 \u0000\u0010 \u0000\u0003 \u00005 \u0000H \u0000D \u0000O \u0000\u0010 \u00007 \u0000L \u0000P \u0000H \u0000\u0003 \u0000& \u0000R \u0000O \u0000O \u0000D \u0000E \u0000R \u0000U \u0000D \u0000W \u0000L \u0000Y \u0000H \u0000\u0003 \u0000\u0016 \u0000' \u0000\u0003 \u0000$ \u0000U \u0000F \u0000K \u0000L \u0000W \u0000H \u0000F \u0000W \u0000X \u0000U \u0000H \u0000\u0003 \u00006 \u0000D \u0000Q \u0000G \u0000E \u0000R \u0000[ \u0000' \u0000H \u0000V \u0000L \u0000J \u0000Q \u0000H \u0000G \u0000\u0003 \u0000D \u0000\u0003 \u0000\u0016 \u0000' \u0000\u0003 \u0000S \u0000O \u0000D \u0000W \u0000I \u0000R \u0000U \u0000P \u0000\u0003 \u0000I \u0000R \u0000U \u0000\u0003 \u0000Y \u0000L \u0000V \u0000X \u0000D \u0000O \u0000L \u0000] \u0000L \u0000Q \u0000J\u0000\u0003 \u0000D \u0000Q\u0000G\u0000\u0003 \u0000F \u0000R\u0000O \u0000O \u0000D \u0000E \u0000R\u0000U \u0000D \u0000W \u0000L \u0000Y \u0000H \u0000O \u0000\\ \u0000\u0003 \u0000P \u0000R\u0000G\u0000H \u0000O \u0000L \u0000Q\u0000J \u0000\u0003\u0000V \u0000R\u0000I \u0000W \u0000Z \u0000D \u0000U \u0000H \u0000\u0003\u0000V \u0000\\\u0000V \u0000W \u0000H \u0000P \u0000\u0003 \u0000D\u0000U \u0000F \u0000K \u0000L \u0000W \u0000H \u0000F \u0000W \u0000X \u0000U \u0000H \u0000V \u0000\u0011 \u0000, \u0000P \u0000S \u0000O \u0000H \u0000P \u0000H \u0000Q \u0000W \u0000H \u0000G \u0000\u0003 \u0000F \u0000R \u0000Q \u0000F \u0000H \u0000S \u0000W \u0000V \u0000\u0003 \u0000X \u0000V \u0000L \u0000Q \u0000J \u0000\u0003 \u00005 \u0000H \u0000D \u0000F \u0000W \u0000\u000f \u0000\u0003 \u00007 \u0000K \u0000U \u0000H \u0000H \u0000\u0011 \u0000M \u0000V \u0000\u000f \u0000\u0003 \u00005 \u0000H \u0000D \u0000F \u0000W \u0000\u0003 \u00007 \u0000K \u0000U \u0000H \u0000H \u0000\u0003 \u0000) \u0000L \u0000E\u0000H \u0000U \u0000\u000f \u0000\u0003\u00001 \u0000R \u0000G \u0000H \u0000\u0011 \u0000M \u0000V \u0000\u000f \u0000\u0003\u00006 \u0000R \u0000F \u0000N \u0000H \u0000W \u0000\u0011 \u0000L \u0000R \u0000\u000f \u0000\u0003\u0000D\u0000Q \u0000G \u0000\u0003\u0000< \u0000M \u0000V \u0000\u0011 \u0000' \u0000H \u0000V \u0000L \u0000J \u0000Q \u0000H \u0000G \u0000\u0003 \u0000U \u0000H \u0000D \u0000O \u0000\u0010 \u0000W \u0000L \u0000P \u0000H \u0000\u0003 \u0000F \u0000R \u0000O \u0000O \u0000D \u0000E \u0000R \u0000U \u0000D \u0000W \u0000L \u0000R \u0000Q \u0000\u000f \u0000\u0003 \u0000F \u0000R \u0000G \u0000H \u0000\u0010 \u0000W \u0000R \u0000\u0010 \u0000\u0016\u0000' \u0000\u0003 \u0000D \u0000U \u0000F \u0000K \u0000L \u0000W \u0000H \u0000F \u0000W \u0000X \u0000U \u0000H \u0000\u000f \u0000\u0003\u0000O \u0000L \u0000Y \u0000H \u0000\u0003 \u0000V \u0000\\ \u0000V \u0000W \u0000H \u0000P \u0000\u0003\u0000O \u0000R \u0000J\u0000V \u0000\u000f \u0000\u0003\u0000D \u0000Q \u0000G \u0000\u0003\u0000I \u0000D\u0000L \u0000O \u0000X \u0000U \u0000H \u0000\u0003 \u0000Y\u0000L \u0000V \u0000X \u0000D \u0000O \u0000L \u0000] \u0000D \u0000W \u0000L \u0000R \u0000Q \u0000\u0011 \u0000% \u0000H \u0000D \u0000X \u0000W \u0000\\ \u0000\u0003 \u00003 \u0000R \u0000L \u0000Q \u0000W \u0000\u0003 \u0000\u0010 \u0000\u0003 \u0000) \u0000X \u0000O \u0000O \u0000\u0010 \u00006 \u0000W \u0000D \u0000F \u0000N \u0000\u0003 \u0000( \u0000\u0010 \u0000& \u0000R \u0000P \u0000P \u0000H \u0000U \u0000F \u0000H \u0000\u0003 \u00003 \u0000O \u0000D \u0000W \u0000I \u0000R \u0000U \u0000P \u0000' \u0000H \u0000Y \u0000H \u0000O \u0000R \u0000S \u0000H \u0000G \u0000\u0003 \u0000D \u0000\u0003 \u0000I \u0000X \u0000O \u0000O \u0000\u0010 \u0000V \u0000W \u0000D \u0000F \u0000N \u0000\u0003 \u0000F \u0000R \u0000V \u0000P \u0000H \u0000W \u0000L \u0000F \u0000V \u0000\u0003 \u0000H \u0000\u0010 \u0000F \u0000R \u0000P \u0000P \u0000H \u0000U \u0000F \u0000H \u0000\u0003 \u0000S\u0000O \u0000D \u0000W \u0000I \u0000R \u0000U \u0000P \u0000\u0003\u0000X \u0000V \u0000L \u0000Q\u0000J \u0000\u0003\u00005 \u0000H \u0000D\u0000F \u0000W \u0000\u000f \u0000\u0003\u00001 \u0000R \u0000G \u0000H \u0000\u0011 \u0000M \u0000V \u0000\u000f \u0000\u0003\u0000D \u0000Q \u0000G \u0000\u0003\u00006 \u0000X \u0000S \u0000D \u0000E \u0000D\u0000V \u0000H \u0000\u0011 \u0000, \u0000P \u0000S \u0000O \u0000H \u0000P \u0000H \u0000Q \u0000W \u0000H \u0000G \u0000\u0003 \u0000D \u0000X \u0000W \u0000K \u0000H \u0000Q \u0000W \u0000L \u0000F \u0000D \u0000W \u0000L \u0000R \u0000Q \u0000\u000f \u0000\u0003 \u0000S \u0000U \u0000R \u0000G \u0000X \u0000F \u0000W \u0000\u0003\u0000P \u0000D \u0000Q\u0000D \u0000J \u0000H \u0000P \u0000H \u0000Q \u0000W \u0000\u000f \u0000\u0003 \u0000F \u0000D\u0000U \u0000W \u0000\u000f \u0000\u0003 \u0000R\u0000U \u0000G \u0000H \u0000U \u0000V \u0000\u000f \u0000\u0003 \u0000D\u0000Q \u0000G\u0000\u0003 \u0000D\u0000G \u0000P \u0000L \u0000Q \u0000\u0003\u0000G \u0000D\u0000V \u0000K \u0000E \u0000R \u0000D\u0000U \u0000G \u0000\u0003\u0000I \u0000X \u0000Q \u0000F \u0000W \u0000L \u0000R \u0000Q \u0000D \u0000O \u0000L \u0000W \u0000\\ \u0000\u0011 \u0000' \u0000H \u0000S \u0000O \u0000R \u0000\\ \u0000H \u0000G \u0000\u0003 \u0000D \u0000\u0003 \u0000S \u0000U \u0000R \u0000G \u0000X \u0000F \u0000W \u0000L \u0000R \u0000Q \u0000\u0010 \u0000U \u0000H \u0000D \u0000G \u0000\\ \u0000\u0003 \u0000D \u0000S \u0000S \u0000O \u0000L \u0000F \u0000D \u0000W \u0000L \u0000R\u0000Q \u0000\u0003\u0000Z \u0000L \u0000W \u0000K\u0000\u0003 \u0000F \u0000X \u0000V \u0000W \u0000R\u0000P \u0000H \u0000U \u0000\u0003 \u0000D\u0000Q \u0000G\u0000\u0003 \u0000D\u0000G \u0000P \u0000L \u0000Q \u0000L \u0000V \u0000W \u0000U \u0000D \u0000W \u0000R \u0000U \u0000\u0003 \u0000Z \u0000R \u0000U \u0000N \u0000I \u0000O \u0000R \u0000Z \u0000V \u0000\u0011 \u0000N \u0000K \u0000D \u0000U \u0000D \u0000W \u0000\\ \u0000D \u0000V \u0000K \u0000U \u0000D \u0000M \u0000\u0015 \u0000\u0013 \u0000\u0013 \u0000\u001a \u0000# \u0000J \u0000P \u0000D \u0000L \u0000O \u0000\u0011 \u0000F \u0000R \u0000P \u0000\u001c \u0000\u001b \u0000\u0015 \u0000\u0013 \u0000\u001a \u0000\u001c \u0000\u0014 \u0000\u001c \u0000\u0019 \u0000\u0014 \u0000Z \u0000Z \u0000Z \u0000\u0011 \u0000O \u0000L \u0000Q \u0000N \u0000H \u0000G \u0000L \u0000Q \u0000\u0011 \u0000F \u0000R \u0000P \u0000\u0012 \u0000L \u0000Q \u0000\u0012 \u0000\\ \u0000D \u0000V \u0000K \u0000U \u0000D \u0000M \u0000\u0010 \u0000N \u0000K \u0000D \u0000U \u0000D \u0000W \u0000\u0010 \u0000D \u0000\u0015 \u0000\u001a \u0000\u0015 \u0000\u001c \u0000\u001b \u0000\u0016 \u0000\u0017 \u0000\u0018 \u0000? \u0000K \u0000W \u0000W \u0000S \u0000V \u0000\u001d \u0000\u0012 \u0000\u0012 \u0000J \u0000L \u0000W \u0000K \u0000X \u0000E \u0000\u0011 \u0000F \u0000R \u0000P \u0000\u0012 \u0000< \u0000D \u0000V \u0000K \u0000U \u0000D \u0000M \u0000. \u0000K \u0000D \u0000U \u0000D \u0000W \u0000< \u0000D \u0000V \u0000K \u0000U \u0000D \u0000M \u0000\u0003 \u0000. \u0000K \u0000D \u0000U \u0000D \u0000W \u0000( \u0000' \u00008 \u0000& \u0000$ \u00007 \u0000, \u00002 \u00001 \u00009 \u0000L \u0000G \u0000\\ \u0000D \u0000O \u0000D \u0000Q \u0000N \u0000D \u0000U \u0000\u0003 \u0000, \u0000Q \u0000V \u0000W \u0000L \u0000W \u0000X \u0000W \u0000H \u0000\u0003 \u00002 \u0000I \u0000\u0003 \u00007 \u0000H \u0000F \u0000K \u0000Q \u0000R \u0000O \u0000R \u0000J \u0000\\ \u0000% \u0000D \u0000F \u0000K \u0000H \u0000O \u0000R \u0000U \u0000\u0003 \u00002 \u0000I \u0000\u0003 \u00007 \u0000H \u0000F \u0000K \u0000Q \u0000R \u0000O \u0000R \u0000J \u0000\\ \u0000\u0003 \u0000\u0010 \u0000\u0003 \u0000& \u0000R \u0000P \u0000S \u0000X \u0000W \u0000H \u0000U \u0000\u0003 \u0000( \u0000Q \u0000J \u0000L \u0000Q \u0000H \u0000H \u0000U \u0000L \u0000Q \u0000J \u00000 \u0000X \u0000P \u0000E \u0000D \u0000L \u0000\u0003 \u00008 \u0000Q \u0000L \u0000Y \u0000H \u0000U \u0000V \u0000L \u0000W \u0000\\ \u0000\u0003 \u00003 \u0000X \u0000U \u0000V \u0000X \u0000L \u0000Q \u0000J \u0000\u0003 \u0000\u0016 \u0000\u0003 \u0000< \u0000H \u0000D \u0000U \u0000U \u0000G \u0000& \u0000* \u00003 \u0000$ \u0000\u0003 \u0000\u001d \u0000\u0003 \u0000\u001c \u0000\u0011 \u0000\u001c \u0000\u0018 \u0000\u0015 \u0000\u0013 \u0000\u0015 \u0000\u0018 \u0000\u0010 \u0000\u0015 \u0000\u0013 \u0000\u0015 \u0000\u001b \u0000% \u0000K \u0000D \u0000U \u0000W \u0000L \u0000\u0003 \u00009 \u0000L \u0000G \u0000\\ \u0000D \u0000S \u0000H \u0000H \u0000W \u0000K \u0000\u0003 \u0000, \u0000Q \u0000V \u0000W \u0000L \u0000W \u0000X \u0000W \u0000H \u0000\u0003 \u00002 \u0000I \u0000\u0003 \u00007 \u0000H \u0000F \u0000K \u0000Q \u0000R \u0000O \u0000R \u0000J \u0000\\ \u0000' \u0000L \u0000S \u0000O \u0000R \u0000P \u0000D \u0000\u0003 \u0000, \u0000Q \u0000\u0003 \u0000, \u0000Q \u0000I \u0000R \u0000U \u0000P \u0000D \u0000W \u0000L \u0000R \u0000Q \u0000\u0003 \u00007 \u0000H \u0000F \u0000K \u0000Q \u0000R \u0000O \u0000R \u0000J \u0000\\ \u00000 \u0000D \u0000K \u0000D \u0000U \u0000D \u0000V \u0000K \u0000W \u0000U \u0000D \u0000\u0003 \u0000% \u0000R \u0000D \u0000U \u0000G \u0000\u0003 \u00002 \u0000I \u0000\u0003 \u00007 \u0000H \u0000F \u0000K \u0000Q \u0000R \u0000O \u0000R \u0000J \u0000\\ \u0000\u0003 \u0000 \u00000 \u00006 \u0000% \u00007 \u0000( \u0000 \u0000& \u0000R \u0000P \u0000S \u0000O \u0000H \u0000W \u0000H \u0000G \u00003 \u0000H \u0000U \u0000F \u0000H \u0000Q \u0000W \u0000D \u0000J \u0000H \u0000\u001d \u0000\u001c \u0000\u0016 \u0000\u0011 \u0000\u0014 \u0000\u001c \u0000\b \u0000\u0015 \u0000\u0013 \u0000\u0015 \u0000\u0015 \u0000\u0010 \u0000\u0015 \u0000\u0013 \u0000\u0015 \u0000\u0018 \u00006 \u0000. \u0000, \u0000/ \u0000/ \u00006 \u0000\u0003 \u00006 \u00008 \u00000 \u00000 \u0000$ \u00005 \u0000< \u0000/ \u0000D \u0000Q \u0000J \u0000X \u0000D \u0000J \u0000H \u0000V \u0000\u001d \u0000\u0010 \u0000\u0003 \u00003 \u0000\\ \u0000W \u0000K \u0000R \u0000Q \u0000\u000f \u00003 \u0000+ \u00003 \u0000\u000f \u0000& \u0000\u000e \u0000\u000e \u0000\u000f \u0000- \u0000D \u0000Y \u0000D \u0000V \u0000F \u0000U \u0000L \u0000S \u0000W \u0000\u000f \u00006 \u00004 \u0000/ \u0000\u000f \u0000- \u0000D \u0000Y \u0000D \u0000) \u0000U \u0000D \u0000P \u0000H \u0000Z \u0000R \u0000U \u0000N \u0000V \u0000\u001d \u0000\u0010 \u0000\u0003 \u00005 \u0000H \u0000D \u0000F \u0000W \u0000\u0011 \u0000M \u0000V \u0000\u000f \u0000\u0003\u00001 \u0000R \u0000G \u0000H \u0000\u0011 \u0000M \u0000V \u0000\u000f \u0000( \u0000[ \u0000S \u0000U \u0000H \u0000V \u0000V \u0000\u0011 \u0000M \u0000V \u0000\u000f \u0000; \u0000* \u0000% \u0000R \u0000R \u0000V \u0000W \u0000\u000f \u00006 \u0000F \u0000L \u0000N \u0000L \u0000W \u0000\u0010 \u0000/ \u0000H \u0000D\u0000U \u0000Q \u00007 \u0000R \u0000R \u0000O \u0000V \u0000\u001d \u0000\u0010 \u0000\u0003 \u0000* \u0000, \u00007 \u0000\u000f \u00003 \u0000R \u0000V \u0000W \u0000J \u0000U \u0000H \u00006 \u00004 \u0000/ \u0000\u000f \u00006 \u00004 \u0000/ \u0000L \u0000W \u0000H \u0000\u000f \u00000 \u0000\\ \u00006 \u00004 \u0000/ \u0000\u000f \u00009 \u00006 \u0000& \u0000R \u0000G \u0000H \u0000\u000f \u0000* \u0000R \u0000R \u0000J \u0000O \u0000H \u0000\u0003\u0000& \u0000R \u0000O \u0000D \u0000E \u0000\u000f \u0000$ \u0000Q \u0000G \u0000U \u0000R \u0000L \u0000G \u0000\u0003\u00006 \u0000W \u0000X \u0000G \u0000L \u0000R \u00006 \u0000R \u0000I \u0000W \u0000\u0003\u00006 \u0000N \u0000L \u0000O \u0000O \u0000V \u0000\u001d \u0000\u0010 \u0000\u0003 \u0000/ \u0000H \u0000D \u0000G \u0000H \u0000U \u0000V \u0000K \u0000L \u0000S \u0000\u000f \u0000& \u0000R \u0000P \u0000P \u0000X \u0000Q \u0000L \u0000F \u0000D \u0000W \u0000L \u0000R \u0000Q \u0000\u000f \u00003 \u0000U \u0000R \u0000E \u0000O \u0000H \u0000P \u0000\u0003\u00006 \u0000R \u0000O \u0000Y \u0000L \u0000Q \u0000J\u0000\u000f \u0000$ \u0000G \u0000D \u0000S \u0000W \u0000D \u0000E \u0000L \u0000O \u0000L \u0000W \u0000\\",
+      "languages": [
+        "English",
+        "Hindi",
+        "Marathi"
+      ],
+      "resumeUrl": "/uploads/resumes/student-1788620582804_1791614124887_Yashraj_Kharat_Resume__1_.pdf"
+    },
+    {
+      "id": "student-profile-student-1788619844796",
+      "userId": "student-1788619844796",
+      "name": "Yashraj Nana kharat",
+      "email": "yashraj2007@gmail.com",
+      "department": "CMPN",
+      "batch": "2026",
+      "cgpa": null,
+      "education": [],
+      "experience": [],
+      "projects": [],
+      "skills": [],
+      "achievements": [],
+      "certificates": [],
+      "placementReadinessScore": 0,
+      "atsScore": 0,
+      "skillGapScore": 0,
+      "createdAt": "2026-09-05T15:22:58.724Z"
+    }
+  ],
+  "recruiters": [],
+  "companies": [],
+  "jobs": [],
+  "applications": [],
+  "interviews": [],
+  "offerLetters": [],
+  "notifications": [
+    {
+      "id": "notif-1788762843321",
+      "userId": "student-1788620582804",
+      "title": "Certificate Replaced Successfully",
+      "message": "Your certificate for Google was replaced with sample_google_internship_certificate_with_evaluation.pdf and re-verified.",
+      "read": true,
+      "type": "SUCCESS",
+      "createdAt": "2026-09-07T06:34:03.321Z"
+    },
+    {
+      "id": "notif-1788762432215",
+      "userId": "student-1788620582804",
+      "title": "Internship Submitted Successfully",
+      "message": "Your SEM_6 internship at Google has been submitted for verification.",
+      "read": true,
+      "type": "SUCCESS",
+      "createdAt": "2026-09-07T06:27:12.215Z"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "log-1791787110109-pvrfd",
+      "userId": "student-1788620582804",
+      "action": "Resume ATS 95%+ Applied",
+      "details": "Synchronized Google XYZ formula bullets, 13 target skills, and optimized ATS score (98%) to profile.",
+      "createdAt": "2026-10-12T06:38:30.109Z"
+    },
+    {
+      "id": "log-1791785922739-rboau",
+      "userId": "student-1788620582804",
+      "action": "Calculated Readiness",
+      "details": "Placement readiness evaluated: 92%",
+      "createdAt": "2026-10-12T06:18:42.739Z"
+    },
+    {
+      "id": "log-1791615619612-h3vip",
+      "userId": "student-1788620582804",
+      "action": "Resume ATS 95%+ Applied",
+      "details": "Synchronized Google XYZ formula bullets, 13 target skills, and optimized ATS score (98%) to profile.",
+      "createdAt": "2026-10-10T07:00:19.612Z"
+    },
+    {
+      "id": "log-1791615563459-p0t0n",
+      "userId": "student-1788620582804",
+      "action": "Resume ATS 95%+ Applied",
+      "details": "Synchronized Google XYZ formula bullets, 13 target skills, and optimized ATS score (94%) to profile.",
+      "createdAt": "2026-10-10T06:59:23.459Z"
+    },
+    {
+      "id": "log-1791615030526-3ymjn",
+      "userId": "student-1788620582804",
+      "action": "Profile Saved",
+      "details": "Updated core student personal and academic details.",
+      "createdAt": "2026-10-10T06:50:30.526Z"
+    },
+    {
+      "id": "log-1791615006088-g25qr",
+      "userId": "student-1788620582804",
+      "action": "Profile Saved",
+      "details": "Updated core student personal and academic details.",
+      "createdAt": "2026-10-10T06:50:06.088Z"
+    },
+    {
+      "id": "log-1791614125728-is32c",
+      "userId": "student-1788620582804",
+      "action": "Resume Uploaded & Profile Replaced",
+      "details": "Uploaded Yashraj Kharat Resume (1).pdf and refreshed profile with new CV details.",
+      "createdAt": "2026-10-10T06:35:25.728Z"
+    },
+    {
+      "id": "log-1791614125724-6evhs",
+      "userId": "student-1788620582804",
+      "action": "ATS Resume Scan",
+      "details": "Scanned resume. ATS Score: 70%",
+      "createdAt": "2026-10-10T06:35:25.724Z"
+    },
+    {
+      "id": "log-1791614081092-r3cjh",
+      "userId": "student-1788620582804",
+      "action": "Profile Saved",
+      "details": "Updated core student personal and academic details.",
+      "createdAt": "2026-10-10T06:34:41.092Z"
+    },
+    {
+      "id": "log-1791614074277-dr7uv",
+      "userId": "student-1788620582804",
+      "action": "Calculated Readiness",
+      "details": "Placement readiness evaluated: 70%",
+      "createdAt": "2026-10-10T06:34:34.277Z"
+    },
+    {
+      "id": "log-1791613856243-rr1ky",
+      "userId": "student-1788620582804",
+      "action": "Coding Challenge: Two Sum Target Indices",
+      "details": "Submitted solution for Google challenge. Status: ACCEPTED",
+      "createdAt": "2026-10-10T06:30:56.243Z"
+    },
+    {
+      "id": "log-1791613835996-fqmqu",
+      "userId": "student-1788620582804",
+      "action": "Coding Challenge: Two Sum Target Indices",
+      "details": "Submitted solution for Google challenge. Status: WRONG_ANSWER",
+      "createdAt": "2026-10-10T06:30:35.996Z"
+    },
+    {
+      "id": "log-1791613810540-kmigi",
+      "userId": "student-1788620582804",
+      "action": "Coding Challenge: Two Sum Target Indices",
+      "details": "Submitted solution for Google challenge. Status: WRONG_ANSWER",
+      "createdAt": "2026-10-10T06:30:10.540Z"
+    },
+    {
+      "id": "log-1790914228708-z0ntq",
+      "userId": "student-1788620582804",
+      "action": "Calculated Readiness",
+      "details": "Placement readiness evaluated: 70%",
+      "createdAt": "2026-10-02T04:10:28.708Z"
+    },
+    {
+      "id": "log-1789974584210-xplig",
+      "userId": "student-1788620582804",
+      "action": "Profile Saved",
+      "details": "Updated core student personal and academic details.",
+      "createdAt": "2026-09-21T07:09:44.210Z"
+    },
+    {
+      "id": "log-1789972085540-7e9rj",
+      "userId": "student-1788620582804",
+      "action": "Profile Saved",
+      "details": "Updated core student personal and academic details.",
+      "createdAt": "2026-09-21T06:28:05.540Z"
+    },
+    {
+      "id": "log-1789972065667-8in4l",
+      "userId": "student-1788620582804",
+      "action": "Profile Saved",
+      "details": "Updated core student personal and academic details.",
+      "createdAt": "2026-09-21T06:27:45.667Z"
+    }
+  ],
+  "bookmarks": [],
+  "internshipRequirements": [
+    {
+      "id": "req-sem6-2026",
+      "academicYear": "2025-2026",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "department": "CMPN",
+      "divisions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "endDate": "2026-10-30T00:00:00.000Z",
+      "gradeBoundaries": {
+        "A+": [
+          90,
+          100
+        ],
+        "A": [
+          80,
+          89.9
+        ],
+        "B": [
+          70,
+          79.9
+        ],
+        "C": [
+          60,
+          69.9
+        ],
+        "D": [
+          50,
+          59.9
+        ],
+        "F": [
+          0,
+          49.9
+        ]
+      },
+      "internshipType": "Industry Internship",
+      "marksConfig": {
+        "certificate": 20,
+        "company": 30,
+        "report": 20,
+        "technical": 15,
+        "viva": 10,
+        "attendance": 5,
+        "total": 100
+      },
+      "maxDurationWeeks": 8,
+      "minDurationWeeks": 4,
+      "requiredCredits": 4,
+      "requiredDocuments": [
+        "CERTIFICATE",
+        "REPORT"
+      ],
+      "semester": "SEM_6",
+      "startDate": "2026-01-05T00:00:00.000Z",
+      "status": "OPEN",
+      "year": "Third Year"
+    },
+    {
+      "id": "req-sem8-2026",
+      "academicYear": "2025-2026",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "department": "CMPN",
+      "divisions": [
+        "A",
+        "B"
+      ],
+      "endDate": "2026-11-15T00:00:00.000Z",
+      "gradeBoundaries": {
+        "A+": [
+          90,
+          100
+        ],
+        "A": [
+          80,
+          89.9
+        ],
+        "B": [
+          70,
+          79.9
+        ],
+        "C": [
+          60,
+          69.9
+        ],
+        "D": [
+          50,
+          59.9
+        ],
+        "F": [
+          0,
+          49.9
+        ]
+      },
+      "internshipType": "Industry Internship",
+      "marksConfig": {
+        "certificate": 20,
+        "company": 30,
+        "report": 20,
+        "technical": 15,
+        "viva": 10,
+        "attendance": 5,
+        "total": 100
+      },
+      "maxDurationWeeks": 16,
+      "minDurationWeeks": 8,
+      "requiredCredits": 8,
+      "requiredDocuments": [
+        "CERTIFICATE",
+        "REPORT",
+        "OFFER_LETTER"
+      ],
+      "semester": "SEM_8",
+      "startDate": "2026-01-10T00:00:00.000Z",
+      "status": "OPEN",
+      "year": "Fourth Year"
+    }
+  ],
+  "internshipSubmissions": [
+    {
+      "id": "sub-1788762432172",
+      "status": "SUBMITTED",
+      "submittedAt": "2026-09-07T06:27:12.172Z",
+      "studentId": "student-profile-student-1788620582804",
+      "requirementId": "req-sem6-2026",
+      "companyName": "Google",
+      "internshipRole": "Software Developer",
+      "internshipType": "Industry Internship",
+      "startDate": "2026-06-01T00:00:00.000Z",
+      "endDate": "2026-07-31T00:00:00.000Z",
+      "durationWeeks": 8,
+      "location": "Mumbai",
+      "workMode": "HYBRID",
+      "industryMentorName": "Rajesh Sharma",
+      "industryMentorEmail": "rajesh@gmail.com",
+      "facultyMentorId": "",
+      "facultyMentorName": "Assigned Faculty Mentor",
+      "description": "",
+      "skills": [
+        "React",
+        "Node.js",
+        "Python",
+        "PostgreSQL"
+      ],
+      "projectTitle": "",
+      "projectDescription": "",
+      "resubmittedAt": "2026-09-07T06:34:03.318Z"
+    }
+  ],
+  "internshipDocuments": [
+    {
+      "id": "doc-1788762432202",
+      "uploadedAt": "2026-09-07T06:27:12.202Z",
+      "submissionId": "sub-1788762432172",
+      "docType": "REPORT",
+      "fileUrl": "/uploads/internships/report/student-1788620582804_1788762432195_sample_google_software_engineering_internship_report__1_.pdf",
+      "fileName": "sample_google_software_engineering_internship_report (1).pdf",
+      "fileSize": 33726,
+      "mimeType": "application/pdf"
+    },
+    {
+      "id": "doc-1788762843312",
+      "submissionId": "sub-1788762432172",
+      "docType": "CERTIFICATE",
+      "uploadedAt": "2026-09-07T06:34:03.312Z",
+      "fileUrl": "/uploads/internships/certificate/student-1788620582804_1788762843259_sample_google_internship_certificate_with_evaluation.pdf",
+      "fileName": "sample_google_internship_certificate_with_evaluation.pdf",
+      "fileSize": 27892,
+      "mimeType": "application/pdf"
+    }
+  ],
+  "certificateVerifications": [
+    {
+      "id": "cert-v-1788762432208",
+      "submissionId": "sub-1788762432172",
+      "verifiedAt": "2026-09-07T06:34:03.317Z",
+      "extractedStudentName": "",
+      "extractedCompany": "",
+      "extractedRole": "AI/ML Intern",
+      "extractedStartDate": "",
+      "extractedEndDate": "",
+      "extractedDuration": "8 weeks",
+      "extractedIssueDate": "",
+      "extractedCertId": "1ec0c5da27b240257f67e010d",
+      "extractedAuthority": "Authorized Signatory",
+      "nameMatchScore": 0,
+      "companyMatchScore": 0,
+      "roleMatchScore": 17,
+      "durationMatchScore": 100,
+      "dateMatchScore": 80,
+      "overallConfidence": 36,
+      "status": "CORRECTION_REQUIRED",
+      "verificationScore": 10.9,
+      "breakdown": {
+        "studentNameMatch": {
+          "score": 0,
+          "max": 3,
+          "percentage": 0
+        },
+        "companyMatch": {
+          "score": 0,
+          "max": 3,
+          "percentage": 0
+        },
+        "roleMatch": {
+          "score": 0.5,
+          "max": 3,
+          "percentage": 17
+        },
+        "durationConsistency": {
+          "score": 3,
+          "max": 3,
+          "percentage": 100
+        },
+        "dateConsistency": {
+          "score": 2.4,
+          "max": 3,
+          "percentage": 80
+        },
+        "documentValidity": {
+          "score": 5,
+          "max": 5,
+          "percentage": 100
+        }
+      },
+      "anomalies": [
+        "Name discrepancy: Extracted 'N/A' vs Record 'Yashraj Nana kharat'",
+        "Company mismatch: Extracted 'N/A' vs Record 'Google'",
+        "Internship duration consistent (8 weeks)",
+        "Certificate Serial Code: 1ec0c5da27b240257f67e010d"
+      ]
+    }
+  ],
+  "reportAnalyses": [
+    {
+      "id": "rep-a-1788762432211",
+      "submissionId": "sub-1788762432172",
+      "analyzedAt": "2026-09-07T06:27:12.211Z",
+      "completenessScore": 0,
+      "technicalDepthScore": 1.5,
+      "workDescriptionScore": 4,
+      "learningOutcomesScore": 2.5,
+      "documentationScore": 3,
+      "aiSuggestedScore": 11,
+      "sectionsFound": [],
+      "feedback": "Report contains 0 of 8 recommended academic report sections with ~1516 words. Strong technical content and architecture descriptions identified."
+    }
+  ],
+  "companyMentorEvaluations": [
+    {
+      "id": "comp-eval-1788762432213",
+      "submissionId": "sub-1788762432172",
+      "accessToken": "eval-sub-1788762432172-ow3k3q7d",
+      "mentorName": "Rajesh Sharma",
+      "mentorEmail": "rajesh@gmail.com",
+      "isSubmitted": true,
+      "technicalKnowledge": 5,
+      "qualityOfWork": 5,
+      "problemSolving": 5,
+      "communication": 5,
+      "teamwork": 3,
+      "professionalism": 5,
+      "feedback": "",
+      "totalScore": 28,
+      "submittedAt": "2026-10-13T13:12:05.198Z"
+    }
+  ],
+  "facultyEvaluations": [],
+  "internshipAuditLogs": [
+    {
+      "id": "audit-log-1791897125201",
+      "createdAt": "2026-10-13T13:12:05.201Z",
+      "submissionId": "sub-1788762432172",
+      "userId": "company-mentor",
+      "userName": "Rajesh Sharma",
+      "role": "RECRUITER",
+      "action": "COMPANY_EVALUATION_SUBMITTED",
+      "details": "Company mentor submitted performance evaluation. Score: 28/30"
+    },
+    {
+      "id": "audit-log-1788762843320",
+      "createdAt": "2026-09-07T06:34:03.320Z",
+      "submissionId": "sub-1788762432172",
+      "userId": "student-1788620582804",
+      "userName": "Yashraj Nana kharat",
+      "role": "STUDENT",
+      "action": "CERTIFICATE_REPLACED",
+      "details": "Replaced certificate file with \"sample_google_internship_certificate_with_evaluation.pdf\". Automated OCR confidence: 36%, score: 10.9/20."
+    },
+    {
+      "id": "audit-log-1788762432174",
+      "createdAt": "2026-09-07T06:27:12.174Z",
+      "submissionId": "sub-1788762432172",
+      "userId": "student-1788620582804",
+      "userName": "Yashraj Nana kharat",
+      "role": "STUDENT",
+      "action": "INTERNSHIP_SUBMITTED",
+      "details": "Submitted Software Developer at Google (SEM_6)"
+    }
+  ],
+  "codingChallenges": [
+    {
+      "id": "algo-1",
+      "title": "Two Sum Target Indices",
+      "slug": "two-sum",
+      "company": "Google",
+      "difficulty": "EASY",
+      "category": "Arrays & Hash Maps",
+      "tags": [
+        "Google",
+        "Array",
+        "Hash Table",
+        "Hot"
+      ],
+      "description": "Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.",
+      "examples": [
+        {
+          "input": "nums = [2,7,11,15], target = 9",
+          "output": "[0,1]",
+          "explanation": "Because nums[0] + nums[1] == 9, we return [0, 1]."
+        },
+        {
+          "input": "nums = [3,2,4], target = 6",
+          "output": "[1,2]",
+          "explanation": "Because nums[1] + nums[2] == 6, we return [1, 2]."
+        },
+        {
+          "input": "nums = [3,3], target = 6",
+          "output": "[0,1]",
+          "explanation": "Because nums[0] + nums[1] == 6, we return [0, 1]."
+        }
+      ],
+      "starterCode": {
+        "javascript": "function twoSum(nums, target) {\n  // Your code here\n  const map = new Map();\n  for (let i = 0; i < nums.length; i++) {\n    const complement = target - nums[i];\n    if (map.has(complement)) {\n      return [map.get(complement), i];\n    }\n    map.set(nums[i], i);\n  }\n  return [];\n}",
+        "python": "def two_sum(nums, target):\n    # Your code here\n    seen = {}\n    for i, num in enumerate(nums):\n        diff = target - num\n        if diff in seen:\n            return [seen[diff], i]\n        seen[num] = i\n    return []"
+      },
+      "testCases": [
+        {
+          "input": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "isHidden": false
+        },
+        {
+          "input": [
+            [
+              3,
+              2,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            1,
+            2
+          ],
+          "isHidden": false
+        },
+        {
+          "input": [
+            [
+              3,
+              3
+            ],
+            6
+          ],
+          "expected": [
+            0,
+            1
+          ],
+          "isHidden": false
+        },
+        {
+          "input": [
+            [
+              1,
+              5,
+              8,
+              12,
+              19
+            ],
+            20
+          ],
+          "expected": [
+            0,
+            4
+          ],
+          "isHidden": true
+        }
+      ],
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(N)",
+      "hints": [
+        "A brute force approach checks all pairs in O(N^2) time.",
+        "Can you use a Hash Map to store elements and look up complements in O(1) time?"
+      ]
+    },
+    {
+      "id": "algo-2",
+      "title": "Longest Substring Without Repeating Characters",
+      "slug": "longest-substring",
+      "company": "Microsoft",
+      "difficulty": "MEDIUM",
+      "category": "Strings & Sliding Window",
+      "tags": [
+        "Microsoft",
+        "String",
+        "Sliding Window",
+        "Amazon"
+      ],
+      "description": "Given a string `s`, find the length of the longest substring without repeating characters.",
+      "examples": [
+        {
+          "input": "s = \"abcabcbb\"",
+          "output": "3",
+          "explanation": "The answer is \"abc\", with the length of 3."
+        },
+        {
+          "input": "s = \"bbbbb\"",
+          "output": "1",
+          "explanation": "The answer is \"b\", with the length of 1."
+        },
+        {
+          "input": "s = \"pwwkew\"",
+          "output": "3",
+          "explanation": "The answer is \"wke\", with the length of 3."
+        }
+      ],
+      "starterCode": {
+        "javascript": "function lengthOfLongestSubstring(s) {\n  // Your code here\n  let maxLength = 0;\n  let left = 0;\n  const set = new Set();\n  \n  for (let right = 0; right < s.length; right++) {\n    while (set.has(s[right])) {\n      set.delete(s[left]);\n      left++;\n    }\n    set.add(s[right]);\n    maxLength = Math.max(maxLength, right - left + 1);\n  }\n  \n  return maxLength;\n}",
+        "python": "def length_of_longest_substring(s: str) -> int:\n    char_set = set()\n    left = 0\n    max_len = 0\n    for right in range(len(s)):\n        while s[right] in char_set:\n            char_set.remove(s[left])\n            left += 1\n        char_set.add(s[right])\n        max_len = max(max_len, right - left + 1)\n    return max_len"
+      },
+      "testCases": [
+        {
+          "input": [
+            "abcabcbb"
+          ],
+          "expected": 3,
+          "isHidden": false
+        },
+        {
+          "input": [
+            "bbbbb"
+          ],
+          "expected": 1,
+          "isHidden": false
+        },
+        {
+          "input": [
+            "pwwkew"
+          ],
+          "expected": 3,
+          "isHidden": false
+        },
+        {
+          "input": [
+            ""
+          ],
+          "expected": 0,
+          "isHidden": true
+        },
+        {
+          "input": [
+            "au"
+          ],
+          "expected": 2,
+          "isHidden": true
+        }
+      ],
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(min(N, M))",
+      "hints": [
+        "Use a sliding window technique with two pointers.",
+        "Keep track of characters currently in the window using a Set or Hash Map."
+      ]
+    },
+    {
+      "id": "algo-3",
+      "title": "Trapping Rain Water",
+      "slug": "trapping-rain-water",
+      "company": "Morgan Stanley",
+      "difficulty": "HARD",
+      "category": "Two Pointers & DP",
+      "tags": [
+        "Morgan Stanley",
+        "Two Pointers",
+        "Dynamic Programming",
+        "Google"
+      ],
+      "description": "Given `n` non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+      "examples": [
+        {
+          "input": "height = [0,1,0,2,1,0,1,3,2,1,2,1]",
+          "output": "6",
+          "explanation": "The above elevation map is represented by array. In this case, 6 units of rain water are being trapped."
+        },
+        {
+          "input": "height = [4,2,0,3,2,5]",
+          "output": "9",
+          "explanation": "9 units of rain water trapped."
+        }
+      ],
+      "starterCode": {
+        "javascript": "function trap(height) {\n  // Your code here\n  if (!height || height.length === 0) return 0;\n  let left = 0, right = height.length - 1;\n  let leftMax = 0, rightMax = 0;\n  let water = 0;\n  \n  while (left < right) {\n    if (height[left] < height[right]) {\n      if (height[left] >= leftMax) leftMax = height[left];\n      else water += leftMax - height[left];\n      left++;\n    } else {\n      if (height[right] >= rightMax) rightMax = height[right];\n      else water += rightMax - height[right];\n      right--;\n    }\n  }\n  return water;\n}",
+        "python": "def trap(height: list[int]) -> int:\n    if not height: return 0\n    left, right = 0, len(height) - 1\n    left_max, right_max = 0, 0\n    water = 0\n    while left < right:\n        if height[left] < height[right]:\n            if height[left] >= left_max: left_max = height[left]\n            else: water += left_max - height[left]\n            left += 1\n        else:\n            if height[right] >= right_max: right_max = height[right]\n            else: water += right_max - height[right]\n            right -= 1\n    return water"
+      },
+      "testCases": [
+        {
+          "input": [
+            [
+              0,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              3,
+              2,
+              1,
+              2,
+              1
+            ]
+          ],
+          "expected": 6,
+          "isHidden": false
+        },
+        {
+          "input": [
+            [
+              4,
+              2,
+              0,
+              3,
+              2,
+              5
+            ]
+          ],
+          "expected": 9,
+          "isHidden": false
+        },
+        {
+          "input": [
+            [
+              3,
+              0,
+              2,
+              0,
+              4
+            ]
+          ],
+          "expected": 7,
+          "isHidden": true
+        }
+      ],
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(1)",
+      "hints": [
+        "For any bar, the water it holds is min(max_left, max_right) - height.",
+        "Can you optimize auxiliary space to O(1) using two pointers moving from ends towards middle?"
+      ]
+    },
+    {
+      "id": "algo-4",
+      "title": "Top K Frequent Elements",
+      "slug": "top-k-frequent",
+      "company": "Barclays",
+      "difficulty": "MEDIUM",
+      "category": "Heap & Bucket Sort",
+      "tags": [
+        "Barclays",
+        "Hash Table",
+        "Bucket Sort",
+        "Heap"
+      ],
+      "description": "Given an integer array `nums` and an integer `k`, return the `k` most frequent elements. You may return the answer in any order.",
+      "examples": [
+        {
+          "input": "nums = [1,1,1,2,2,3], k = 2",
+          "output": "[1,2]",
+          "explanation": "1 occurs 3 times, 2 occurs 2 times."
+        },
+        {
+          "input": "nums = [1], k = 1",
+          "output": "[1]",
+          "explanation": "1 occurs 1 time."
+        }
+      ],
+      "starterCode": {
+        "javascript": "function topKFrequent(nums, k) {\n  // Your code here\n  const count = {};\n  for (const n of nums) count[n] = (count[n] || 0) + 1;\n  \n  const sorted = Object.keys(count).sort((a, b) => count[b] - count[a]);\n  return sorted.slice(0, k).map(Number);\n}",
+        "python": "from collections import Counter\ndef top_k_frequent(nums: list[int], k: int) -> list[int]:\n    count = Counter(nums)\n    return [item for item, _ in count.most_common(k)]"
+      },
+      "testCases": [
+        {
+          "input": [
+            [
+              1,
+              1,
+              1,
+              2,
+              2,
+              3
+            ],
+            2
+          ],
+          "expected": [
+            1,
+            2
+          ],
+          "isHidden": false
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            1
+          ],
+          "expected": [
+            1
+          ],
+          "isHidden": false
+        },
+        {
+          "input": [
+            [
+              4,
+              1,
+              -1,
+              2,
+              -1,
+              2,
+              3
+            ],
+            2
+          ],
+          "expected": [
+            -1,
+            2
+          ],
+          "isHidden": true
+        }
+      ],
+      "timeComplexity": "O(N log K)",
+      "spaceComplexity": "O(N)",
+      "hints": [
+        "Count frequencies with a Hash Map first.",
+        "Use a min-heap of size K or bucket sort to achieve O(N) or O(N log K)."
+      ]
+    },
+    {
+      "id": "algo-5",
+      "title": "Valid Anagram & Subsequence",
+      "slug": "valid-anagram",
+      "company": "TCS Digital",
+      "difficulty": "EASY",
+      "category": "Strings & Sorting",
+      "tags": [
+        "TCS",
+        "Infosys",
+        "String",
+        "Easy"
+      ],
+      "description": "Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.\n\nAn Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.",
+      "examples": [
+        {
+          "input": "s = \"anagram\", t = \"nagaram\"",
+          "output": "true",
+          "explanation": "All characters match frequencies."
+        },
+        {
+          "input": "s = \"rat\", t = \"car\"",
+          "output": "false",
+          "explanation": "Frequencies do not match."
+        }
+      ],
+      "starterCode": {
+        "javascript": "function isAnagram(s, t) {\n  if (s.length !== t.length) return false;\n  const count = {};\n  for (const char of s) count[char] = (count[char] || 0) + 1;\n  for (const char of t) {\n    if (!count[char]) return false;\n    count[char]--;\n  }\n  return true;\n}",
+        "python": "def is_anagram(s: str, t: str) -> bool:\n    if len(s) != len(t): return False\n    return sorted(s) == sorted(t)"
+      },
+      "testCases": [
+        {
+          "input": [
+            "anagram",
+            "nagaram"
+          ],
+          "expected": true,
+          "isHidden": false
+        },
+        {
+          "input": [
+            "rat",
+            "car"
+          ],
+          "expected": false,
+          "isHidden": false
+        },
+        {
+          "input": [
+            "aacc",
+            "ccac"
+          ],
+          "expected": false,
+          "isHidden": true
+        }
+      ],
+      "timeComplexity": "O(N)",
+      "spaceComplexity": "O(1)",
+      "hints": [
+        "What if the strings contain Unicode characters?",
+        "Can you count character occurrences in an array of size 26?"
+      ]
+    }
+  ],
+  "interviewExperiences": [
+    {
+      "id": "exp-1",
+      "studentName": "Aditya S. (Alumni '25)",
+      "department": "CMPN",
+      "company": "Morgan Stanley",
+      "role": "Technology Analyst",
+      "package": "24.5 LPA",
+      "packageTier": "SUPER_DREAM",
+      "verdict": "SELECTED",
+      "difficulty": "HARD",
+      "date": "2025-10-15",
+      "upvotes": 42,
+      "cgpaRequired": "8.0+",
+      "summary": "Morgan Stanley's campus drive had 4 rounds. Heavy focus on DSA (Trees & Dynamic Programming), Operating System concepts, and Low-Level System Design (Design Parking Lot / LRU Cache).",
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "title": "Online Assessment (HackerRank)",
+          "duration": "90 Mins",
+          "details": "3 Coding questions (1 Easy string manipulation, 1 Medium Tree BFS/DFS, 1 Hard DP on Grids) + 10 CS Fundamentals MCQs on OS (Virtual Memory, Semaphores) and DBMS."
+        },
+        {
+          "roundNumber": 2,
+          "title": "Technical Round 1 (DSA & Core CS)",
+          "duration": "60 Mins",
+          "details": "Live coding on CoderPad: Trapping Rain Water problem, followed by detailed explanation of time & space complexity. Deep-dive into multithreading, race conditions, and mutexes in Java/C++."
+        },
+        {
+          "roundNumber": 3,
+          "title": "Technical Round 2 (System Design & Projects)",
+          "duration": "45 Mins",
+          "details": "Walkthrough of my final year project architecture. Asked to design a scalable real-time notification service with Redis and Kafka. Questions on database indexing and B+ trees."
+        },
+        {
+          "roundNumber": 4,
+          "title": "HR / Senior Director Round",
+          "duration": "30 Mins",
+          "details": "Behavioral questions using STAR technique: 'Tell me about a conflict in a team project', 'Why Morgan Stanley over tech product firms?', 'Where do you see yourself in 3 years?'."
+        }
+      ],
+      "tips": [
+        "Master LeetCode Medium/Hard for Trees, Graphs, and DP.",
+        "Prepare OS concepts (Paging, Deadlocks, Context Switching) thoroughly.",
+        "Be ready to justify every technology choice in your resume projects."
+      ]
+    },
+    {
+      "id": "exp-2",
+      "studentName": "Neha P. (Alumni '25)",
+      "department": "IT",
+      "company": "Barclays",
+      "role": "Graduate Technology Developer",
+      "package": "14.2 LPA",
+      "packageTier": "DREAM",
+      "verdict": "SELECTED",
+      "difficulty": "MEDIUM",
+      "date": "2025-09-28",
+      "upvotes": 38,
+      "cgpaRequired": "7.5+",
+      "summary": "Barclays evaluates both strong coding foundation and alignment with Barclays RISES core values. Clean code and communication during the interview was the key differentiator.",
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "title": "Online Coding & Value Assessment",
+          "duration": "75 Mins",
+          "details": "2 Coding Questions (Arrays & String hashing) + Barclays Values situational judgment questions."
+        },
+        {
+          "roundNumber": 2,
+          "title": "Technical Interview Round",
+          "duration": "50 Mins",
+          "details": "Questions on SQL joins, grouping, and subqueries. Asked to write Top K Frequent Elements and reverse a linked list in groups of K. Discussion on REST API best practices."
+        },
+        {
+          "roundNumber": 3,
+          "title": "Values & Leadership Round",
+          "duration": "40 Mins",
+          "details": "Discussed real-life leadership scenarios, handling tight project deadlines, and ethical considerations in fintech software."
+        }
+      ],
+      "tips": [
+        "Understand Barclays RISES values (Respect, Integrity, Service, Excellence, Stewardship).",
+        "Practice SQL medium queries (Window functions, dense_rank).",
+        "Speak your thought process out loud when solving coding problems."
+      ]
+    },
+    {
+      "id": "exp-3",
+      "studentName": "Rohan V. (Alumni '25)",
+      "department": "CMPN",
+      "company": "Stripe",
+      "role": "Software Development Engineer",
+      "package": "36.0 LPA",
+      "packageTier": "SUPER_DREAM",
+      "verdict": "SELECTED",
+      "difficulty": "HARD",
+      "date": "2025-11-04",
+      "upvotes": 56,
+      "cgpaRequired": "8.5+",
+      "summary": "World-class engineering bar. Focus on practical software development, writing clean maintainable code with unit tests, and production debugging.",
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "title": "Practical Take-Home Coding Challenge",
+          "duration": "120 Mins",
+          "details": "Building a rate-limiter and idempotency key validator in TypeScript / Node.js with automated test suites."
+        },
+        {
+          "roundNumber": 2,
+          "title": "Pair Programming & Refactoring",
+          "duration": "60 Mins",
+          "details": "Refactored an existing microservice module with the interviewer, adding edge case error handling, logging, and concurrency control."
+        },
+        {
+          "roundNumber": 3,
+          "title": "System Architecture & API Design",
+          "duration": "60 Mins",
+          "details": "Designed a multi-currency webhook payment notification distributor with retry queues and DLQ (Dead Letter Queue)."
+        }
+      ],
+      "tips": [
+        "Focus on code readability, modularity, and clean error handling.",
+        "Familiarize yourself with distributed systems fundamentals (Idempotency, Eventual Consistency).",
+        "Don't rush to code—clarify requirements and edge cases first."
+      ]
+    },
+    {
+      "id": "exp-4",
+      "studentName": "Pooja M. (Alumni '25)",
+      "department": "EXTC",
+      "company": "TCS Digital",
+      "role": "System Engineer - Digital",
+      "package": "7.5 LPA",
+      "packageTier": "REGULAR",
+      "verdict": "SELECTED",
+      "difficulty": "MEDIUM",
+      "date": "2025-08-20",
+      "upvotes": 29,
+      "cgpaRequired": "7.0+",
+      "summary": "TCS NQT Advanced section has high cutoff. Focus on Speed in Aptitude & Logical reasoning, followed by 2 standard coding questions.",
+      "rounds": [
+        {
+          "roundNumber": 1,
+          "title": "TCS National Qualifier Test (NQT)",
+          "duration": "110 Mins",
+          "details": "Quantitative Aptitude, Reasoning, Verbal, and Advanced Coding (Matrix rotation & Dynamic Programming basics)."
+        },
+        {
+          "roundNumber": 2,
+          "title": "Technical + Managerial + HR Combined Panel",
+          "duration": "45 Mins",
+          "details": "OOPs concepts (Polymorphism, Inheritance), Python list comprehensions vs generators, and final year project demo."
+        }
+      ],
+      "tips": [
+        "Practice timed aptitude tests on IndiaBIX or PrepInsta.",
+        "Solidify OOPs concepts in Java or Python.",
+        "Be confident in explaining your project's practical utility."
+      ]
+    }
+  ],
+  "codeSubmissions": [
+    {
+      "id": "sub-1791613856240",
+      "createdAt": "2026-10-10T06:30:56.240Z",
+      "studentId": "student-1788620582804",
+      "challengeId": "algo-1",
+      "challengeTitle": "Two Sum Target Indices",
+      "company": "Google",
+      "difficulty": "EASY",
+      "code": "def two_sum(nums, target):\n    # Your code here\n    seen = {}\n    for i, num in enumerate(nums):\n        diff = target - num\n        if diff in seen:\n            return [seen[diff], i]\n        seen[num] = i\n    return []",
+      "language": "python",
+      "status": "ACCEPTED",
+      "runtimeMs": 48.2,
+      "passedTests": 4,
+      "totalTests": 4
+    },
+    {
+      "id": "sub-1791613835994",
+      "createdAt": "2026-10-10T06:30:35.994Z",
+      "studentId": "student-1788620582804",
+      "challengeId": "algo-1",
+      "challengeTitle": "Two Sum Target Indices",
+      "company": "Google",
+      "difficulty": "EASY",
+      "code": "function twoSum(nums, target) {\n  // Your code here\n  const map = new Map();\n  for (let i = 0; i < nums.length; i++) {\n    const complement = target - nums[i];\n    if (map.has(complement)) {\n      return [map.get(complement), i];\n    }\n    map.set(nums[i], i);\n  }\n  return [];\n}",
+      "language": "javascript",
+      "status": "WRONG_ANSWER",
+      "runtimeMs": 0.04,
+      "passedTests": 3,
+      "totalTests": 4
+    },
+    {
+      "id": "sub-1791613810537",
+      "createdAt": "2026-10-10T06:30:10.537Z",
+      "studentId": "student-1788620582804",
+      "challengeId": "algo-1",
+      "challengeTitle": "Two Sum Target Indices",
+      "company": "Google",
+      "difficulty": "EASY",
+      "code": "function twoSum(nums, target) {\n  // Your code here\n  const map = new Map();\n  for (let i = 0; i < nums.length; i++) {\n    const complement = target - nums[i];\n    if (map.has(complement)) {\n      return [map.get(complement), i];\n    }\n    map.set(nums[i], i);\n  }\n  return [];\n}",
+      "language": "javascript",
+      "status": "WRONG_ANSWER",
+      "runtimeMs": 0.11,
+      "passedTests": 3,
+      "totalTests": 4
+    }
+  ],
+  "experienceUpvotes": [],
+  "offerComparisons": [],
+  "competitions": [
+    {
+      "id": "comp-tata-2026",
+      "title": "Tata Imagination Challenge 2026",
+      "slug": "tata-imagination-challenge-2026",
+      "organizer": "Tata Sons",
+      "organizerLogo": "🏢",
+      "category": "CASE_STUDY",
+      "badge": "FEATURED",
+      "bannerGradient": "from-blue-900 via-indigo-900 to-slate-900",
+      "prizePool": "₹5,00,000 + Tata Leader Mentorship + Fast-Track PPIs",
+      "prizeAmountNumeric": 500000,
+      "impressions": "85.4K",
+      "registeredCount": 14820,
+      "daysLeft": 6,
+      "deadline": "2026-10-25",
+      "startDate": "2026-10-10",
+      "endDate": "2026-11-15",
+      "teamSize": "1 - 3 Members",
+      "eligibility": "All Undergrads & Postgrads",
+      "mode": "Online",
+      "fee": "Free",
+      "location": "Virtual & Mumbai Final",
+      "description": "The Tata Imagination Challenge is one of India's largest leadership & case competition platforms. Solve strategic real-world problems facing India across Sustainability, Digital Inclusion, Green Energy, and Next-Gen Mobility. Top winners present directly to Tata Group Executive Directors with direct entry to Tata Administrative Services (TAS) PPIs.",
+      "tracks": [
+        {
+          "name": "Green Energy & Circular Economy",
+          "desc": "Scaling carbon-neutral manufacturing and EV charging infrastructure across tier-2/3 cities."
+        },
+        {
+          "name": "Digital Inclusion & FinTech",
+          "desc": "Empowering 100M rural micro-merchants with voice-first payments and credit scoring."
+        },
+        {
+          "name": "Next-Gen AI Mobility",
+          "desc": "Smart fleet telemetry and real-time safety automation for connected electric vehicles."
+        }
+      ],
+      "stages": [
+        {
+          "roundNumber": 1,
+          "title": "Tata Brand & Critical Aptitude Assessment",
+          "type": "ONLINE_QUIZ",
+          "duration": "30 Mins",
+          "deadline": "Oct 25, 2026",
+          "details": "Online timed assessment covering logical reasoning, business comprehension, and Tata case vignettes."
+        },
+        {
+          "roundNumber": 2,
+          "title": "Executive Case Solution Deck Submission",
+          "type": "DECK_SUBMISSION",
+          "duration": "10-Slide Deck",
+          "deadline": "Nov 05, 2026",
+          "details": "Shortlisted teams submit structured PPT proposal with financial feasibility, TAM analysis, and execution roadmap."
+        },
+        {
+          "roundNumber": 3,
+          "title": "Grand National Finale & Jury Pitch",
+          "type": "LIVE_PITCH",
+          "duration": "15 Mins Pitch + Q&A",
+          "deadline": "Nov 15, 2026",
+          "details": "Top 10 National Finalists present live before Tata Sons Managing Directors at Bombay House."
+        }
+      ],
+      "prizes": [
+        {
+          "rank": "1st Place (National Winner)",
+          "prize": "₹2,50,000 Cash",
+          "perks": "TAS Pre-Placement Interview + 1-Year Executive Mentorship + Gold Trophy"
+        },
+        {
+          "rank": "2nd Place (1st Runner Up)",
+          "prize": "₹1,50,000 Cash",
+          "perks": "Tata Group PPIs + Trophy + Merit Certificate"
+        },
+        {
+          "rank": "3rd Place (2nd Runner Up)",
+          "prize": "₹1,00,000 Cash",
+          "perks": "Tata Group PPIs + Trophy + Merit Certificate"
+        },
+        {
+          "rank": "All Round 2 Qualifiers",
+          "prize": "Tata Swag Kit",
+          "perks": "Certificate of Appreciation + Exclusive Masterclasses"
+        }
+      ],
+      "rules": [
+        "Cross-college and cross-department teams are strictly permitted.",
+        "Plagiarism or AI-generated unvetted reports will lead to immediate disqualification.",
+        "All team members must be registered before the deadline."
+      ]
+    },
+    {
+      "id": "comp-flipkart-grid-7",
+      "title": "Flipkart GRiD 7.0 - Robotics & Software Hackathon",
+      "slug": "flipkart-grid-7",
+      "organizer": "Flipkart",
+      "organizerLogo": "🛍️",
+      "category": "HACKATHON",
+      "badge": "MEGA HIRING",
+      "bannerGradient": "from-blue-800 via-sky-900 to-indigo-950",
+      "prizePool": "₹3,50,000 + SDE-1 Job Offers (32 LPA CTC)",
+      "prizeAmountNumeric": 350000,
+      "impressions": "92.1K",
+      "registeredCount": 18450,
+      "daysLeft": 4,
+      "deadline": "2026-10-20",
+      "startDate": "2026-10-05",
+      "endDate": "2026-11-20",
+      "teamSize": "2 - 4 Members",
+      "eligibility": "B.Tech/M.Tech (2025, 2026, 2027 Batches)",
+      "mode": "Online / Bangalore HQ Finale",
+      "fee": "Free",
+      "location": "Virtual + Flipkart HQ",
+      "description": "Flipkart GRiD is Flipkart's flagship engineering campus challenge. Now in its 7th edition, GRiD invites top young minds to solve deep-tech algorithmic, distributed systems, and autonomous computer vision challenges powering India's largest e-commerce infrastructure.",
+      "tracks": [
+        {
+          "name": "Autonomous Warehouse Robotics",
+          "desc": "Real-time edge computer vision for automated parcel sorting and barcode defect detection."
+        },
+        {
+          "name": "Smart Delivery Route Optimization",
+          "desc": "Dynamic multi-vehicle routing with live traffic congestion and hyperlocal delivery constraints."
+        },
+        {
+          "name": "GenAI Product Discovery & Voice Search",
+          "desc": "Multilingual Indian voice-assisted search and conversational buying assistants."
+        }
+      ],
+      "stages": [
+        {
+          "roundNumber": 1,
+          "title": "E-Commerce Tech & DSA Screening Quiz",
+          "type": "ONLINE_QUIZ",
+          "duration": "45 Mins",
+          "deadline": "Oct 20, 2026",
+          "details": "Online algorithmic problem solving, distributed computing, and CS fundamentals."
+        },
+        {
+          "roundNumber": 2,
+          "title": "Prototype & Architecture Submission",
+          "type": "CODE_SUBMISSION",
+          "duration": "GitHub + Demo",
+          "deadline": "Nov 08, 2026",
+          "details": "Build and deploy working prototype with complete benchmark metrics, video demo, and architecture doc."
+        },
+        {
+          "roundNumber": 3,
+          "title": "Live Hackathon & Bangalore Demo",
+          "type": "LIVE_HACKATHON",
+          "duration": "24-Hour Prototype Hack",
+          "deadline": "Nov 20, 2026",
+          "details": "Finalist teams flown to Flipkart Bengaluru HQ to present to VP of Engineering."
+        }
+      ],
+      "prizes": [
+        {
+          "rank": "National Champion",
+          "prize": "₹2,00,000 Cash",
+          "perks": "Full-Time SDE-1 Offers (32.0 LPA) + Fast-Track PPIs for all team members"
+        },
+        {
+          "rank": "1st Runner Up",
+          "prize": "₹1,00,000 Cash",
+          "perks": "SDE-1 Offers (32.0 LPA) + Flipkart Vouchers"
+        },
+        {
+          "rank": "2nd Runner Up",
+          "prize": "₹50,000 Cash",
+          "perks": "SDE Internship Offers + Flipkart Vouchers"
+        },
+        {
+          "rank": "Top 50 Semi-Finalists",
+          "prize": "Exclusive Merch",
+          "perks": "Direct Technical Interview Call for SDE Internships"
+        }
+      ],
+      "rules": [
+        "Team members must belong to an accredited engineering institution.",
+        "Submissions must contain working code and reproducible instructions."
+      ]
+    },
+    {
+      "id": "comp-sih-2026",
+      "title": "Smart India Hackathon (SIH) 2026 - Campus Arena",
+      "slug": "smart-india-hackathon-2026",
+      "organizer": "Ministry of Education & AICTE",
+      "organizerLogo": "🇮🇳",
+      "category": "HACKATHON",
+      "badge": "GOVT OF INDIA",
+      "bannerGradient": "from-orange-900 via-amber-950 to-slate-950",
+      "prizePool": "₹1,00,000 per Problem Statement + Incubation Support",
+      "prizeAmountNumeric": 100000,
+      "impressions": "115K",
+      "registeredCount": 22600,
+      "daysLeft": 8,
+      "deadline": "2026-10-30",
+      "startDate": "2026-10-15",
+      "endDate": "2026-12-05",
+      "teamSize": "6 Members (1 Female Mandatory)",
+      "eligibility": "All Recognized College Students",
+      "mode": "Hybrid",
+      "fee": "Free",
+      "location": "Pan-India Nodal Centers",
+      "description": "World's biggest open innovation model providing students a platform to solve pressing problems of ministries, government departments, and premier industries. Build scalable digital & hardware solutions for clean water, smart agriculture, disaster response, and cyber security.",
+      "tracks": [
+        {
+          "name": "Smart Agriculture & Crop Disease Detection",
+          "desc": "Drone imagery and spectral analysis for early pest warning and soil nutrient telemetry."
+        },
+        {
+          "name": "Disaster Management & Emergency SOS Mesh",
+          "desc": "Decentralized offline mesh communication for flood and earthquake rescue squads."
+        },
+        {
+          "name": "Cyber Crime & Deepfake Audio Defender",
+          "desc": "Real-time biometric voice authentication against synthetic voice cloning frauds."
+        }
+      ],
+      "stages": [
+        {
+          "roundNumber": 1,
+          "title": "Internal College Screening & SPOC Nomination",
+          "type": "INTERNAL_REVIEW",
+          "duration": "PPT Review",
+          "deadline": "Oct 30, 2026",
+          "details": "Top teams shortlisted by College Single Point of Contact (SPOC) for national portal."
+        },
+        {
+          "roundNumber": 2,
+          "title": "National Jury Idea Evaluation",
+          "type": "NATIONAL_EVALUATION",
+          "duration": "Concept Assessment",
+          "deadline": "Nov 15, 2026",
+          "details": "Ministry experts evaluate submissions for technical novelty, feasibility, and impact."
+        },
+        {
+          "roundNumber": 3,
+          "title": "36-Hour Grand Finale Non-Stop Hackathon",
+          "type": "36_HOUR_HACK",
+          "duration": "36 Hours",
+          "deadline": "Dec 05, 2026",
+          "details": "Continuous coding hackathon at assigned national nodal center with live mentor evaluations."
+        }
+      ],
+      "prizes": [
+        {
+          "rank": "Winner (per Problem Statement)",
+          "prize": "₹1,00,000 Cash",
+          "perks": "National Trophy + MHRD Certificate + Gov Grant Incubation up to ₹10 Lakhs"
+        },
+        {
+          "rank": "All Finalists",
+          "prize": "AICTE Certificate",
+          "perks": "Free Cloud Credits ($5,000) + National Hackathon Medal"
+        }
+      ],
+      "rules": [
+        "Each team must comprise exactly 6 members with at least 1 female member.",
+        "College SPOC authorization required."
+      ]
+    },
+    {
+      "id": "comp-barclays-2026",
+      "title": "Barclays FinTech Tech-a-Thon 2026",
+      "slug": "barclays-fintech-techathon-2026",
+      "organizer": "Barclays",
+      "organizerLogo": "🦅",
+      "category": "HIRING_CHALLENGE",
+      "badge": "JOB DRIVE",
+      "bannerGradient": "from-cyan-950 via-slate-900 to-sky-950",
+      "prizePool": "₹2,00,000 + Graduate Analyst Offers (15.5 LPA)",
+      "prizeAmountNumeric": 200000,
+      "impressions": "48.2K",
+      "registeredCount": 6890,
+      "daysLeft": 3,
+      "deadline": "2026-10-18",
+      "startDate": "2026-10-01",
+      "endDate": "2026-11-10",
+      "teamSize": "1 - 2 Members",
+      "eligibility": "Final & Pre-Final Year (CMPN / IT / EXTC)",
+      "mode": "Online",
+      "fee": "Free",
+      "location": "Virtual",
+      "description": "Barclays invites tech enthusiasts to build hyper-secure, resilient banking infrastructure. Tackle high-throughput transaction processing, AI fraud prevention, and real-time ledger settlement.",
+      "tracks": [
+        {
+          "name": "Real-Time AI Fraud Prevention Engine",
+          "desc": "Sub-50ms transaction risk evaluation using streaming graph neural networks."
+        },
+        {
+          "name": "High-Frequency Payments Ledger",
+          "desc": "Idempotent, zero-downtime distributed ledger handling 50,000 transactions/sec."
+        }
+      ],
+      "stages": [
+        {
+          "roundNumber": 1,
+          "title": "Barclays Algorithmic Coding Challenge",
+          "type": "ONLINE_CODE",
+          "duration": "90 Mins",
+          "deadline": "Oct 18, 2026",
+          "details": "Data structures, multi-threading, concurrency, and SQL optimization."
+        },
+        {
+          "roundNumber": 2,
+          "title": "FinTech Prototype Build & Video Walkthrough",
+          "type": "PROTOTYPE",
+          "duration": "GitHub + Demo",
+          "deadline": "Oct 30, 2026",
+          "details": "Implement core financial ledger microservice with unit tests and benchmark report."
+        },
+        {
+          "roundNumber": 3,
+          "title": "Barclays Leadership Interview Loop",
+          "type": "INTERVIEW",
+          "duration": "Technical + Values",
+          "deadline": "Nov 10, 2026",
+          "details": "Virtual interview panel with Barclays Senior Directors for Graduate Analyst hires."
+        }
+      ],
+      "prizes": [
+        {
+          "rank": "Grand Champion",
+          "prize": "₹1,25,000 Cash",
+          "perks": "Full-Time Graduate Analyst Offers (15.5 LPA) + Direct Placement"
+        },
+        {
+          "rank": "Runner Up",
+          "prize": "₹75,000 Cash",
+          "perks": "Summer Analyst Internship Offers + Barclays Swag Box"
+        },
+        {
+          "rank": "Top 25 Scorers",
+          "prize": "PPI Call",
+          "perks": "Fast-track Technical Interview Voucher"
+        }
+      ],
+      "rules": [
+        "Minimum 7.0 CGPA required for full-time offer conversion.",
+        "Original code submissions with MIT or Apache license."
+      ]
+    },
+    {
+      "id": "comp-google-girl-2026",
+      "title": "Google Girl Hackathon 2026",
+      "slug": "google-girl-hackathon-2026",
+      "organizer": "Google",
+      "organizerLogo": "🌈",
+      "category": "HACKATHON",
+      "badge": "FAANG DIVERSITY",
+      "bannerGradient": "from-purple-950 via-indigo-950 to-slate-900",
+      "prizePool": "₹1,50,000 + Google SWE Internships & Goodies",
+      "prizeAmountNumeric": 150000,
+      "impressions": "65.3K",
+      "registeredCount": 8900,
+      "daysLeft": 10,
+      "deadline": "2026-11-05",
+      "startDate": "2026-10-20",
+      "endDate": "2026-12-01",
+      "teamSize": "1 - 2 Members",
+      "eligibility": "Women in Engineering (All Years)",
+      "mode": "Online",
+      "fee": "Free",
+      "location": "Virtual",
+      "description": "Google Girl Hackathon is designed to provide women students across India an engaging platform to showcase technical competence, learn from Google mentors, and fast-track into Google Software Engineering roles.",
+      "tracks": [
+        {
+          "name": "Accessible Computing for All",
+          "desc": "Assistive AI tools for visually impaired and neurodiverse learners."
+        },
+        {
+          "name": "Urban Climate Intelligence",
+          "desc": "Satellite data mapping and heat island mitigation analytics."
+        }
+      ],
+      "stages": [
+        {
+          "roundNumber": 1,
+          "title": "Google Online Challenge (GOC)",
+          "type": "CODING_ROUND",
+          "duration": "60 Mins",
+          "deadline": "Nov 05, 2026",
+          "details": "Two algorithmic questions focused on graphs and dynamic programming."
+        },
+        {
+          "roundNumber": 2,
+          "title": "Design Document & Technical Architecture",
+          "type": "DESIGN_DOC",
+          "duration": "Doc Submission",
+          "deadline": "Nov 18, 2026",
+          "details": "Structured architectural RFC outlining scalability, latency, and database schemas."
+        },
+        {
+          "roundNumber": 3,
+          "title": "Virtual Hackathon & Google Mentorship",
+          "type": "VIRTUAL_HACK",
+          "duration": "3 Days",
+          "deadline": "Dec 01, 2026",
+          "details": "Direct 1-on-1 coaching by Google SWE engineers and final prototype demo."
+        }
+      ],
+      "prizes": [
+        {
+          "rank": "Winner Team",
+          "prize": "₹1,00,000 Cash",
+          "perks": "Google SWE Summer Internship Interview + Google Pixel Devices"
+        },
+        {
+          "rank": "Runner Up",
+          "prize": "₹50,000 Cash",
+          "perks": "Google Mentorship Program + Google Swag Bag"
+        },
+        {
+          "rank": "All Finalists",
+          "prize": "Certificate of Merit",
+          "perks": "Exclusive Google Tech Workshop Access"
+        }
+      ],
+      "rules": [
+        "Open to all women engineering students in India.",
+        "Solo participation or duo teams permitted."
+      ]
+    },
+    {
+      "id": "comp-tcs-quiz-2026",
+      "title": "TCS Tech Bytes & Aptitude Speed Quiz 2026",
+      "slug": "tcs-tech-bytes-speed-quiz-2026",
+      "organizer": "Tata Consultancy Services",
+      "organizerLogo": "⚡",
+      "category": "QUIZ",
+      "badge": "SPEED SPRINT",
+      "bannerGradient": "from-rose-950 via-slate-900 to-red-950",
+      "prizePool": "₹75,000 Cash + TCS Digital Direct Interviews",
+      "prizeAmountNumeric": 75000,
+      "impressions": "42.1K",
+      "registeredCount": 11400,
+      "daysLeft": 2,
+      "deadline": "2026-10-15",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-16",
+      "teamSize": "Individual",
+      "eligibility": "Open to All College Students",
+      "mode": "Online",
+      "fee": "Free",
+      "location": "Virtual",
+      "description": "India's premier IT quiz championship designed to test student agility, general tech awareness, emerging software trends, and logical puzzle speed.",
+      "tracks": [
+        {
+          "name": "Emerging Tech & Generative AI",
+          "desc": "LLMs, quantum computing, cloud architecture, and cybersecurity breakthroughs."
+        },
+        {
+          "name": "Logic & Data Interpretation",
+          "desc": "Rapid speed math, pattern recognition, and algorithm complexity trivia."
+        }
+      ],
+      "stages": [
+        {
+          "roundNumber": 1,
+          "title": "Online Preliminary Speed Quiz",
+          "type": "ONLINE_QUIZ",
+          "duration": "20 Mins (30 Questions)",
+          "deadline": "Oct 15, 2026",
+          "details": "Speed-scoring MCQ test with negative marking for wrong answers."
+        },
+        {
+          "roundNumber": 2,
+          "title": "Live Grand Finale Buzzer Round",
+          "type": "LIVE_BUZZER",
+          "duration": "45 Mins",
+          "deadline": "Oct 16, 2026",
+          "details": "Top 20 scorers enter live interactive broadcast hosted by TCS Quizmasters."
+        }
+      ],
+      "prizes": [
+        {
+          "rank": "1st Place (National Champion)",
+          "prize": "₹40,000 Cash",
+          "perks": "TCS Digital Direct Job Interview + Champion Trophy"
+        },
+        {
+          "rank": "2nd Place",
+          "prize": "₹25,000 Cash",
+          "perks": "TCS Digital Direct Job Interview + Trophy"
+        },
+        {
+          "rank": "3rd Place",
+          "prize": "₹10,000 Cash",
+          "perks": "TCS Merit Certificate + Tech Goodies"
+        }
+      ],
+      "rules": [
+        "Individual participation only.",
+        "Strict anti-cheating browser tab switch monitoring."
+      ]
+    }
+  ],
+  "competitionRegistrations": [
+    {
+      "id": "reg-1",
+      "competitionId": "comp-flipkart-grid-7",
+      "studentId": "student-1788620582804",
+      "teamName": "Algorithmic Titans",
+      "teamCode": "GRID-TITANS-99",
+      "role": "TEAM_LEAD",
+      "members": [
+        {
+          "name": "Yashraj Kharat",
+          "email": "yashraj200@gmail.com",
+          "role": "Team Leader (Frontend & ML)"
+        },
+        {
+          "name": "Aditya Sawant",
+          "email": "aditya@college.edu",
+          "role": "Backend Developer"
+        },
+        {
+          "name": "Sneha Patil",
+          "email": "sneha@college.edu",
+          "role": "UI/UX & PPT"
+        }
+      ],
+      "registeredAt": "2026-10-06T00:00:00.000Z",
+      "status": "CONFIRMED",
+      "submission": {
+        "projectTitle": "Autonomous Edge Sort: Sub-10ms Parcel Sorting with YOLOv9 & WASM",
+        "repoUrl": "https://github.com/yashraj/flipkart-grid-edge-sort",
+        "demoUrl": "https://edge-sort-demo.vercel.app",
+        "deckUrl": "https://drive.google.com/sample-deck.pdf",
+        "submittedAt": "2026-10-08T00:00:00.000Z"
+      }
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "quiz-tcs-nqt",
+      "title": "TCS NQT Advanced Technical Sprint",
+      "slug": "tcs-nqt-technical-sprint",
+      "category": "Placement Technical",
+      "difficulty": "MEDIUM",
+      "durationMinutes": 10,
+      "totalQuestions": 5,
+      "points": 250,
+      "unstopCoinsReward": 50,
+      "description": "Test your core computer science fundamentals, DSA time complexity, memory management, and SQL query prediction based on actual TCS Digital NQT papers.",
+      "badge": "TCS Certified",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What is the worst-case time complexity of searching an element in a Balanced Binary Search Tree (AVL / Red-Black Tree) containing N nodes?",
+          "options": [
+            "O(1)",
+            "O(log N)",
+            "O(N)",
+            "O(N log N)"
+          ],
+          "correctAnswer": 1,
+          "explanation": "In a balanced BST, tree height is strictly bounded by O(log N). Hence lookup, insertion, and deletion all run in O(log N) worst-case time."
+        },
+        {
+          "id": "q2",
+          "question": "In Python, what is the output of: `print(type(lambda x: x + 1))`?",
+          "options": [
+            "<class 'lambda'>",
+            "<class 'function'>",
+            "<class 'expression'>",
+            "<class 'builtin_function'>"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Lambda expressions in Python construct instances of the standard `<class 'function'>` type."
+        },
+        {
+          "id": "q3",
+          "question": "Which database isolation level prevents 'Dirty Reads', 'Non-Repeatable Reads', and 'Phantom Reads' simultaneously?",
+          "options": [
+            "Read Committed",
+            "Read Uncommitted",
+            "Repeatable Read",
+            "Serializable"
+          ],
+          "correctAnswer": 3,
+          "explanation": "SERIALIZABLE is the highest ANSI SQL isolation level. It guarantees completely serializable execution, eliminating phantom reads, dirty reads, and non-repeatable reads."
+        },
+        {
+          "id": "q4",
+          "question": "What will `[1, 2, 3] + [4, 5]` produce in JavaScript?",
+          "options": [
+            "[1, 2, 3, 4, 5]",
+            "'1,2,34,5'",
+            "NaN",
+            "TypeError"
+          ],
+          "correctAnswer": 1,
+          "explanation": "In JavaScript, the `+` operator coerces both arrays to strings ('1,2,3' and '4,5') and concatenates them to produce the string '1,2,34,5'."
+        },
+        {
+          "id": "q5",
+          "question": "Which data structure is primarily used to implement Breadth-First Search (BFS) graph traversal?",
+          "options": [
+            "Stack",
+            "Queue (FIFO)",
+            "Priority Queue",
+            "Disjoint Set"
+          ],
+          "correctAnswer": 1,
+          "explanation": "BFS explores vertices layer by layer in First-In-First-Out order using a standard FIFO Queue."
+        }
+      ]
+    },
+    {
+      "id": "quiz-google-dsa",
+      "title": "Google DSA & Algorithmic Speed Sprint",
+      "slug": "google-dsa-speed-sprint",
+      "category": "DSA & Problem Solving",
+      "difficulty": "HARD",
+      "durationMinutes": 10,
+      "totalQuestions": 5,
+      "points": 300,
+      "unstopCoinsReward": 75,
+      "description": "Solve high-yield algorithmic trivia, recursion stack bounds, bitwise manipulation tricks, and amortized complexity benchmarks.",
+      "badge": "Google Elite",
+      "questions": [
+        {
+          "id": "gq1",
+          "question": "What is the result of evaluating `(n & (n - 1)) == 0` for any positive integer `n > 0`?",
+          "options": [
+            "Checks if n is odd",
+            "Checks if n is a power of 2",
+            "Checks if n is prime",
+            "Checks if n is divisible by 4"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Subtracting 1 flips all bits after the lowest set bit. Bitwise ANDing `n & (n - 1)` clears the lowest set bit. If the result is 0, exactly one bit was set, meaning `n` is a power of 2."
+        },
+        {
+          "id": "gq2",
+          "question": "What is the amortized time complexity of inserting N elements into a dynamic array (like C++ `std::vector` or Java `ArrayList`) that doubles capacity upon filling?",
+          "options": [
+            "O(N^2)",
+            "O(N log N)",
+            "O(1) amortized per insert, O(N) total",
+            "O(N) per insert"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Although resizing takes O(K) when triggered, geometric doubling distributes the copy cost across past insertions, resulting in O(1) amortized time per insertion."
+        },
+        {
+          "id": "gq3",
+          "question": "In Dijkstra's Shortest Path Algorithm with a Min-Heap (Binary Heap), what is the overall time complexity for a graph with V vertices and E edges?",
+          "options": [
+            "O(V + E)",
+            "O((V + E) log V)",
+            "O(V^2)",
+            "O(V * E)"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Using a binary min-heap, extracting min takes O(V log V) and decreasing keys / pushing edges takes O(E log V), yielding O((V + E) log V)."
+        },
+        {
+          "id": "gq4",
+          "question": "Which algorithmic paradigm does the '0/1 Knapsack' problem solve using?",
+          "options": [
+            "Greedy Algorithm",
+            "Dynamic Programming",
+            "Divide & Conquer",
+            "Randomized Sampling"
+          ],
+          "correctAnswer": 1,
+          "explanation": "0/1 Knapsack exhibits overlapping subproblems and optimal substructure where items cannot be broken, requiring 2D/1D Dynamic Programming."
+        },
+        {
+          "id": "gq5",
+          "question": "What is the space complexity of a recursive Inorder traversal on a skewed binary tree with N nodes?",
+          "options": [
+            "O(1)",
+            "O(log N)",
+            "O(N)",
+            "O(N^2)"
+          ],
+          "correctAnswer": 2,
+          "explanation": "On a degenerated (skewed) tree, recursion depth reaches N, consuming O(N) call-stack memory."
+        }
+      ]
+    },
+    {
+      "id": "quiz-quant-aptitude",
+      "title": "Quantitative Aptitude & Speed Math Master",
+      "slug": "quant-aptitude-speed-math",
+      "category": "Aptitude & Reasoning",
+      "difficulty": "EASY",
+      "durationMinutes": 8,
+      "totalQuestions": 5,
+      "points": 200,
+      "unstopCoinsReward": 40,
+      "description": "Ace speed math, time & work, probability, percentages, and ratios required in campus placement preliminary screening rounds.",
+      "badge": "Aptitude Pro",
+      "questions": [
+        {
+          "id": "aq1",
+          "question": "A can complete a project in 12 days and B can complete it in 24 days. Working together, how many days will they take to complete the project?",
+          "options": [
+            "6 days",
+            "8 days",
+            "10 days",
+            "16 days"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Combined 1-day work = 1/12 + 1/24 = (2 + 1)/24 = 3/24 = 1/8. Hence, together they take 8 days."
+        },
+        {
+          "id": "aq2",
+          "question": "A train 180 meters long is traveling at 72 km/h. How long will it take to cross an electric pole?",
+          "options": [
+            "7 seconds",
+            "9 seconds",
+            "12 seconds",
+            "15 seconds"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Speed in m/s = 72 * (5/18) = 20 m/s. Time = Distance / Speed = 180 / 20 = 9 seconds."
+        },
+        {
+          "id": "aq3",
+          "question": "What is the probability of rolling a sum of 7 when two fair 6-sided dice are thrown simultaneously?",
+          "options": [
+            "1/6",
+            "1/12",
+            "5/36",
+            "7/36"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Pairs yielding 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 outcomes out of 36 total. Probability = 6/36 = 1/6."
+        },
+        {
+          "id": "aq4",
+          "question": "If a product is sold at ₹960 with a 20% profit, what was its original cost price (CP)?",
+          "options": [
+            "₹768",
+            "₹800",
+            "₹820",
+            "₹840"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Selling Price = CP * 1.20 => 960 = CP * 1.20 => CP = 960 / 1.20 = ₹800."
+        },
+        {
+          "id": "aq5",
+          "question": "Find the missing number in the sequence: 2, 6, 12, 20, 30, ?",
+          "options": [
+            "40",
+            "42",
+            "44",
+            "48"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Differences are +4, +6, +8, +10. Next difference is +12 => 30 + 12 = 42 (or n^2 + n formula: 1*2, 2*3, 3*4, 4*5, 5*6, 6*7 = 42)."
+        }
+      ]
+    }
+  ],
+  "quizAttempts": [
+    {
+      "id": "att-1791655090130",
+      "certificateId": "VIT-CERT-299026",
+      "completedAt": "2026-10-10T17:58:10.130Z",
+      "quizId": "quiz-tcs-nqt",
+      "quizTitle": "TCS NQT Advanced Technical Sprint",
+      "category": "Placement Technical",
+      "studentId": "student-1788620582804",
+      "studentName": "Student Candidate",
+      "correctCount": 1,
+      "totalQuestions": 5,
+      "accuracyPercent": 20,
+      "earnedPoints": 50,
+      "unstopCoinsEarned": 10,
+      "timeSpentSeconds": 11,
+      "questionReview": [
+        {
+          "questionId": "q1",
+          "question": "What is the worst-case time complexity of searching an element in a Balanced Binary Search Tree (AVL / Red-Black Tree) containing N nodes?",
+          "options": [
+            "O(1)",
+            "O(log N)",
+            "O(N)",
+            "O(N log N)"
+          ],
+          "selected": 1,
+          "correctAnswer": 1,
+          "isCorrect": true,
+          "explanation": "In a balanced BST, tree height is strictly bounded by O(log N). Hence lookup, insertion, and deletion all run in O(log N) worst-case time."
+        },
+        {
+          "questionId": "q2",
+          "question": "In Python, what is the output of: `print(type(lambda x: x + 1))`?",
+          "options": [
+            "<class 'lambda'>",
+            "<class 'function'>",
+            "<class 'expression'>",
+            "<class 'builtin_function'>"
+          ],
+          "selected": 2,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "Lambda expressions in Python construct instances of the standard `<class 'function'>` type."
+        },
+        {
+          "questionId": "q3",
+          "question": "Which database isolation level prevents 'Dirty Reads', 'Non-Repeatable Reads', and 'Phantom Reads' simultaneously?",
+          "options": [
+            "Read Committed",
+            "Read Uncommitted",
+            "Repeatable Read",
+            "Serializable"
+          ],
+          "selected": 0,
+          "correctAnswer": 3,
+          "isCorrect": false,
+          "explanation": "SERIALIZABLE is the highest ANSI SQL isolation level. It guarantees completely serializable execution, eliminating phantom reads, dirty reads, and non-repeatable reads."
+        },
+        {
+          "questionId": "q4",
+          "question": "What will `[1, 2, 3] + [4, 5]` produce in JavaScript?",
+          "options": [
+            "[1, 2, 3, 4, 5]",
+            "'1,2,34,5'",
+            "NaN",
+            "TypeError"
+          ],
+          "selected": 3,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "In JavaScript, the `+` operator coerces both arrays to strings ('1,2,3' and '4,5') and concatenates them to produce the string '1,2,34,5'."
+        },
+        {
+          "questionId": "q5",
+          "question": "Which data structure is primarily used to implement Breadth-First Search (BFS) graph traversal?",
+          "options": [
+            "Stack",
+            "Queue (FIFO)",
+            "Priority Queue",
+            "Disjoint Set"
+          ],
+          "selected": 2,
+          "correctAnswer": 1,
+          "isCorrect": false,
+          "explanation": "BFS explores vertices layer by layer in First-In-First-Out order using a standard FIFO Queue."
+        }
+      ]
+    }
+  ],
+  "mentors": [
+    {
+      "id": "mentor-aarav",
+      "name": "Aarav Mehta",
+      "title": "Senior Software Engineer",
+      "company": "Google",
+      "companyLogo": "🟢",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces",
+      "rating": 4.95,
+      "reviewsCount": 148,
+      "totalSessions": 320,
+      "experienceYears": 6,
+      "alumniStatus": "Alumni '20",
+      "badge": "Top 1% Mentor",
+      "bio": "Senior SWE at Google Core Infrastructure (ex-Microsoft). Mentored 300+ students with 85% placement rate at FAANG/Tier-1 product firms.",
+      "services": [
+        {
+          "id": "s1",
+          "name": "1:1 FAANG Mock Coding Interview",
+          "duration": "45 Mins",
+          "price": "Free for VIT",
+          "desc": "Live coding on Google Meet with real Google interview rubric and immediate scoring feedback."
+        },
+        {
+          "id": "s2",
+          "name": "Resume Roast & ATS Optimization",
+          "duration": "30 Mins",
+          "price": "Free for VIT",
+          "desc": "Line-by-line audit of your projects, metrics, impact bullets, and ATS parser readiness."
+        },
+        {
+          "id": "s3",
+          "name": "FAANG Career Transition Roadmap",
+          "duration": "30 Mins",
+          "price": "Free for VIT",
+          "desc": "Custom 90-day roadmap covering DSA patterns, system design, and recruiter outreach."
+        }
+      ],
+      "skills": [
+        "DSA",
+        "Distributed Systems",
+        "Google Interview Prep",
+        "Go",
+        "C++",
+        "System Architecture"
+      ],
+      "availableSlots": [
+        {
+          "id": "slot-1",
+          "date": "Today",
+          "time": "05:00 PM - 05:45 PM"
+        },
+        {
+          "id": "slot-2",
+          "date": "Today",
+          "time": "07:00 PM - 07:45 PM"
+        },
+        {
+          "id": "slot-3",
+          "date": "Tomorrow",
+          "time": "04:30 PM - 05:15 PM"
+        },
+        {
+          "id": "slot-4",
+          "date": "Tomorrow",
+          "time": "06:30 PM - 07:15 PM"
+        }
+      ]
+    },
+    {
+      "id": "mentor-sneha",
+      "name": "Sneha Iyer",
+      "title": "Senior Product Manager",
+      "company": "Microsoft",
+      "companyLogo": "🔷",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=faces",
+      "rating": 4.92,
+      "reviewsCount": 94,
+      "totalSessions": 180,
+      "experienceYears": 5,
+      "alumniStatus": "Alumni '21",
+      "badge": "PM Leader",
+      "bio": "Product Lead at Microsoft Teams. Ex-Flipkart APM. Expert in Product Sense, Case Studies, GTM strategy, and transitioning from engineering to product roles.",
+      "services": [
+        {
+          "id": "pm1",
+          "name": "Product Sense & GTM Mock Interview",
+          "duration": "45 Mins",
+          "price": "Free for VIT",
+          "desc": "Cracking root cause analysis, product teardowns, and user journey optimization."
+        },
+        {
+          "id": "pm2",
+          "name": "Case Study & Deck Review",
+          "duration": "30 Mins",
+          "price": "Free for VIT",
+          "desc": "Reviewing competition submissions for Tata Imagination Challenge, Flipkart GRiD, and HUL LIME."
+        }
+      ],
+      "skills": [
+        "Product Management",
+        "Case Interviews",
+        "GTM Strategy",
+        "Figma",
+        "User Analytics",
+        "A/B Testing"
+      ],
+      "availableSlots": [
+        {
+          "id": "slot-5",
+          "date": "Tomorrow",
+          "time": "05:30 PM - 06:15 PM"
+        },
+        {
+          "id": "slot-6",
+          "date": "Friday",
+          "time": "06:00 PM - 06:45 PM"
+        }
+      ]
+    },
+    {
+      "id": "mentor-vikram",
+      "name": "Vikramaditya Rao",
+      "title": "Staff SDE & Tech Lead",
+      "company": "Amazon AWS",
+      "companyLogo": "📦",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
+      "rating": 4.88,
+      "reviewsCount": 162,
+      "totalSessions": 290,
+      "experienceYears": 8,
+      "alumniStatus": "Alumni '18",
+      "badge": "Cloud Architect",
+      "bio": "Staff Engineer at Amazon Cloud Infrastructure. Specializes in High-Scale Backend Systems, Kubernetes, Kafka, and Salary Negotiation for Senior/Junior engineers.",
+      "services": [
+        {
+          "id": "aws1",
+          "name": "High-Scale System Design Interview",
+          "duration": "50 Mins",
+          "price": "Free for VIT",
+          "desc": "Designing URL shorteners, Uber ride matching, and Netflix video streaming architectures."
+        },
+        {
+          "id": "aws2",
+          "name": "Multiple Offer Negotiation Coaching",
+          "duration": "30 Mins",
+          "price": "Free for VIT",
+          "desc": "Maximizing base pay, sign-on bonuses, and ESOP vesting schedules across competing offers."
+        }
+      ],
+      "skills": [
+        "System Design",
+        "AWS",
+        "Kafka",
+        "Java",
+        "High Concurrency",
+        "Offer Negotiation"
+      ],
+      "availableSlots": [
+        {
+          "id": "slot-7",
+          "date": "Today",
+          "time": "08:00 PM - 08:45 PM"
+        },
+        {
+          "id": "slot-8",
+          "date": "Saturday",
+          "time": "11:00 AM - 11:45 AM"
+        }
+      ]
+    },
+    {
+      "id": "mentor-rhea",
+      "name": "Rhea Deshmukh",
+      "title": "Management Consultant",
+      "company": "McKinsey & Company",
+      "companyLogo": "📈",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=faces",
+      "rating": 5,
+      "reviewsCount": 78,
+      "totalSessions": 135,
+      "experienceYears": 4,
+      "alumniStatus": "Alumni '22",
+      "badge": "Top Consultant",
+      "bio": "Consultant at McKinsey Mumbai Office. Specializes in Guesstimates, Profitability & Market Entry frameworks, and Corporate Presentation Mastery.",
+      "services": [
+        {
+          "id": "mck1",
+          "name": "Management Consulting Case Prep",
+          "duration": "45 Mins",
+          "price": "Free for VIT",
+          "desc": "Live case interview with profitability tree, market sizing, and structured hypothesis testing."
+        },
+        {
+          "id": "mck2",
+          "name": "Executive Presence & HR Interview Mastery",
+          "duration": "30 Mins",
+          "price": "Free for VIT",
+          "desc": "Storytelling with the STAR framework, leadership principles, and behavioral mastery."
+        }
+      ],
+      "skills": [
+        "Management Consulting",
+        "Guesstimates",
+        "Market Entry",
+        "Executive Presence",
+        "Case Frameworks"
+      ],
+      "availableSlots": [
+        {
+          "id": "slot-9",
+          "date": "Tomorrow",
+          "time": "07:30 PM - 08:15 PM"
+        },
+        {
+          "id": "slot-10",
+          "date": "Sunday",
+          "time": "04:00 PM - 04:45 PM"
+        }
+      ]
+    }
+  ],
+  "mentorshipBookings": [
+    {
+      "id": "bk-1",
+      "mentorId": "mentor-aarav",
+      "studentId": "student-1788620582804",
+      "studentName": "Yashraj Nana kharat",
+      "studentEmail": "yashraj200@gmail.com",
+      "serviceName": "1:1 FAANG Mock Coding Interview",
+      "date": "2026-10-12",
+      "timeSlot": "05:00 PM - 05:45 PM",
+      "meetLink": "https://meet.google.com/unstop-aarav-vit",
+      "status": "CONFIRMED",
+      "notes": "Targeting Google SDE-1 placement drive. Need evaluation on Graph algorithms and Sliding Window."
+    }
+  ],
+  "teammateRequests": [
+    {
+      "id": "team-req-1",
+      "studentId": "student-1788620582804",
+      "authorName": "Yashraj Kharat",
+      "authorDepartment": "CMPN (Batch '26)",
+      "competitionId": "comp-flipkart-grid-7",
+      "competitionTitle": "Flipkart GRiD 7.0 - Robotics Hackathon",
+      "rolesNeeded": [
+        "Machine Learning / YOLO Specialist",
+        "UI/UX Designer"
+      ],
+      "skillsRequired": [
+        "PyTorch",
+        "Computer Vision",
+        "Figma",
+        "REST APIs"
+      ],
+      "projectIdea": "Building an Autonomous Edge Parcel Sorter that processes conveyor belt video feeds in sub-10ms using edge TensorRT models.",
+      "spotsAvailable": 2,
+      "contactEmail": "yashraj200@gmail.com",
+      "createdAt": "2026-10-08T00:00:00.000Z"
+    },
+    {
+      "id": "team-req-2",
+      "studentId": "std-ananya",
+      "authorName": "Ananya Sharma",
+      "authorDepartment": "IT (Batch '26)",
+      "competitionId": "comp-sih-2026",
+      "competitionTitle": "Smart India Hackathon 2026 (SIH)",
+      "rolesNeeded": [
+        "Hardware / IoT Embedded Engineer",
+        "Full-Stack Dev"
+      ],
+      "skillsRequired": [
+        "ESP32 / Arduino",
+        "MQTT",
+        "React.js",
+        "Node.js"
+      ],
+      "projectIdea": "Smart Crop Disease Telemetry with LoRaWAN wireless sensor mesh for rural agricultural fields without internet coverage.",
+      "spotsAvailable": 3,
+      "contactEmail": "ananya.sharma@college.edu",
+      "createdAt": "2026-10-09T00:00:00.000Z"
+    },
+    {
+      "id": "team-req-3",
+      "studentId": "std-devendra",
+      "authorName": "Devendra Patel",
+      "authorDepartment": "EXTC (Batch '26)",
+      "competitionId": "comp-tata-2026",
+      "competitionTitle": "Tata Imagination Challenge 2026",
+      "rolesNeeded": [
+        "Financial Modeler / Pitch Presenter"
+      ],
+      "skillsRequired": [
+        "Financial TAM Modeling",
+        "PowerPoint Storytelling",
+        "Market Research"
+      ],
+      "projectIdea": "Decarbonizing Indian Tier-2 Trucking via Battery Swapping Franchise Network with 3-year payback financial model.",
+      "spotsAvailable": 1,
+      "contactEmail": "devendra.p@college.edu",
+      "createdAt": "2026-10-10T00:00:00.000Z"
+    }
+  ],
+  "leaderboardUsers": [
+    {
+      "rank": 1,
+      "name": "Aryan Sharma",
+      "department": "CMPN",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop",
+      "points": 4850,
+      "unstopCoins": 1240,
+      "streakDays": 18,
+      "hackathonsWon": 6,
+      "quizzesCompleted": 24,
+      "badges": [
+        "Grandmaster",
+        "SIH Winner",
+        "Top Coder",
+        "Flipkart Finalist"
+      ],
+      "isCurrentUser": false
+    },
+    {
+      "rank": 2,
+      "name": "Pooja Nair",
+      "department": "IT",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+      "points": 4620,
+      "unstopCoins": 1100,
+      "streakDays": 14,
+      "hackathonsWon": 5,
+      "quizzesCompleted": 20,
+      "badges": [
+        "Flipkart GRiD Finalist",
+        "10x Quiz Whiz",
+        "Code Ninja"
+      ],
+      "isCurrentUser": false
+    },
+    {
+      "rank": 3,
+      "name": "Rohan Verma",
+      "department": "CMPN",
+      "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&h=100&fit=crop",
+      "points": 4310,
+      "unstopCoins": 980,
+      "streakDays": 12,
+      "hackathonsWon": 4,
+      "quizzesCompleted": 19,
+      "badges": [
+        "Barclays Finalist",
+        "Aptitude Champion",
+        "Full-Stack Pro"
+      ],
+      "isCurrentUser": false
+    },
+    {
+      "rank": 4,
+      "name": "Yashraj Nana kharat",
+      "department": "CMPN",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop",
+      "points": 3950,
+      "unstopCoins": 850,
+      "streakDays": 8,
+      "hackathonsWon": 3,
+      "quizzesCompleted": 16,
+      "badges": [
+        "Code Arena Master",
+        "AI Voice Pro",
+        "Tata Semifinalist",
+        "Resume Ready"
+      ],
+      "isCurrentUser": true
+    },
+    {
+      "rank": 5,
+      "name": "Kavita Patil",
+      "department": "EXTC",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop",
+      "points": 3720,
+      "unstopCoins": 720,
+      "streakDays": 9,
+      "hackathonsWon": 3,
+      "quizzesCompleted": 14,
+      "badges": [
+        "Google Diversity Star",
+        "Quiz Whiz"
+      ],
+      "isCurrentUser": false
+    }
+  ],
+  "rewardsStore": [
+    {
+      "id": "rew-1",
+      "title": "1:1 FAANG Mock Interview with Google SDE",
+      "category": "Mentorship",
+      "coinsCost": 500,
+      "icon": "🎯",
+      "description": "Redeem 500 Unstop Coins for a complimentary 45-minute live technical interview with a verified Google SWE.",
+      "tag": "MOST POPULAR"
+    },
+    {
+      "id": "rew-2",
+      "title": "Unstop PRO Gold Badge & Placement Priority",
+      "category": "Profile Boost",
+      "coinsCost": 350,
+      "icon": "👑",
+      "description": "Stand out to top recruiters with the Unstop Verified Gold badge displayed on all job & drive applications.",
+      "tag": "TOP RATED"
+    },
+    {
+      "id": "rew-3",
+      "title": "AI ATS Resume Deep Audit & Roast",
+      "category": "Career Prep",
+      "coinsCost": 250,
+      "icon": "📄",
+      "description": "Comprehensive 12-page PDF audit report with line-by-line keyword and formatting suggestions.",
+      "tag": "INSTANT"
+    },
+    {
+      "id": "rew-4",
+      "title": "Official Unstop Swag Pack (Hoodie + Mug + Stickers)",
+      "category": "Merchandise",
+      "coinsCost": 1000,
+      "icon": "🎁",
+      "description": "Official branded merchandise kit delivered directly to your doorstep or college department.",
+      "tag": "LIMITED EDITION"
+    }
+  ],
+  "gdRooms": [
+    {
+      "id": "gd-room-1791616004140",
+      "code": "VIT-GD-5130",
+      "topicTitle": "Generative AI vs Software Engineering: Will AI Replace Entry-Level Developers by 2028?",
+      "category": "Technology & Placement",
+      "durationMinutes": 10,
+      "mode": "HYBRID",
+      "hostId": "student-1788620582804",
+      "hostName": "Student Candidate",
+      "status": "ACTIVE",
+      "participants": [
+        {
+          "id": "student-1788620582804",
+          "name": "Student Candidate",
+          "role": "HOST",
+          "avatar": "🎓",
+          "isAi": false,
+          "joinedAt": "12:36 PM"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "System",
+          "speakerId": "SYSTEM",
+          "text": "GD Room created by Student Candidate. Share Code VIT-GD-5130 with friends to join the roundtable!",
+          "time": "12:36 PM"
+        },
+        {
+          "speaker": "Moderator",
+          "speakerId": "SYSTEM",
+          "text": "The discussion floor is officially open! Good luck candidates.",
+          "time": "12:36 PM"
+        },
+        {
+          "speaker": "Arjun Verma",
+          "speakerId": "arjun",
+          "text": "Good morning everyone. To kick off our discussion on \"Generative AI vs Software Engineering: Will AI Replace Entry-Level Developers by 2028?\", I'd like to propose that we first define the core challenges before examining the business and technical implications.",
+          "time": "12:36 PM"
+        }
+      ],
+      "createdAt": "2026-10-10T07:06:44.182Z"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <rect width="1800" height="1200" fill="#f8fafc"/>
+  <text x="900" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#0f172a">Placement Management System - Use Case Diagram</text>
+
+  <rect x="80" y="120" width="260" height="900" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="210" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1e293b">Actors</text>
+
+  <rect x="120" y="200" width="180" height="60" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <circle cx="160" cy="230" r="14" fill="#0f172a"/>
+  <circle cx="160" cy="230" r="7" fill="#ffffff"/>
+  <line x1="160" y1="244" x2="160" y2="280" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="250" x2="135" y2="278" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="250" x2="185" y2="278" stroke="#0f172a" stroke-width="2"/>
+  <text x="210" y="235" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Guest</text>
+
+  <rect x="120" y="300" width="180" height="60" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="160" cy="330" r="14" fill="#0f172a"/>
+  <circle cx="160" cy="330" r="7" fill="#ffffff"/>
+  <line x1="160" y1="344" x2="160" y2="380" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="350" x2="135" y2="378" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="350" x2="185" y2="378" stroke="#0f172a" stroke-width="2"/>
+  <text x="210" y="335" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Student</text>
+
+  <rect x="120" y="400" width="180" height="60" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <circle cx="160" cy="430" r="14" fill="#0f172a"/>
+  <circle cx="160" cy="430" r="7" fill="#ffffff"/>
+  <line x1="160" y1="444" x2="160" y2="480" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="450" x2="135" y2="478" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="450" x2="185" y2="478" stroke="#0f172a" stroke-width="2"/>
+  <text x="210" y="435" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Recruiter</text>
+
+  <rect x="120" y="500" width="180" height="60" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="160" cy="530" r="14" fill="#0f172a"/>
+  <circle cx="160" cy="530" r="7" fill="#ffffff"/>
+  <line x1="160" y1="544" x2="160" y2="580" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="550" x2="135" y2="578" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="550" x2="185" y2="578" stroke="#0f172a" stroke-width="2"/>
+  <text x="210" y="535" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">TPO</text>
+
+  <rect x="120" y="600" width="180" height="60" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="160" cy="630" r="14" fill="#0f172a"/>
+  <circle cx="160" cy="630" r="7" fill="#ffffff"/>
+  <line x1="160" y1="644" x2="160" y2="680" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="650" x2="135" y2="678" stroke="#0f172a" stroke-width="2"/>
+  <line x1="160" y1="650" x2="185" y2="678" stroke="#0f172a" stroke-width="2"/>
+  <text x="210" y="635" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Admin</text>
+
+  <rect x="420" y="120" width="1260" height="930" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="1050" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1e293b">System Use Cases</text>
+
+  <g>
+    <ellipse cx="560" cy="240" rx="120" ry="42" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="560" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Register Account</text>
+    <text x="560" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Guest</text>
+  </g>
+
+  <g>
+    <ellipse cx="820" cy="240" rx="95" ry="38" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="820" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Login</text>
+    <text x="820" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">All actors</text>
+  </g>
+
+  <g>
+    <ellipse cx="1040" cy="240" rx="120" ry="42" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="1040" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Reset Password</text>
+    <text x="1040" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Guest</text>
+  </g>
+
+  <g>
+    <ellipse cx="1260" cy="240" rx="120" ry="42" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="1260" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Verify Email</text>
+    <text x="1260" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Included</text>
+  </g>
+
+  <g>
+    <ellipse cx="600" cy="380" rx="120" ry="42" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="600" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Manage Profile</text>
+    <text x="600" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Student</text>
+  </g>
+
+  <g>
+    <ellipse cx="840" cy="380" rx="120" ry="42" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="840" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Browse Jobs</text>
+    <text x="840" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Student</text>
+  </g>
+
+  <g>
+    <ellipse cx="1080" cy="380" rx="120" ry="42" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="1080" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Apply for Job</text>
+    <text x="1080" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Student</text>
+  </g>
+
+  <g>
+    <ellipse cx="1320" cy="380" rx="120" ry="42" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="1320" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Upload Resume</text>
+    <text x="1320" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Included</text>
+  </g>
+
+  <g>
+    <ellipse cx="640" cy="520" rx="125" ry="42" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="640" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Post Job</text>
+    <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Recruiter</text>
+  </g>
+
+  <g>
+    <ellipse cx="900" cy="520" rx="125" ry="42" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="900" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Review Applications</text>
+    <text x="900" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Recruiter</text>
+  </g>
+
+  <g>
+    <ellipse cx="1160" cy="520" rx="125" ry="42" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="1160" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Schedule Interview</text>
+    <text x="1160" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Recruiter</text>
+  </g>
+
+  <g>
+    <ellipse cx="700" cy="660" rx="130" ry="42" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="700" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Manage Placement Drives</text>
+    <text x="700" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">TPO</text>
+  </g>
+
+  <g>
+    <ellipse cx="980" cy="660" rx="125" ry="42" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="980" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Manage Student Records</text>
+    <text x="980" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">TPO</text>
+  </g>
+
+  <g>
+    <ellipse cx="1240" cy="660" rx="125" ry="42" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="1240" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Manage Recruiters</text>
+    <text x="1240" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">TPO</text>
+  </g>
+
+  <g>
+    <ellipse cx="760" cy="800" rx="125" ry="42" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="760" y="795" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Manage Users</text>
+    <text x="760" y="820" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Admin</text>
+  </g>
+
+  <g>
+    <ellipse cx="1040" cy="800" rx="125" ry="42" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="1040" y="795" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">View Audit Logs</text>
+    <text x="1040" y="820" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Admin</text>
+  </g>
+
+  <g>
+    <ellipse cx="1320" cy="800" rx="125" ry="42" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="1320" y="795" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">View AI Logs</text>
+    <text x="1320" y="820" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Admin</text>
+  </g>
+
+  <line x1="300" y1="230" x2="440" y2="240" stroke="#64748b" stroke-width="2"/>
+  <line x1="300" y1="330" x2="520" y2="380" stroke="#64748b" stroke-width="2"/>
+  <line x1="300" y1="430" x2="515" y2="520" stroke="#64748b" stroke-width="2"/>
+  <line x1="300" y1="530" x2="570" y2="660" stroke="#64748b" stroke-width="2"/>
+  <line x1="300" y1="630" x2="635" y2="800" stroke="#64748b" stroke-width="2"/>
+
+  <line x1="680" y1="240" x2="700" y2="240" stroke="#64748b" stroke-width="2"/>
+  <line x1="915" y1="240" x2="940" y2="240" stroke="#64748b" stroke-width="2"/>
+  <line x1="1160" y1="240" x2="1140" y2="240" stroke="#64748b" stroke-width="2"/>
+
+  <line x1="1080" y1="338" x2="1320" y2="338" stroke="#64748b" stroke-width="2"/>
+  <line x1="960" y1="380" x2="960" y2="380" stroke="#64748b" stroke-width="2"/>
+
+  <path d="M 1080 422 L 1080 470" stroke="#64748b" stroke-width="2" fill="none"/>
+  <path d="M 1320 338 L 1320 338" stroke="#64748b" stroke-width="2" fill="none"/>
+
+  <line x1="640" y1="562" x2="640" y2="618" stroke="#64748b" stroke-width="2"/>
+  <line x1="900" y1="562" x2="900" y2="478" stroke="#64748b" stroke-width="2"/>
+  <line x1="1160" y1="562" x2="1160" y2="478" stroke="#64748b" stroke-width="2"/>
+
+  <line x1="560" y1="282" x2="560" y2="198" stroke="#64748b" stroke-width="2"/>
+  <line x1="560" y1="198" x2="1260" y2="198" stroke="#64748b" stroke-width="2"/>
+  <text x="910" y="188" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Include</text>
+
+  <line x1="1080" y1="422" x2="1080" y2="470" stroke="#64748b" stroke-width="2"/>
+  <line x1="1080" y1="470" x2="1320" y2="470" stroke="#64748b" stroke-width="2"/>
+  <text x="1170" y="462" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Include</text>
+
+  <ellipse cx="1340" cy="470" rx="8" ry="8" fill="#0f172a"/>
+  <ellipse cx="1080" cy="470" rx="8" ry="8" fill="#0f172a"/>
+  <ellipse cx="1320" cy="338" rx="8" ry="8" fill="#0f172a"/>
+
+  <line x1="900" y1="478" x2="900" y2="478" stroke="#64748b" stroke-width="2"/>
+  <line x1="1160" y1="478" x2="1160" y2="478" stroke="#64748b" stroke-width="2"/>
+
+  <text x="900" y="980" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Legend</text>
+  <text x="900" y="1010" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Dashed arrow = Include relationship</text>
+  <text x="900" y="1038" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Optional extension = Extend relationship</text>
+</svg>

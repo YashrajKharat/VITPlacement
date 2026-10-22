@@ -1,0 +1,500 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  STUDENT
+  FACULTY_MENTOR
+  INTERNSHIP_COORDINATOR
+  RECRUITER
+  TPO
+  ADMIN
+}
+
+enum JobType {
+  FULL_TIME
+  INTERNSHIP
+  PART_TIME
+  CONTRACT
+}
+
+enum ApplicationStatus {
+  APPLIED
+  SHORTLISTED
+  REJECTED
+  OFFERED
+}
+
+enum InterviewStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+}
+
+enum OfferStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+}
+
+model User {
+  id           String        @id @default(uuid())
+  email        String        @unique
+  passwordHash String
+  role         Role
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  
+  // Relations
+  student      Student?
+  recruiter    Recruiter?
+  tpo          Tpo?
+  admin        Admin?
+  notifications Notification[]
+  activityLogs ActivityLog[]
+}
+
+model Student {
+  id                     String        @id @default(uuid())
+  userId                 String        @unique
+  user                   User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  name                   String
+  phone                  String?
+  avatar                 String?
+  bio                    String?       @db.Text
+  cgpa                   Float?
+  department             String?
+  batch                  String?       // e.g. 2026
+  
+  // Professional Profiles
+  github                 String?
+  linkedin               String?
+  portfolio              String?
+  resumeUrl              String?
+  resumeText             String?       @db.Text
+  
+  // JSON formats for education, work experience, projects, achievements, certificates
+  education              Json?         // e.g. [{ school, degree, startYear, endYear }]
+  experience             Json?         // e.g. [{ company, role, duration, description }]
+  projects               Json?         // e.g. [{ title, description, repoLink, liveLink }]
+  skills                 Json?         // e.g. ["JavaScript", "React", "Node.js"]
+  achievements           Json?         // e.g. ["Won 1st place in Hackathon"]
+  certificates           Json?         // e.g. ["AWS Certified Developer"]
+  languages              Json?         // e.g. ["English", "Hindi"]
+  
+  // AI Placement Profiles
+  placementReadinessScore Int?         @default(0)
+  atsScore               Int?          @default(0)
+  skillGapScore          Int?          @default(0)
+  
+  createdAt              DateTime      @default(now())
+  updatedAt              DateTime      @updatedAt
+
+  // Relations
+  applications           Application[]
+  bookmarks              Bookmark[]
+  interviews             Interview[]
+  offerLetters           OfferLetter[]
+  internshipSubmissions  InternshipSubmission[]
+}
+
+model Recruiter {
+  id          String      @id @default(uuid())
+  userId      String      @unique
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  name        String
+  designation String?
+  isVerified  Boolean     @default(false)
+  
+  companyId   String
+  company     Company     @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  // Relations
+  interviews  Interview[]
+}
+
+model Tpo {
+  id         String   @id @default(uuid())
+  userId     String   @unique
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  name       String
+  department String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Company {
+  id          String      @id @default(uuid())
+  name        String      @unique
+  logo        String?
+  website     String?
+  description String?     @db.Text
+  industry    String?
+  location    String?
+  isVerified  Boolean     @default(false)
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  // Relations
+  recruiters  Recruiter[]
+  jobs        Job[]
+}
+
+model Job {
+  id           String      @id @default(uuid())
+  title        String
+  description  String      @db.Text
+  companyId    String
+  company      Company     @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  
+  salaryRange  String?     // e.g. "$100,000 - $120,000" or "12 - 18 LPA"
+  location     String
+  type         JobType     @default(FULL_TIME)
+  requirements Json?       // Array of strings: ["React expert", "3+ years experience"]
+  status       String      @default("OPEN") // OPEN, CLOSED
+  
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  // Relations
+  applications Application[]
+  bookmarks    Bookmark[]
+}
+
+model Application {
+  id          String            @id @default(uuid())
+  jobId       String
+  job         Job               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  studentId   String
+  student     Student           @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  
+  resumeUrl   String?
+  status      ApplicationStatus @default(APPLIED)
+  appliedAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  // Relations
+  interviews  Interview[]
+  offerLetter OfferLetter?
+}
+
+model Interview {
+  id            String          @id @default(uuid())
+  applicationId String
+  application   Application     @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  studentId     String
+  student       Student         @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  recruiterId   String
+  recruiter     Recruiter       @relation(fields: [recruiterId], references: [id], onDelete: Cascade)
+  
+  dateTime      DateTime
+  duration      Int             @default(45) // duration in minutes
+  format        String          @default("ONLINE") // ONLINE, IN_PERSON
+  link          String?         // Meeting link
+  status        InterviewStatus @default(SCHEDULED)
+  feedback      String?         @db.Text
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+}
+
+model OfferLetter {
+  id            String      @id @default(uuid())
+  applicationId String      @unique
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  studentId     String
+  student       Student     @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  
+  offerLetterUrl String
+  package       String      // e.g. "15 LPA" or "$110,000"
+  status        OfferStatus @default(PENDING)
+  
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  title     String
+  message   String   @db.Text
+  read      Boolean  @default(false)
+  type      String   @default("INFO") // INFO, SUCCESS, WARNING, DANGER
+  
+  createdAt DateTime @default(now())
+}
+
+model ActivityLog {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  action    String
+  details   String?  @db.Text
+  
+  createdAt DateTime @default(now())
+}
+
+model Bookmark {
+  id        String   @id @default(uuid())
+  studentId String
+  student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  jobId     String
+  job       Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  
+  createdAt DateTime @default(now())
+
+  @@unique([studentId, jobId])
+}
+
+// ----------------------------------------------------
+// Internship Verification & Performance Evaluation Module
+// ----------------------------------------------------
+
+enum InternshipStatus {
+  DRAFT
+  SUBMITTED
+  DOCUMENT_ANALYSIS
+  UNDER_REVIEW
+  CORRECTION_REQUIRED
+  RESUBMITTED
+  APPROVED
+  REJECTED
+}
+
+enum VerificationStatus {
+  VERIFIED
+  NEEDS_REVIEW
+  CORRECTION_REQUIRED
+  REJECTED
+}
+
+model InternshipRequirement {
+  id                String                 @id @default(uuid())
+  academicYear      String                 // e.g. "2025-2026"
+  semester          String                 // e.g. "SEM_6", "SEM_8"
+  department        String                 // CMPN, IT, EXCS, EXTC, BME, ALL
+  year              String                 // e.g. "Third Year", "Fourth Year"
+  divisions         Json?                  // ["A", "B", "C", "D"]
+  internshipType    String                 @default("Industry Internship")
+  startDate         DateTime
+  endDate           DateTime
+  minDurationWeeks  Int                    @default(4)
+  maxDurationWeeks  Int                    @default(8)
+  requiredCredits   Int                    @default(4)
+  requiredDocuments Json?                  // ["CERTIFICATE", "REPORT"]
+  marksConfig       Json?                  // { certificate: 20, company: 30, report: 20, technical: 15, viva: 10, attendance: 5, total: 100 }
+  gradeBoundaries   Json?                  // { "A+": [90, 100], "A": [80, 89], "B": [70, 79], "C": [60, 69], "D": [50, 59], "F": [0, 49] }
+  status            String                 @default("OPEN") // OPEN, CLOSED, DRAFT
+  
+  createdAt         DateTime               @default(now())
+  updatedAt         DateTime               @updatedAt
+
+  submissions       InternshipSubmission[]
+}
+
+model InternshipSubmission {
+  id                 String                    @id @default(uuid())
+  studentId          String
+  student            Student                   @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  requirementId      String
+  requirement        InternshipRequirement     @relation(fields: [requirementId], references: [id], onDelete: Cascade)
+  
+  // Student Submission Fields
+  companyName        String
+  internshipRole     String
+  internshipType     String                    @default("Industry Internship")
+  startDate          DateTime
+  endDate            DateTime
+  durationWeeks      Int                       @default(8)
+  location           String
+  workMode           String                    @default("HYBRID") // ON_SITE, REMOTE, HYBRID
+  industryMentorName String
+  industryMentorEmail String
+  facultyMentorId    String?
+  facultyMentorName  String?
+  description        String?                   @db.Text
+  skills             Json?                     // ["React", "Node.js", "Python"]
+  projectTitle       String?
+  projectDescription String?                   @db.Text
+  
+  // Workflow Status
+  status             InternshipStatus          @default(SUBMITTED)
+  correctionReason   String?                   @db.Text
+  submittedAt        DateTime                  @default(now())
+  resubmittedAt      DateTime?
+  
+  // Final Scores & Grade
+  finalScore         Float?                    @default(0)
+  finalGrade         String?
+  isLocked           Boolean                   @default(false)
+  
+  createdAt          DateTime                  @default(now())
+  updatedAt          DateTime                  @updatedAt
+
+  // Child Relations
+  documents          InternshipDocument[]
+  certificateVerify  CertificateVerification?
+  reportAnalysis     InternshipReportAnalysis?
+  companyEvaluation  CompanyMentorEvaluation?
+  facultyEvaluation  FacultyEvaluation?
+  auditLogs          InternshipAuditLog[]
+}
+
+model InternshipDocument {
+  id           String               @id @default(uuid())
+  submissionId String
+  submission   InternshipSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  
+  docType      String               // CERTIFICATE, REPORT, OFFER_LETTER, COMPLETION_LETTER, COMPANY_EVALUATION, OTHER
+  fileUrl      String
+  fileName     String
+  fileSize     Int                  @default(0)
+  mimeType     String?
+  
+  uploadedAt   DateTime             @default(now())
+}
+
+model CertificateVerification {
+  id                     String               @id @default(uuid())
+  submissionId           String               @unique
+  submission             InternshipSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  
+  extractedStudentName   String?
+  extractedCompany       String?
+  extractedRole          String?
+  extractedStartDate     String?
+  extractedEndDate       String?
+  extractedDuration      String?
+  extractedIssueDate     String?
+  extractedCertId        String?
+  extractedAuthority     String?
+  
+  nameMatchScore         Float                @default(0)
+  companyMatchScore      Float                @default(0)
+  roleMatchScore         Float                @default(0)
+  dateMatchScore         Float                @default(0)
+  durationMatchScore     Float                @default(0)
+  overallConfidence      Float                @default(0)
+  
+  status                 VerificationStatus   @default(NEEDS_REVIEW)
+  verificationScore      Float                @default(0) // out of 20
+  breakdown              Json?                // { name: 3, company: 3, role: 3, duration: 3, date: 3, quality: 5 }
+  anomalies              Json?                // ["Minor company name abbreviation detected", ...]
+  
+  verifiedAt             DateTime             @default(now())
+}
+
+model InternshipReportAnalysis {
+  id                     String               @id @default(uuid())
+  submissionId           String               @unique
+  submission             InternshipSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  
+  completenessScore      Float                @default(0) // /4
+  technicalDepthScore    Float                @default(0) // /4
+  workDescriptionScore   Float                @default(0) // /4
+  learningOutcomesScore  Float                @default(0) // /4
+  documentationScore     Float                @default(0) // /4
+  
+  aiSuggestedScore       Float                @default(0) // /20
+  facultyFinalScore      Float?               // /20
+  facultyComments        String?              @db.Text
+  
+  sectionsFound          Json?                // ["Abstract", "Introduction", "Objectives", "Work Performed", "Results", "Conclusion"]
+  feedback               String?              @db.Text
+  
+  analyzedAt             DateTime             @default(now())
+}
+
+model CompanyMentorEvaluation {
+  id                  String               @id @default(uuid())
+  submissionId        String               @unique
+  submission          InternshipSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  
+  accessToken         String               @unique // Secure access link for company mentor
+  mentorName          String?
+  mentorEmail         String?
+  
+  technicalKnowledge  Int                  @default(0) // /5
+  qualityOfWork       Int                  @default(0) // /5
+  problemSolving      Int                  @default(0) // /5
+  communication       Int                  @default(0) // /5
+  teamwork            Int                  @default(0) // /5
+  professionalism     Int                  @default(0) // /5
+  totalScore          Float                @default(0) // /30
+  
+  feedback            String?              @db.Text
+  isSubmitted         Boolean              @default(false)
+  submittedAt         DateTime?
+}
+
+model FacultyEvaluation {
+  id                    String               @id @default(uuid())
+  submissionId          String               @unique
+  submission            InternshipSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  
+  facultyId             String?
+  facultyName           String?
+  
+  // Technical Evaluation (/15)
+  technicalImplementation Int                @default(0) // /5
+  problemSolving        Int                  @default(0) // /5
+  qualityOfOutput       Int                  @default(0) // /5
+  technicalScore        Float                @default(0) // /15
+  
+  // Viva & Presentation (/10)
+  vivaUnderstanding     Int                  @default(0) // /3
+  vivaExplanation       Int                  @default(0) // /3
+  vivaCommunication     Int                  @default(0) // /2
+  vivaQuestionHandling  Int                  @default(0) // /2
+  vivaScore             Float                @default(0) // /10
+  
+  // Attendance & Participation (/5)
+  attendanceScore       Float                @default(5) // /5
+  
+  totalFacultyScore     Float                @default(0) // /30 (15+10+5)
+  comments              String?              @db.Text
+  recommendation        String               @default("APPROVE") // APPROVE, CORRECTION_REQUIRED, REJECT
+  
+  evaluatedAt           DateTime             @default(now())
+}
+
+model InternshipAuditLog {
+  id           String                @id @default(uuid())
+  submissionId String
+  submission   InternshipSubmission  @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  
+  userId       String
+  userName     String?
+  role         String
+  action       String
+  oldValue     String?               @db.Text
+  newValue     String?               @db.Text
+  details      String?               @db.Text
+  
+  createdAt    DateTime              @default(now())
+}
+

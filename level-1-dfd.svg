@@ -1,0 +1,305 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1300" viewBox="0 0 1800 1300">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="processGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="entityStudent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="entityRecruiter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="entityTpo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="entityAdmin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    
+    <filter id="shadowL1" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <filter id="procShadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#4338ca" flood-opacity="0.2"/>
+    </filter>
+
+    <marker id="arr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+    </marker>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1800" height="1300" fill="url(#bgGrad1)"/>
+
+  <!-- Page Header -->
+  <rect x="450" y="25" width="900" height="75" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadowL1)"/>
+  <text x="900" y="60" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Placement Management System - Level 1 DFD</text>
+  <text x="900" y="84" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="600" fill="#64748b">Detailed Functional Subsystem Decomposition, Data Stores &amp; Internal Information Flows</text>
+
+  <!-- ==================== EXTERNAL ENTITIES (BOUNDARIES) ==================== -->
+  
+  <!-- Student (Top Left) -->
+  <g filter="url(#shadowL1)">
+    <rect x="50" y="140" width="180" height="100" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="50" y="140" width="180" height="30" rx="12" fill="url(#entityStudent)"/>
+    <text x="140" y="160" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">STUDENT</text>
+    <text x="140" y="195" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#334155">Uploads Resume, Applies,</text>
+    <text x="140" y="215" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#334155">Attends Interviews</text>
+  </g>
+
+  <!-- Recruiter (Top Right) -->
+  <g filter="url(#shadowL1)">
+    <rect x="1570" y="140" width="180" height="100" rx="12" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect x="1570" y="140" width="180" height="30" rx="12" fill="url(#entityRecruiter)"/>
+    <text x="1660" y="160" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">RECRUITER</text>
+    <text x="1660" y="195" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#334155">Posts Drives, Screens,</text>
+    <text x="1660" y="215" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#334155">Releases Job Offers</text>
+  </g>
+
+  <!-- TPO Officer (Bottom Left) -->
+  <g filter="url(#shadowL1)">
+    <rect x="50" y="1050" width="180" height="100" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <rect x="50" y="1050" width="180" height="30" rx="12" fill="url(#entityTpo)"/>
+    <text x="140" y="1070" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">TPO CELL</text>
+    <text x="140" y="1105" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#334155">Verifies Companies,</text>
+    <text x="140" y="1125" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#334155">Monitors Analytics</text>
+  </g>
+
+  <!-- System Admin (Bottom Right) -->
+  <g filter="url(#shadowL1)">
+    <rect x="1570" y="1050" width="180" height="100" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <rect x="1570" y="1050" width="180" height="30" rx="12" fill="url(#entityAdmin)"/>
+    <text x="1660" y="1070" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">ADMIN</text>
+    <text x="1660" y="1105" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#334155">Role Authorization,</text>
+    <text x="1660" y="1125" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#334155">Audit Logs &amp; Security</text>
+  </g>
+
+
+  <!-- ==================== PROCESS BUBBLES (1.0 to 7.0) ==================== -->
+
+  <!-- Process 1.0: Auth & Access Control -->
+  <g filter="url(#procShadow)">
+    <circle cx="900" cy="180" r="75" fill="url(#processGrad)" stroke="#ffffff" stroke-width="3"/>
+    <text x="900" y="160" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="800" fill="#c7d2fe">1.0</text>
+    <text x="900" y="180" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Authentication &amp;</text>
+    <text x="900" y="200" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="600" fill="#e0e7ff">RBAC Control</text>
+  </g>
+
+  <!-- Process 2.0: Profile & AI Resume Parser -->
+  <g filter="url(#procShadow)">
+    <circle cx="450" cy="380" r="85" fill="url(#processGrad)" stroke="#ffffff" stroke-width="3"/>
+    <text x="450" y="355" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="800" fill="#c7d2fe">2.0</text>
+    <text x="450" y="375" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Profile Management</text>
+    <text x="450" y="395" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">&amp; Resume Parser</text>
+    <text x="450" y="415" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="500" fill="#c7d2fe">(PDF/DOCX Extractor)</text>
+  </g>
+
+  <!-- Process 3.0: Company & Job Drive Management -->
+  <g filter="url(#procShadow)">
+    <circle cx="1350" cy="380" r="85" fill="url(#processGrad)" stroke="#ffffff" stroke-width="3"/>
+    <text x="1350" y="355" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="800" fill="#c7d2fe">3.0</text>
+    <text x="1350" y="375" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Company Drives &amp;</text>
+    <text x="1350" y="395" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Job Postings</text>
+    <text x="1350" y="415" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="500" fill="#c7d2fe">(Eligibility Filter)</text>
+  </g>
+
+  <!-- Process 4.0: Application Tracking & Shortlisting -->
+  <g filter="url(#procShadow)">
+    <circle cx="900" cy="550" r="85" fill="url(#processGrad)" stroke="#ffffff" stroke-width="3"/>
+    <text x="900" y="525" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="800" fill="#c7d2fe">4.0</text>
+    <text x="900" y="545" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Application Tracking</text>
+    <text x="900" y="565" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">&amp; Shortlisting Engine</text>
+    <text x="900" y="585" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="500" fill="#c7d2fe">(ATS Score Alignment)</text>
+  </g>
+
+  <!-- Process 5.0: Interview Scheduling & Video Meetings -->
+  <g filter="url(#procShadow)">
+    <circle cx="450" cy="780" r="80" fill="url(#processGrad)" stroke="#ffffff" stroke-width="3"/>
+    <text x="450" y="755" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="800" fill="#c7d2fe">5.0</text>
+    <text x="450" y="775" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Interview Scheduling</text>
+    <text x="450" y="795" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="600" fill="#e0e7ff">&amp; Video Rounds</text>
+  </g>
+
+  <!-- Process 6.0: Offer Letter & Package Verification -->
+  <g filter="url(#procShadow)">
+    <circle cx="1350" cy="780" r="80" fill="url(#processGrad)" stroke="#ffffff" stroke-width="3"/>
+    <text x="1350" y="755" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="800" fill="#c7d2fe">6.0</text>
+    <text x="1350" y="775" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Offer Letter Delivery</text>
+    <text x="1350" y="795" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="600" fill="#e0e7ff">&amp; Acceptance</text>
+  </g>
+
+  <!-- Process 7.0: TPO Analytics, Readiness & Reports -->
+  <g filter="url(#procShadow)">
+    <circle cx="900" cy="1000" r="80" fill="url(#processGrad)" stroke="#ffffff" stroke-width="3"/>
+    <text x="900" y="975" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="800" fill="#c7d2fe">7.0</text>
+    <text x="900" y="995" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Placement Analytics,</text>
+    <text x="900" y="1015" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="600" fill="#e0e7ff">Readiness &amp; Reports</text>
+  </g>
+
+
+  <!-- ==================== DATA STORES (D1 to D7) ==================== -->
+  
+  <!-- D1: Users & RBAC Store (Top Center-ish) -->
+  <g filter="url(#shadowL1)">
+    <rect x="790" y="300" width="220" height="42" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <line x1="840" y1="300" x2="840" y2="342" stroke="#475569" stroke-width="1.5"/>
+    <text x="815" y="326" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" fill="#4338ca">D1</text>
+    <text x="925" y="326" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600" fill="#1e293b">User &amp; Auth Store</text>
+  </g>
+
+  <!-- D2: Student Profile & Resume Store (Left) -->
+  <g filter="url(#shadowL1)">
+    <rect x="340" y="550" width="220" height="42" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <line x1="390" y1="550" x2="390" y2="592" stroke="#475569" stroke-width="1.5"/>
+    <text x="365" y="576" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" fill="#4338ca">D2</text>
+    <text x="475" y="576" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Student Profiles &amp; Resumes</text>
+  </g>
+
+  <!-- D3: Companies & Job Postings Store (Right) -->
+  <g filter="url(#shadowL1)">
+    <rect x="1240" y="550" width="220" height="42" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <line x1="1290" y1="550" x2="1290" y2="592" stroke="#475569" stroke-width="1.5"/>
+    <text x="1265" y="576" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" fill="#4338ca">D3</text>
+    <text x="1375" y="576" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Companies &amp; Jobs Store</text>
+  </g>
+
+  <!-- D4: Applications Store (Center) -->
+  <g filter="url(#shadowL1)">
+    <rect x="790" y="700" width="220" height="42" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <line x1="840" y1="700" x2="840" y2="742" stroke="#475569" stroke-width="1.5"/>
+    <text x="815" y="726" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" fill="#4338ca">D4</text>
+    <text x="925" y="726" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Job Applications Store</text>
+  </g>
+
+  <!-- D5: Interviews Store (Bottom Left-Center) -->
+  <g filter="url(#shadowL1)">
+    <rect x="470" y="930" width="210" height="42" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <line x1="520" y1="930" x2="520" y2="972" stroke="#475569" stroke-width="1.5"/>
+    <text x="495" y="956" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" fill="#4338ca">D5</text>
+    <text x="600" y="956" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Interviews Store</text>
+  </g>
+
+  <!-- D6: Offer Letters Store (Bottom Right-Center) -->
+  <g filter="url(#shadowL1)">
+    <rect x="1120" y="930" width="210" height="42" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <line x1="1170" y1="930" x2="1170" y2="972" stroke="#475569" stroke-width="1.5"/>
+    <text x="1145" y="956" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" fill="#4338ca">D6</text>
+    <text x="1250" y="956" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Offer Letters Store</text>
+  </g>
+
+  <!-- D7: Activity & Notification Store (Bottom Center) -->
+  <g filter="url(#shadowL1)">
+    <rect x="780" y="1150" width="240" height="42" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <line x1="830" y1="1150" x2="830" y2="1192" stroke="#475569" stroke-width="1.5"/>
+    <text x="805" y="1176" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="800" fill="#4338ca">D7</text>
+    <text x="925" y="1176" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Activity Logs &amp; Notifs</text>
+  </g>
+
+
+  <!-- ==================== FLOW CONNECTIONS & LABELS ==================== -->
+
+  <!-- Student -> 1.0 Auth -->
+  <path d="M 230 180 L 825 180" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="500" y="170" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#475569">Credentials (Login/Register)</text>
+
+  <!-- Recruiter -> 1.0 Auth -->
+  <path d="M 1570 180 L 975 180" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="1270" y="170" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" fill="#475569">Company Recruiter Login</text>
+
+  <!-- 1.0 Auth -> D1 User Store -->
+  <path d="M 900 255 L 900 300" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="940" y="280" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#475569">Verify/Save User</text>
+
+  <!-- Student -> 2.0 Profile & Resume -->
+  <path d="M 170 240 C 220 320, 300 360, 365 375" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="210" y="325" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="600" fill="#0284c7">Uploads Resume Document</text>
+  <text x="210" y="340" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#64748b">(PDF/DOCX) &amp; Profile Details</text>
+
+  <!-- 2.0 Profile -> Student (Auto-fill response) -->
+  <path d="M 370 410 C 290 420, 180 350, 150 240" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4,4" marker-end="url(#arrBlue)"/>
+  <text x="170" y="390" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#2563eb">Auto-filled Fields &amp; ATS Score</text>
+
+  <!-- 2.0 Profile -> D2 Student Store -->
+  <path d="M 450 465 L 450 550" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="455" y="515" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#475569">Save Profile &amp; Resume URL</text>
+
+  <!-- Recruiter -> 3.0 Job Posting -->
+  <path d="M 1630 240 C 1580 320, 1500 360, 1435 375" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="1560" y="325" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="600" fill="#059669">Create Job Drive,</text>
+  <text x="1560" y="340" text-anchor="middle" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#64748b">Criteria &amp; Package</text>
+
+  <!-- 3.0 Job Posting -> D3 Jobs Store -->
+  <path d="M 1350 465 L 1350 550" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="1355" y="515" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#475569">Save Job Openings</text>
+
+  <!-- Student -> 4.0 Application -->
+  <path d="M 535 380 C 650 420, 750 480, 825 520" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="680" y="445" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="600" fill="#1e293b">Apply to Job Openings</text>
+
+  <!-- D2 & D3 -> 4.0 Applications -->
+  <path d="M 560 570 L 815 560" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+  <path d="M 1240 570 L 985 560" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+  <text x="680" y="580" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#64748b">Fetch Resume &amp; Skills</text>
+  <text x="1100" y="580" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#64748b">Fetch Job Requirements</text>
+
+  <!-- 4.0 Applications -> D4 Applications Store -->
+  <path d="M 900 635 L 900 700" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="905" y="670" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#475569">Store Application Status</text>
+
+  <!-- Recruiter <-> 4.0 Applications (Shortlisting & Screening) -->
+  <path d="M 1600 240 C 1450 350, 1150 480, 985 540" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#arrGreen)"/>
+  <text x="1300" y="470" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="600" fill="#059669">View Resumes &amp; Shortlist</text>
+
+  <!-- Recruiter -> 5.0 Interview Scheduling -->
+  <path d="M 1580 240 C 1300 450, 800 680, 530 760" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="880" y="660" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="600" fill="#059669">Schedule Interview Slot &amp; Meeting Link</text>
+
+  <!-- 5.0 Interview -> D5 Interviews Store -->
+  <path d="M 450 860 L 450 950 L 470 950" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- 5.0 Interview -> Student (Notify schedule) -->
+  <path d="M 370 780 C 250 750, 150 600, 130 240" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4,4" marker-end="url(#arrBlue)"/>
+  <text x="180" y="630" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#2563eb">Interview Schedule &amp; Link</text>
+
+  <!-- Recruiter -> 6.0 Offer Letters -->
+  <path d="M 1650 240 C 1600 500, 1500 680, 1430 750" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="1560" y="600" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="600" fill="#059669">Release Offer Package (PDF/LPA)</text>
+
+  <!-- 6.0 Offer -> D6 Offers Store -->
+  <path d="M 1350 860 L 1350 950 L 1330 950" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- 6.0 Offer -> Student (Deliver offer & receive accept/decline) -->
+  <path d="M 1300 830 C 1000 950, 300 800, 160 240" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4,4" marker-end="url(#arrBlue)"/>
+  <text x="650" y="860" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#2563eb">Offer Letter Notice &amp; Acceptance Flow</text>
+
+  <!-- TPO Cell -> 7.0 Analytics & Drive Setup -->
+  <path d="M 230 1100 L 820 1010" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="450" y="1070" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="600" fill="#d97706">Verify Companies &amp; Generate Reports</text>
+
+  <!-- 7.0 Analytics <-> All Data Stores (D2, D3, D4, D5, D6) -->
+  <path d="M 900 920 L 900 742" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+  <text x="910" y="840" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#64748b">Aggregate Placement Stats</text>
+
+  <!-- Admin -> 1.0 & 7.0 (Role grants and system audits) -->
+  <path d="M 1570 1100 L 980 1010" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="1350" y="1070" font-family="Segoe UI, Inter, sans-serif" font-size="11" font-weight="600" fill="#dc2626">Manage Users, Audit Logs, Policies</text>
+
+  <!-- 7.0 -> D7 Activity Logs -->
+  <path d="M 900 1080 L 900 1150" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="905" y="1120" font-family="Segoe UI, Inter, sans-serif" font-size="10" fill="#475569">Audit Trail Logs</text>
+</svg>
