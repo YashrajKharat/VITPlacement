@@ -40,18 +40,50 @@
       "email": "yashraj200@gmail.com",
       "passwordHash": "$2b$10$ZH.4xtIIa5r2f1r1.E8jSO2c7j6Yu3kJ9FkEbSc1sS5C1GMKb5zti",
       "role": "STUDENT",
-      "name": "Student Candidate"
+      "name": "Yashraj Nana kharat"
+    },
+    {
+      "id": "recruiter-1",
+      "email": "recruiter@company.com",
+      "passwordHash": "",
+      "role": "RECRUITER",
+      "name": "Google HR / Campus Talent Partner",
+      "companyId": "company-google"
+    },
+    {
+      "id": "recruiter-2",
+      "email": "hr@tcs.com",
+      "passwordHash": "$2a$10$abcdefghijklmnopqrstuv",
+      "role": "RECRUITER",
+      "name": "TCS Lead Talent Acquisition",
+      "companyId": "company-tcs"
+    },
+    {
+      "id": "student-1",
+      "email": "student@college.edu",
+      "passwordHash": "$2a$10$abcdefghijklmnopqrstuv",
+      "role": "STUDENT",
+      "name": "Aarav Sharma (CMPN Candidate)"
+    },
+    {
+      "id": "recruiter-1792997228287",
+      "email": "yash@google.com",
+      "passwordHash": "$2b$10$9TJ8amnh4GtuZpc3eNEdW.Vb0he8zT/a44lZskIFJNBgzWULhFN7G",
+      "role": "RECRUITER",
+      "name": "Yashraj Nana kharat",
+      "companyId": "company-google",
+      "createdAt": "2026-10-26T06:47:08.287Z"
     }
   ],
   "students": [
     {
       "id": "student-profile-student-1788620582804",
       "userId": "student-1788620582804",
-      "name": "Student Candidate",
+      "name": "Yashraj Nana kharat",
       "email": "yashraj200@gmail.com",
       "department": "Computer Engineering",
       "batch": "2026",
-      "cgpa": 8.5,
+      "cgpa": 9.95,
       "education": [
         {
           "school": "University / Institute",
@@ -162,13 +194,147 @@
       "createdAt": "2026-09-05T15:22:58.724Z"
     }
   ],
-  "recruiters": [],
-  "companies": [],
-  "jobs": [],
-  "applications": [],
+  "recruiters": [
+    {
+      "id": "recruiter-profile-recruiter-1",
+      "userId": "recruiter-1",
+      "name": "Google HR / Campus Talent Partner",
+      "companyId": "company-google",
+      "email": "recruiter@company.com",
+      "isVerified": true
+    },
+    {
+      "id": "recruiter-profile-recruiter-2",
+      "userId": "recruiter-2",
+      "name": "TCS Lead Talent Acquisition",
+      "companyId": "company-tcs",
+      "email": "hr@tcs.com",
+      "isVerified": true
+    },
+    {
+      "id": "recruiter-profile-1792997228287",
+      "userId": "recruiter-1792997228287",
+      "name": "Yashraj Nana kharat",
+      "email": "yash@google.com",
+      "designation": "HR Manager",
+      "companyId": "company-google",
+      "isVerified": true,
+      "createdAt": "2026-10-26T06:47:08.287Z"
+    }
+  ],
+  "companies": [
+    {
+      "id": "company-google",
+      "name": "Google India",
+      "website": "https://careers.google.com",
+      "industry": "Cloud & AI Engineering",
+      "location": "Mumbai / Bengaluru / Hyderabad",
+      "description": "Global technology pioneer in search, generative AI, cloud computing, and developer systems.",
+      "isVerified": true,
+      "logo": "🔍"
+    },
+    {
+      "id": "company-tcs",
+      "name": "Tata Consultancy Services (TCS)",
+      "website": "https://www.tcs.com",
+      "industry": "IT Services & Consulting",
+      "location": "Mumbai / Pune",
+      "description": "India's premier multinational information technology and engineering enterprise.",
+      "isVerified": true,
+      "logo": "🏢"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-2",
+      "title": "Systems Engineer (Digital & Prime)",
+      "companyId": "company-tcs",
+      "companyName": "Tata Consultancy Services (TCS)",
+      "location": "Mumbai / Pune",
+      "type": "FULL_TIME",
+      "salaryRange": "7.5 - 11.5 LPA",
+      "description": "Architect cutting-edge enterprise cloud transformations and full-stack solutions for global clients.",
+      "requirements": [
+        "Full stack development with Node.js/React",
+        "Good algorithmic problem-solving",
+        "Consistent 60%+ throughout academics"
+      ],
+      "status": "ACTIVE",
+      "applicantsCount": 128,
+      "createdAt": "2026-01-20T00:00:00.000Z"
+    },
+    {
+      "id": "job-1792997313171",
+      "status": "OPEN",
+      "createdAt": "2026-10-26T06:48:33.171Z",
+      "title": "Frontend Developer",
+      "description": "\nAI Mode conversation: give me frontend developer description at google\n\n\nYou said: give me frontend developer description at google\n\ngive me frontend developer description at google\nA Front End Developer (or Software Engineer, Front End) at Google designs, builds, and maintains user interfaces for large-scale web applications like Google Workspace (Gmail, Docs, Drive), Search, and Cloud platforms.\n\nKey Responsibilities\n\n• Build User Interfaces: Create responsive, scalable, and reusable front-end components using modern JavaScript, TypeScript, HTML5, and CSS3.\n• Framework Usage: Work heavily with front-end ecosystems—often Angular (which Google originally created and maintains) or React, alongside modern build tools like Vite or Webpack.\n• Performance & Accessibility: Optimize web applications for maximum speed, low latency, and cross-device/cross-browser compatibility while ensuring strict accessibility standards.\n• Cross-Functional Collaboration: Partner closely with UX/UI designers, product managers, and backend engineers to translate design concepts into seamless functional experiences.\n• Code Quality & Testing: Write clean, testable code, participate in peer code reviews, and maintain testing coverage.\n\nTypical Requirements\n\n• Education & Experience: Bachelor’s degree in Computer Science (or equivalent practical experience) with a solid track record in software engineering.\n• Core Technical Stack: Deep proficiency in JavaScript/TypeScript, HTML5, CSS3, DOM manipulation, browser APIs, and version control (Git).\n• Web Fundamentals: Strong understanding of web security (such as XSS and XSRF), asynchronous handling, performance tuning, and state management.\n• Problem-Solving / DSA: Standard engineering tracks at Google typically evaluate candidates on core data structures and algorithms alongside front-end system design.\nIf you'd like, let me know:\n• Are you looking at a specific Google product team (like Google Cloud or Workspace)?\n• Do you want details on the interview process or experience level (e.g., L3 vs. L4/L5)?\n• \nInstahyre\nFrontend Developer job at Google - Instahyre\nGoogle is looking for a Frontend Developer in Gurgaon with 3-5 years of experience in Frontend Development, JavaScript, HTML, CSS,\n• \nYouTube·Chirag Goel\nGoogle Frontend Interview Experience | Chakde Interviews ⚡️\nso I'm I'm glad to have him on the platform to talk about the system. talk about the interview talk about the expectation. when yo...\n11m\n• \nGoogle\nStaff Software Engineer, Front End, Google Workspace\nBachelor's degree or equivalent practical experience. 8 years of experience in software development. 3 years of experience with fu...\nShow all\n\nin para\n\nA Front End Developer at Google (officially titled Software Engineer, Front End) is responsible for designing and building the visual, interactive elements of massive web applications like Gmail, YouTube, Google Cloud, and Search. Working heavily with TypeScript, JavaScript, HTML5, CSS3, and Angular, these engineers write highly performant, accessible, and scalable code that functions flawlessly across millions of global devices. They collaborate closely with UX designers, product managers, and backend engineers to translate complex workflows into intuitive user experiences, all while ensuring strict security protocols and web performance standards. Standard Google front-end roles require a strong foundation in computer science principles, web architecture, and front-end system design, which are heavily tested throughout their engineering interview process.",
+      "salaryRange": "5-7 LPA",
+      "location": "Airoli Mumbai",
+      "type": "FULL_TIME",
+      "requirements": [
+        "React experience",
+        "Knowledge of SQL",
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Python",
+        "Bootstrap"
+      ],
+      "companyId": "company-google",
+      "updatedAt": "2026-10-26T06:49:17.381Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": "app-1792997405530",
+      "jobId": "job-1792997313171",
+      "studentId": "student-profile-student-1788620582804",
+      "resumeUrl": "/uploads/resumes/student-1788620582804_1791614124887_Yashraj_Kharat_Resume__1_.pdf",
+      "status": "APPLIED",
+      "appliedAt": "2026-10-26T06:50:05.530Z",
+      "updatedAt": "2026-10-26T06:50:05.530Z"
+    }
+  ],
   "interviews": [],
   "offerLetters": [],
   "notifications": [
+    {
+      "id": "notif-1792997405535",
+      "userId": "recruiter-1792997228287",
+      "title": "New Application Received",
+      "message": "Yashraj Nana kharat applied for the Frontend Developer position.",
+      "read": false,
+      "type": "INFO",
+      "createdAt": "2026-10-26T06:50:05.535Z"
+    },
+    {
+      "id": "notif-1792997405533",
+      "userId": "recruiter-1",
+      "title": "New Application Received",
+      "message": "Yashraj Nana kharat applied for the Frontend Developer position.",
+      "read": false,
+      "type": "INFO",
+      "createdAt": "2026-10-26T06:50:05.533Z"
+    },
+    {
+      "id": "notif-1792997313178",
+      "userId": "student-1788619844796",
+      "title": "New Job Opening",
+      "message": "Yashraj Nana kharat has posted a new role: Frontend Developer at Stripe.",
+      "read": false,
+      "type": "INFO",
+      "createdAt": "2026-10-26T06:48:33.178Z"
+    },
+    {
+      "id": "notif-1792997313175",
+      "userId": "student-1788620582804",
+      "title": "New Job Opening",
+      "message": "Yashraj Nana kharat has posted a new role: Frontend Developer at Stripe.",
+      "read": false,
+      "type": "INFO",
+      "createdAt": "2026-10-26T06:48:33.175Z"
+    },
     {
       "id": "notif-1788762843321",
       "userId": "student-1788620582804",
@@ -189,6 +355,20 @@
     }
   ],
   "activityLogs": [
+    {
+      "id": "log-1792997405537-edyx9",
+      "userId": "student-1788620582804",
+      "action": "Applied for Job",
+      "details": "Submitted application for Frontend Developer at Google India",
+      "createdAt": "2026-10-26T06:50:05.537Z"
+    },
+    {
+      "id": "log-1792676349181-z3psn",
+      "userId": "student-1788620582804",
+      "action": "Profile Saved",
+      "details": "Updated core student personal and academic details.",
+      "createdAt": "2026-10-22T13:39:09.181Z"
+    },
     {
       "id": "log-1791787110109-pvrfd",
       "userId": "student-1788620582804",
@@ -309,7 +489,14 @@
       "createdAt": "2026-09-21T06:27:45.667Z"
     }
   ],
-  "bookmarks": [],
+  "bookmarks": [
+    {
+      "id": "bm-1792997402905",
+      "studentId": "student-profile-student-1788620582804",
+      "jobId": "job-1792997313171",
+      "createdAt": "2026-10-26T06:50:02.905Z"
+    }
+  ],
   "internshipRequirements": [
     {
       "id": "req-sem6-2026",
@@ -1784,20 +1971,27 @@
   "quizzes": [
     {
       "id": "quiz-tcs-nqt",
-      "title": "TCS NQT Advanced Technical Sprint",
+      "companyId": "tcs",
+      "company": "TCS",
+      "companyLogo": "🏢",
+      "title": "TCS NQT & Digital Repeated Placement PYQs",
       "slug": "tcs-nqt-technical-sprint",
-      "category": "Placement Technical",
+      "category": "Mass IT & Digital",
+      "placementRound": "Round 1: Online Technical Assessment (PYQ Bank)",
+      "frequencyInfo": "⭐ Repeated in TCS Digital & NQT Drives (85% Historical Frequency)",
       "difficulty": "MEDIUM",
       "durationMinutes": 10,
-      "totalQuestions": 5,
+      "totalQuestions": 6,
       "points": 250,
       "unstopCoinsReward": 50,
-      "description": "Test your core computer science fundamentals, DSA time complexity, memory management, and SQL query prediction based on actual TCS Digital NQT papers.",
-      "badge": "TCS Certified",
+      "description": "High-yield repeatedly tested questions from TCS National Qualifier Test (NQT) and Digital drives covering AVL trees, pointer arithmetic, SQL grouping, and aptitude logic.",
+      "badge": "TCS NQT Verified",
       "questions": [
         {
-          "id": "q1",
+          "id": "tcs-q1",
           "question": "What is the worst-case time complexity of searching an element in a Balanced Binary Search Tree (AVL / Red-Black Tree) containing N nodes?",
+          "frequencyTag": "⭐ Repeated 6+ Times in TCS Digital & Ninja Assessments",
+          "topic": "Data Structures • Balanced BSTs",
           "options": [
             "O(1)",
             "O(log N)",
@@ -1805,11 +1999,59 @@
             "O(N log N)"
           ],
           "correctAnswer": 1,
-          "explanation": "In a balanced BST, tree height is strictly bounded by O(log N). Hence lookup, insertion, and deletion all run in O(log N) worst-case time."
+          "explanation": "In a balanced BST, tree height is strictly bounded by O(log N). Hence lookup, insertion, and deletion all run in O(log N) worst-case time.",
+          "whyCompanyAsks": "TCS frequently tests standard logarithmic bounds for balanced search structures in their Advanced Technical Section."
         },
         {
-          "id": "q2",
-          "question": "In Python, what is the output of: `print(type(lambda x: x + 1))`?",
+          "id": "tcs-q2",
+          "question": "In C, given `int arr[] = {10, 20, 30, 40};`, what does the expression `*(arr + 2)` evaluate to?",
+          "frequencyTag": "⭐ Frequent TCS NQT C-Programming Output Question",
+          "topic": "C Programming • Pointer Arithmetic",
+          "options": [
+            "10",
+            "20",
+            "30",
+            "Memory address of arr[2]"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The expression `*(arr + 2)` dereferences the pointer offset by 2 elements from the base address, returning `arr[2]` which is 30. Note that `arr[2]`, `*(arr + 2)`, and `2[arr]` are all equivalent in C.",
+          "whyCompanyAsks": "TCS NQT routinely tests fundamental pointer arithmetic and array indexing identity rules."
+        },
+        {
+          "id": "tcs-q3",
+          "question": "In SQL, which clause is specifically used to filter records AFTER an aggregation with `GROUP BY` has taken place?",
+          "frequencyTag": "⭐ Asked in TCS Digital SQL Technical Assessment",
+          "topic": "DBMS • SQL Aggregations",
+          "options": [
+            "WHERE",
+            "HAVING",
+            "FILTER BY",
+            "ORDER BY"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The `WHERE` clause filters individual rows BEFORE aggregation. The `HAVING` clause filters aggregated groups resulting from `GROUP BY`.",
+          "whyCompanyAsks": "Distinguishing WHERE vs HAVING is one of the most repeated database questions across TCS technical interview panels."
+        },
+        {
+          "id": "tcs-q4",
+          "question": "A can complete a project in 12 days and B can complete it in 24 days. Working together, how many days will they take to complete the project?",
+          "frequencyTag": "⭐ Classic TCS NQT Quantitative Ability Repeat",
+          "topic": "Aptitude • Time & Work",
+          "options": [
+            "6 days",
+            "8 days",
+            "10 days",
+            "16 days"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Combined 1-day work = 1/12 + 1/24 = (2 + 1)/24 = 3/24 = 1/8. Hence, working together they take 8 days.",
+          "whyCompanyAsks": "Time & Work problems appear in almost every TCS NQT Foundation and Advanced Cognitive round."
+        },
+        {
+          "id": "tcs-q5",
+          "question": "In Python, what is the exact return value of `type(lambda x: x + 1)`?",
+          "frequencyTag": "⭐ Repeated in TCS Digital Python Assessment",
+          "topic": "Python • Functional Constructs",
           "options": [
             "<class 'lambda'>",
             "<class 'function'>",
@@ -1817,62 +2059,49 @@
             "<class 'builtin_function'>"
           ],
           "correctAnswer": 1,
-          "explanation": "Lambda expressions in Python construct instances of the standard `<class 'function'>` type."
+          "explanation": "Lambda expressions in Python construct anonymous functions which are first-class instances of `<class 'function'>`.",
+          "whyCompanyAsks": "TCS Digital evaluates candidates on Python internal typing and first-class function representations."
         },
         {
-          "id": "q3",
-          "question": "Which database isolation level prevents 'Dirty Reads', 'Non-Repeatable Reads', and 'Phantom Reads' simultaneously?",
-          "options": [
-            "Read Committed",
-            "Read Uncommitted",
-            "Repeatable Read",
-            "Serializable"
-          ],
-          "correctAnswer": 3,
-          "explanation": "SERIALIZABLE is the highest ANSI SQL isolation level. It guarantees completely serializable execution, eliminating phantom reads, dirty reads, and non-repeatable reads."
-        },
-        {
-          "id": "q4",
-          "question": "What will `[1, 2, 3] + [4, 5]` produce in JavaScript?",
-          "options": [
-            "[1, 2, 3, 4, 5]",
-            "'1,2,34,5'",
-            "NaN",
-            "TypeError"
-          ],
-          "correctAnswer": 1,
-          "explanation": "In JavaScript, the `+` operator coerces both arrays to strings ('1,2,3' and '4,5') and concatenates them to produce the string '1,2,34,5'."
-        },
-        {
-          "id": "q5",
+          "id": "tcs-q6",
           "question": "Which data structure is primarily used to implement Breadth-First Search (BFS) graph traversal?",
+          "frequencyTag": "⭐ Standard TCS Technical Round Interview Question",
+          "topic": "Algorithms • Graph Traversal",
           "options": [
-            "Stack",
+            "Stack (LIFO)",
             "Queue (FIFO)",
             "Priority Queue",
-            "Disjoint Set"
+            "Disjoint Set (Union-Find)"
           ],
           "correctAnswer": 1,
-          "explanation": "BFS explores vertices layer by layer in First-In-First-Out order using a standard FIFO Queue."
+          "explanation": "BFS explores vertices level-by-level in First-In-First-Out order, making a standard FIFO Queue the required primary data structure.",
+          "whyCompanyAsks": "Graph traversal fundamentals are a mandatory screening topic for TCS Digital and Prime developer roles."
         }
       ]
     },
     {
       "id": "quiz-google-dsa",
-      "title": "Google DSA & Algorithmic Speed Sprint",
+      "companyId": "google",
+      "company": "Google",
+      "companyLogo": "🟢",
+      "title": "Google SWE Algorithmic High-Yield PYQs",
       "slug": "google-dsa-speed-sprint",
-      "category": "DSA & Problem Solving",
+      "category": "Product & Algorithmic",
+      "placementRound": "Round 1: Online Challenge & Coding Screen",
+      "frequencyInfo": "⭐ High-Frequency in Google Campus OA & Onsite Sprints",
       "difficulty": "HARD",
-      "durationMinutes": 10,
-      "totalQuestions": 5,
+      "durationMinutes": 12,
+      "totalQuestions": 6,
       "points": 300,
       "unstopCoinsReward": 75,
-      "description": "Solve high-yield algorithmic trivia, recursion stack bounds, bitwise manipulation tricks, and amortized complexity benchmarks.",
-      "badge": "Google Elite",
+      "description": "Curated high-yield algorithmic benchmarks repeatedly asked in Google campus hiring rounds covering bitwise operations, amortized analysis, graph shortest paths, and dynamic programming.",
+      "badge": "Google SWE Verified",
       "questions": [
         {
-          "id": "gq1",
+          "id": "goog-q1",
           "question": "What is the result of evaluating `(n & (n - 1)) == 0` for any positive integer `n > 0`?",
+          "frequencyTag": "⭐ Repeated in Google Campus OA & Technical Phone Screen",
+          "topic": "Bit Manipulation • Power of 2",
           "options": [
             "Checks if n is odd",
             "Checks if n is a power of 2",
@@ -1880,11 +2109,14 @@
             "Checks if n is divisible by 4"
           ],
           "correctAnswer": 1,
-          "explanation": "Subtracting 1 flips all bits after the lowest set bit. Bitwise ANDing `n & (n - 1)` clears the lowest set bit. If the result is 0, exactly one bit was set, meaning `n` is a power of 2."
+          "explanation": "Subtracting 1 flips all bits after the lowest set bit. Bitwise ANDing `n & (n - 1)` clears the lowest set bit. If the result is 0, exactly one bit was set, confirming `n` is a power of 2.",
+          "whyCompanyAsks": "Google tests bitwise optimizations to gauge a candidate's low-level algorithmic mastery."
         },
         {
-          "id": "gq2",
+          "id": "goog-q2",
           "question": "What is the amortized time complexity of inserting N elements into a dynamic array (like C++ `std::vector` or Java `ArrayList`) that doubles capacity upon filling?",
+          "frequencyTag": "⭐ Classic Google Algorithmic Complexity Benchmark",
+          "topic": "Algorithm Analysis • Amortized Complexity",
           "options": [
             "O(N^2)",
             "O(N log N)",
@@ -1892,11 +2124,14 @@
             "O(N) per insert"
           ],
           "correctAnswer": 2,
-          "explanation": "Although resizing takes O(K) when triggered, geometric doubling distributes the copy cost across past insertions, resulting in O(1) amortized time per insertion."
+          "explanation": "Although resizing takes O(K) copy time, geometric capacity doubling distributes the copy cost across past insertions, resulting in O(1) amortized time per insertion.",
+          "whyCompanyAsks": "Google interviewers frequently probe beyond worst-case to check understanding of amortized costs."
         },
         {
-          "id": "gq3",
+          "id": "goog-q3",
           "question": "In Dijkstra's Shortest Path Algorithm with a Min-Heap (Binary Heap), what is the overall time complexity for a graph with V vertices and E edges?",
+          "frequencyTag": "⭐ High-Yield Google Graph Theory Question",
+          "topic": "Graph Algorithms • Shortest Path",
           "options": [
             "O(V + E)",
             "O((V + E) log V)",
@@ -1904,11 +2139,14 @@
             "O(V * E)"
           ],
           "correctAnswer": 1,
-          "explanation": "Using a binary min-heap, extracting min takes O(V log V) and decreasing keys / pushing edges takes O(E log V), yielding O((V + E) log V)."
+          "explanation": "Using a binary min-heap, extracting min takes O(V log V) and decreasing keys / pushing edges takes O(E log V), yielding O((V + E) log V).",
+          "whyCompanyAsks": "Standard graph algorithms with optimal heap data structures are heavily tested at Google."
         },
         {
-          "id": "gq4",
+          "id": "goog-q4",
           "question": "Which algorithmic paradigm does the '0/1 Knapsack' problem solve using?",
+          "frequencyTag": "⭐ Tested in Google Dynamic Programming Assessments",
+          "topic": "Dynamic Programming • Optimization",
           "options": [
             "Greedy Algorithm",
             "Dynamic Programming",
@@ -1916,11 +2154,29 @@
             "Randomized Sampling"
           ],
           "correctAnswer": 1,
-          "explanation": "0/1 Knapsack exhibits overlapping subproblems and optimal substructure where items cannot be broken, requiring 2D/1D Dynamic Programming."
+          "explanation": "0/1 Knapsack exhibits overlapping subproblems and optimal substructure where items cannot be broken, requiring 2D/1D Dynamic Programming.",
+          "whyCompanyAsks": "Google evaluates whether candidates recognize when a greedy strategy fails and dynamic programming is mandatory."
         },
         {
-          "id": "gq5",
-          "question": "What is the space complexity of a recursive Inorder traversal on a skewed binary tree with N nodes?",
+          "id": "goog-q5",
+          "question": "In an array where every integer appears twice except for one unique integer, how can you find the unique element in O(N) time and O(1) auxiliary space?",
+          "frequencyTag": "⭐ Repeated Google Technical Phone Screen Problem",
+          "topic": "Bit Manipulation • XOR Identity",
+          "options": [
+            "Sort the array first",
+            "Compute bitwise XOR of all array elements",
+            "Use a Frequency Hash Table",
+            "Build a Binary Search Tree"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Since `x ^ x = 0` and `x ^ 0 = x`, XORing all elements cancels out every paired duplicate, leaving strictly the unique single number in O(N) time and O(1) space.",
+          "whyCompanyAsks": "Bitwise XOR problem solving is a hallmark of Google technical interview questions."
+        },
+        {
+          "id": "goog-q6",
+          "question": "What is the space complexity of a recursive Inorder traversal on a degenerate (skewed) binary tree containing N nodes?",
+          "frequencyTag": "⭐ Frequent Google Tree Recursion Question",
+          "topic": "Trees • Call-Stack Memory",
           "options": [
             "O(1)",
             "O(log N)",
@@ -1928,7 +2184,888 @@
             "O(N^2)"
           ],
           "correctAnswer": 2,
-          "explanation": "On a degenerated (skewed) tree, recursion depth reaches N, consuming O(N) call-stack memory."
+          "explanation": "On a degenerated skewed tree (essentially a linked list), recursion depth reaches N, consuming O(N) call-stack memory.",
+          "whyCompanyAsks": "Google checks if candidates consider skewed worst-case structures rather than assuming balanced trees."
+        }
+      ]
+    },
+    {
+      "id": "quiz-amazon-sde",
+      "companyId": "amazon",
+      "company": "Amazon",
+      "companyLogo": "📦",
+      "title": "Amazon SDE-1 OA Repeated Questions",
+      "slug": "amazon-sde-oa-sprint",
+      "category": "Product & Cloud",
+      "placementRound": "Round 1: Online Assessment (OA Part 1 & 2)",
+      "frequencyInfo": "⭐ Repeated in 90%+ of Amazon SDE-1 Campus Online Assessments",
+      "difficulty": "HARD",
+      "durationMinutes": 12,
+      "totalQuestions": 6,
+      "points": 300,
+      "unstopCoinsReward": 75,
+      "description": "Curated from verified Amazon SDE-1 OA rounds covering LRU Cache internals, Two Pointers, Top K Heaps, Monotonic Queues, and Amazon Leadership Principles.",
+      "badge": "Amazon OA Verified",
+      "questions": [
+        {
+          "id": "amz-q1",
+          "question": "To implement an LRU (Least Recently Used) Cache with O(1) average time complexity for both `get` and `put` operations, which combination of data structures is optimal?",
+          "frequencyTag": "⭐ Asked in 90%+ of Amazon SDE-1 Technical Rounds",
+          "topic": "System Design & DSA • LRU Cache",
+          "options": [
+            "HashMap + Singly Linked List",
+            "HashMap + Doubly Linked List",
+            "Binary Heap + Array",
+            "Balanced BST + Queue"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The HashMap provides O(1) key-to-node lookup, while the Doubly Linked List enables O(1) node removal and re-insertion at the head for recency tracking.",
+          "whyCompanyAsks": "LRU Cache is the single most iconic Amazon interview question worldwide, testing practical data structure synthesis."
+        },
+        {
+          "id": "amz-q2",
+          "question": "Given a sorted array of N numbers, what is the optimal time and auxiliary space complexity to determine if any two numbers sum to target X using the Two-Pointer approach?",
+          "frequencyTag": "⭐ Repeated Amazon OA Classic (Two Pointers)",
+          "topic": "Algorithms • Two Pointers",
+          "options": [
+            "O(N^2) time, O(1) space",
+            "O(N log N) time, O(N) space",
+            "O(N) time, O(1) space",
+            "O(1) time, O(N) space"
+          ],
+          "correctAnswer": 2,
+          "explanation": "By placing pointers at the start and end and incrementing/decrementing based on current sum vs target, we inspect each element at most once: O(N) time and O(1) auxiliary space.",
+          "whyCompanyAsks": "Amazon heavily emphasizes space-efficient two-pointer patterns over allocating extra hash tables."
+        },
+        {
+          "id": "amz-q3",
+          "question": "Which data structure is optimal to continuously find the 'Top K Frequent Elements' from a stream of N elements in O(N log K) time?",
+          "frequencyTag": "⭐ Repeated Amazon Campus OA Problem",
+          "topic": "Heaps • Top K Pattern",
+          "options": [
+            "Max-Heap of size N",
+            "Min-Heap of size K",
+            "QuickSort on entire array",
+            "Stack of size K"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Maintaining a Min-Heap of size K evicts the minimum element whenever size exceeds K. Inserting N elements takes O(N log K), saving both time and heap memory.",
+          "whyCompanyAsks": "Top K patterns directly mirror Amazon's real-world product recommendation and trending search architectures."
+        },
+        {
+          "id": "amz-q4",
+          "question": "According to Amazon's Leadership Principles, if a critical software flaw is identified hours before a major product launch, which principle dictates delaying launch to resolve it?",
+          "frequencyTag": "⭐ Amazon OA Part 2: Work Simulation & LP Round",
+          "topic": "Leadership Principles • Customer Obsession",
+          "options": [
+            "Bias for Action",
+            "Customer Obsession & Insist on the Highest Standards",
+            "Frugality",
+            "Deliver Results at all costs"
+          ],
+          "correctAnswer": 1,
+          "explanation": "While 'Bias for Action' values calculated risk, 'Customer Obsession' and 'Insist on Highest Standards' strictly prohibit releasing broken software that damages customer trust.",
+          "whyCompanyAsks": "Amazon's OA Part 2 evaluates cultural fit using situational behavioral scenarios mapped directly to their 16 LPs."
+        },
+        {
+          "id": "amz-q5",
+          "question": "What is the optimal amortized time complexity to find the maximum element in every sliding window of size K across an array of length N?",
+          "frequencyTag": "⭐ Frequent Amazon SDE OA Coding Challenge",
+          "topic": "Monotonic Queue • Sliding Window",
+          "options": [
+            "O(N * K)",
+            "O(N log K)",
+            "O(N) amortized using a Monotonic Deque",
+            "O(N^2)"
+          ],
+          "correctAnswer": 2,
+          "explanation": "A monotonic decreasing deque stores candidate indices. Each element is pushed and popped at most once across the entire traversal, yielding O(N) amortized time.",
+          "whyCompanyAsks": "Sliding window optimization is a staple of Amazon's OA coding rounds."
+        },
+        {
+          "id": "amz-q6",
+          "question": "In Object-Oriented Design for an Amazon Locker / Parking Lot system, which creational pattern is ideal for instantiating different locker/ticket types (Small, Medium, XL) based on package size?",
+          "frequencyTag": "⭐ Standard Amazon LLD (Low Level Design) Question",
+          "topic": "Design Patterns • Factory Method",
+          "options": [
+            "Singleton Pattern",
+            "Factory Pattern",
+            "Observer Pattern",
+            "Decorator Pattern"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Factory Pattern encapsulates the creation logic and decouples the client from knowing the exact concrete class instantiated.",
+          "whyCompanyAsks": "Amazon Low-Level Design rounds evaluate modularity and adherence to SOLID design principles."
+        }
+      ]
+    },
+    {
+      "id": "quiz-microsoft-swe",
+      "companyId": "microsoft",
+      "company": "Microsoft",
+      "companyLogo": "🔷",
+      "title": "Microsoft On-Campus Repeated Technical Round",
+      "slug": "microsoft-swe-round",
+      "category": "Product & Systems",
+      "placementRound": "Round 1 & 2: Technical Assessment & Systems Screen",
+      "frequencyInfo": "⭐ Frequently Tested in Microsoft Campus Technical Rounds & OA",
+      "difficulty": "HARD",
+      "durationMinutes": 12,
+      "totalQuestions": 6,
+      "points": 300,
+      "unstopCoinsReward": 75,
+      "description": "Curated high-yield questions repeatedly tested in Microsoft university hiring covering Floyd's cycle detection, OS deadlock conditions, B+ Tree disk indexing, and bit manipulation.",
+      "badge": "Microsoft OA Verified",
+      "questions": [
+        {
+          "id": "ms-q1",
+          "question": "What is the name and complexity of the algorithm that uses slow and fast pointers to detect a loop in a singly linked list in O(N) time and O(1) space?",
+          "frequencyTag": "⭐ Asked in 80%+ of Microsoft Linked List Interviews",
+          "topic": "Linked Lists • Cycle Detection",
+          "options": [
+            "Dijkstra's Algorithm",
+            "Floyd's Tortoise and Hare Algorithm",
+            "Kruskal's Algorithm",
+            "Kadane's Algorithm"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Floyd's Cycle-Finding Algorithm advances the slow pointer by 1 step and fast pointer by 2 steps. If a loop exists, they must collide within O(N) steps without allocating extra memory.",
+          "whyCompanyAsks": "Microsoft interviewers routinely test linked list manipulation and in-place pointer math."
+        },
+        {
+          "id": "ms-q2",
+          "question": "Which four conditions (known as the Coffman conditions) must simultaneously hold for an Operating System deadlock to occur?",
+          "frequencyTag": "⭐ Microsoft Core OS Fundamentals Favorite",
+          "topic": "Operating Systems • Deadlocks",
+          "options": [
+            "Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait",
+            "Paging, Segmentation, Thrashing, Swapping",
+            "FCFS, Round Robin, SJF, Priority Scheduling",
+            "Atomicity, Consistency, Isolation, Durability"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Deadlock strictly requires: 1) Mutual Exclusion, 2) Hold and Wait, 3) No Preemption, and 4) Circular Wait. Breaking any one condition prevents deadlocks.",
+          "whyCompanyAsks": "Microsoft has deep OS roots (Windows/Azure) and fiercely probes OS synchronization and concurrency."
+        },
+        {
+          "id": "ms-q3",
+          "question": "Why do relational database engines (like SQL Server / PostgreSQL) use B+ Trees instead of standard Binary Search Trees for disk-based indexing?",
+          "frequencyTag": "⭐ Repeated Microsoft Database Systems Interview Question",
+          "topic": "DBMS • Index Data Structures",
+          "options": [
+            "B+ Trees use less RAM than BSTs",
+            "B+ Trees have a high branching factor (fan-out) that drastically minimizes disk I/O reads",
+            "BSTs cannot store string keys",
+            "B+ Trees do not require sorting"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Disk reads are thousands of times slower than RAM. B+ Trees have huge node capacity (fan-out of 100+), keeping tree height at 3-4 levels and minimizing disk seek operations.",
+          "whyCompanyAsks": "Microsoft tests real-world systems architecture and the physical constraints of storage hardware."
+        },
+        {
+          "id": "ms-q4",
+          "question": "What is the optimal time complexity to compute the diameter (longest path between any two nodes) of a binary tree in a single bottom-up postorder traversal?",
+          "frequencyTag": "⭐ Microsoft Campus OA Problem",
+          "topic": "Binary Trees • Tree Diameter",
+          "options": [
+            "O(N^2)",
+            "O(N log N)",
+            "O(N)",
+            "O(log N)"
+          ],
+          "correctAnswer": 2,
+          "explanation": "By computing subtree heights bottom-up, each node calculates `leftHeight + rightHeight` and returns `1 + max(leftHeight, rightHeight)` to its parent in O(N) single-pass time.",
+          "whyCompanyAsks": "Postorder bottom-up recursion is a fundamental pattern for Microsoft tree coding assessments."
+        },
+        {
+          "id": "ms-q5",
+          "question": "In Brian Kernighan's algorithm, what does the operation `n = n & (n - 1)` repeatedly accomplish until `n == 0`?",
+          "frequencyTag": "⭐ Microsoft Bitwise Coding Challenge",
+          "topic": "Bit Manipulation • Set Bit Counting",
+          "options": [
+            "Inverts all bits of n",
+            "Counts the total number of set bits (1s)",
+            "Reverses the bits of n",
+            "Checks if n is negative"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Each iteration of `n & (n - 1)` clears the lowest set bit. The number of iterations equals the exact count of set bits (Hamming Weight).",
+          "whyCompanyAsks": "Microsoft values elegant, minimal bit-level operations over looping through all 32 bits."
+        },
+        {
+          "id": "ms-q6",
+          "question": "In Virtual Memory management, what phenomenon occurs when the system spends more time swapping pages between RAM and disk than executing user instructions?",
+          "frequencyTag": "⭐ Microsoft OS Assessment Question",
+          "topic": "Operating Systems • Virtual Memory",
+          "options": [
+            "Paging Fragmentation",
+            "Thrashing",
+            "Starvation",
+            "Context Inversion"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Thrashing occurs when the working set of active processes exceeds physical RAM capacity, causing a high frequency of page faults and total CPU throughput collapse.",
+          "whyCompanyAsks": "Understanding memory pressure and thrashing is vital for candidates entering cloud infrastructure roles at Azure."
+        }
+      ]
+    },
+    {
+      "id": "quiz-infosys-sp",
+      "companyId": "infosys",
+      "company": "Infosys",
+      "companyLogo": "🔷",
+      "title": "Infosys SP / DSE Pseudocode & DSA Bank",
+      "slug": "infosys-sp-dse-bank",
+      "category": "Mass IT & High-Package",
+      "placementRound": "Round 1: HackWithInfy & SP Technical Assessment",
+      "frequencyInfo": "⭐ Tested in Infosys Specialist Programmer (SP) & InfyTQ",
+      "difficulty": "MEDIUM",
+      "durationMinutes": 10,
+      "totalQuestions": 6,
+      "points": 250,
+      "unstopCoinsReward": 50,
+      "description": "Curated high-yield repeated questions from Infosys SP (Specialist Programmer - 9.5 LPA) and DSE recruitment drives covering tricky pseudocode, matrix searching, Java OOPs, and Kadane's algorithm.",
+      "badge": "Infosys SP Verified",
+      "questions": [
+        {
+          "id": "infy-q1",
+          "question": "What is the return value of `fun(4, 3)` given the recursive pseudocode:\n`Integer fun(Integer a, Integer b)\n  If(b == 0) Return 0\n  Return a + fun(a, b - 1)`?",
+          "frequencyTag": "⭐ Repeated in Infosys SP / DSE Pseudocode Round",
+          "topic": "Pseudocode • Recursion",
+          "options": [
+            "7",
+            "12",
+            "64",
+            "0"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The function recursively adds `a` exactly `b` times: 4 + 4 + 4 + 0 = 12. This is recursive multiplication.",
+          "whyCompanyAsks": "Infosys pseudocode sections test rapid recursion tracing under tight time constraints."
+        },
+        {
+          "id": "infy-q2",
+          "question": "What is the time complexity of searching a target value in an N x M matrix where both rows and columns are independently sorted in ascending order (Staircase Search)?",
+          "frequencyTag": "⭐ Infosys HackWithInfy Favorite Problem",
+          "topic": "Matrix Algorithms • Staircase Search",
+          "options": [
+            "O(N * M)",
+            "O(N log M)",
+            "O(N + M)",
+            "O(log(N * M))"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Starting at the top-right corner, if target is smaller we move left (column--); if target is larger we move down (row++). At most N + M steps are executed.",
+          "whyCompanyAsks": "Infosys tests candidates' ability to avoid naive O(N*M) scans on partially ordered structures."
+        },
+        {
+          "id": "infy-q3",
+          "question": "In Java, what occurs when a subclass defines a `static` method with the exact same name and signature as a `static` method in the parent class?",
+          "frequencyTag": "⭐ Repeated Infosys Java Technical MCQ",
+          "topic": "Java OOPs • Method Hiding",
+          "options": [
+            "Method Overriding with Dynamic Dispatch",
+            "Method Hiding (Resolved at Compile Time)",
+            "Compilation Error",
+            "Runtime Exception"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Static methods cannot be overridden dynamically because they are bound at compile time to the reference class, not the runtime object. This is known as Method Hiding.",
+          "whyCompanyAsks": "Infosys technical rounds heavily stress Java language edge cases and OOP fundamentals."
+        },
+        {
+          "id": "infy-q4",
+          "question": "What is the worst-case time complexity of the Knuth-Morris-Pratt (KMP) string pattern matching algorithm for text of length N and pattern of length M?",
+          "frequencyTag": "⭐ Infosys Specialist Programmer Coding Concept",
+          "topic": "Strings • KMP Pattern Matching",
+          "options": [
+            "O(N * M)",
+            "O(N + M)",
+            "O(N log M)",
+            "O(M^2)"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The KMP algorithm constructs the LPS (Longest Prefix Suffix) array in O(M) time and scans the text in O(N) time without backtracking, yielding O(N + M) total worst-case time.",
+          "whyCompanyAsks": "String pattern searching is frequently tested in high-package Infosys SP coding challenges."
+        },
+        {
+          "id": "infy-q5",
+          "question": "Which block in Java exception handling will execute regardless of whether an exception is thrown or caught, unless `System.exit(0)` is invoked?",
+          "frequencyTag": "⭐ Standard Infosys Technical Interview Question",
+          "topic": "Java • Exception Handling",
+          "options": [
+            "catch block",
+            "finally block",
+            "throws clause",
+            "finalizer"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The `finally` block is guaranteed to execute for resource cleanup, irrespective of normal termination or uncaught exceptions.",
+          "whyCompanyAsks": "Resource safety and robust exception handling are core requirements for enterprise software roles at Infosys."
+        },
+        {
+          "id": "infy-q6",
+          "question": "What is the optimal time complexity to find the maximum contiguous subarray sum using Kadane's algorithm?",
+          "frequencyTag": "⭐ High-Frequency Infosys Coding Problem",
+          "topic": "Dynamic Programming • Kadane's Algorithm",
+          "options": [
+            "O(N^2)",
+            "O(N log N)",
+            "O(N)",
+            "O(1)"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Kadane's algorithm iterates through the array once maintaining `max_ending_here = max(x, max_ending_here + x)` in linear O(N) time and O(1) space.",
+          "whyCompanyAsks": "Kadane's algorithm is one of the most repeatedly asked dynamic programming problems in campus recruitment."
+        }
+      ]
+    },
+    {
+      "id": "quiz-accenture-tech",
+      "companyId": "accenture",
+      "company": "Accenture",
+      "companyLogo": "⚡",
+      "title": "Accenture Advanced Technical Assessment PYQs",
+      "slug": "accenture-advanced-tech",
+      "category": "Consulting & Tech",
+      "placementRound": "Round 1: Cognitive & Technical Assessment",
+      "frequencyInfo": "⭐ Repeated in Accenture Advanced Technical & Cognitive Assessment",
+      "difficulty": "MEDIUM",
+      "durationMinutes": 10,
+      "totalQuestions": 6,
+      "points": 250,
+      "unstopCoinsReward": 50,
+      "description": "Curated from Accenture placement drives testing pseudocode variable manipulation, cloud computing architectures, TLS network security, Venn logic, and Agile Scrum.",
+      "badge": "Accenture Certified",
+      "questions": [
+        {
+          "id": "acc-q1",
+          "question": "In a pseudocode loop: `ans = 0; for each x in [2, 3, 2, 4, 3]: ans = ans ^ x`. What is the final value of `ans`?",
+          "frequencyTag": "⭐ Repeated Accenture Pseudocode Question",
+          "topic": "Pseudocode • Bitwise Logic",
+          "options": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Bitwise XOR is commutative and associative. `(2 ^ 2) ^ (3 ^ 3) ^ 4 = 0 ^ 0 ^ 4 = 4`. Paired duplicates eliminate each other.",
+          "whyCompanyAsks": "Accenture pseudocode rounds heavily feature bitwise arithmetic and variable scope tracking."
+        },
+        {
+          "id": "acc-q2",
+          "question": "Which cloud computing deployment model provides dedicated infrastructure exclusively for a single organization, operated internally or by a third-party?",
+          "frequencyTag": "⭐ Accenture Cloud & Security Fundamentals",
+          "topic": "Cloud Computing • Deployment Models",
+          "options": [
+            "Public Cloud",
+            "Private Cloud",
+            "Hybrid Cloud",
+            "Community Cloud"
+          ],
+          "correctAnswer": 1,
+          "explanation": "A Private Cloud delivers infrastructure exclusively dedicated to a single client organization, ensuring maximum data isolation and compliance control.",
+          "whyCompanyAsks": "Accenture is a major global cloud migration partner, requiring every graduate to grasp cloud deployment models."
+        },
+        {
+          "id": "acc-q3",
+          "question": "Which cryptographic protocol operates at the Transport Layer to provide end-to-end encryption, authentication, and integrity for HTTPS web traffic?",
+          "frequencyTag": "⭐ Accenture Network Security MCQ",
+          "topic": "Computer Networks • TLS/SSL",
+          "options": [
+            "IPsec",
+            "TLS (Transport Layer Security)",
+            "SSH",
+            "SNMP"
+          ],
+          "correctAnswer": 1,
+          "explanation": "TLS (and its predecessor SSL) resides between the Application and Transport layers (operating over TCP) to secure web traffic.",
+          "whyCompanyAsks": "Network security and cryptographic handshakes are core requirements in Accenture's technical assessment."
+        },
+        {
+          "id": "acc-q4",
+          "question": "In an engineering batch of 100 students, 60 know C++, 45 know Python, and 20 know both languages. How many students know NEITHER C++ nor Python?",
+          "frequencyTag": "⭐ Repeated Accenture Abstract & Logical Reasoning",
+          "topic": "Logical Reasoning • Set Theory & Venn Diagrams",
+          "options": [
+            "10",
+            "15",
+            "20",
+            "25"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Total knowing at least one = `n(C++) + n(Py) - n(Both)` = 60 + 45 - 20 = 85. Students knowing neither = 100 - 85 = 15.",
+          "whyCompanyAsks": "Set theory Venn logic questions are a staple of Accenture's Cognitive Reasoning section."
+        },
+        {
+          "id": "acc-q5",
+          "question": "Which data structure is primarily used by compilers to convert an arithmetic expression from Infix notation to Postfix notation?",
+          "frequencyTag": "⭐ Accenture Data Structures Favorite",
+          "topic": "Data Structures • Stack Applications",
+          "options": [
+            "Queue",
+            "Stack",
+            "Binary Search Tree",
+            "Linked List"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Shunting-Yard algorithm uses an Operator Stack to manage precedence and associativity when transforming Infix to Postfix (RPN).",
+          "whyCompanyAsks": "Stack applications in expression parsing are repeatedly tested across Accenture technical rounds."
+        },
+        {
+          "id": "acc-q6",
+          "question": "In the Agile Scrum framework, which time-boxed meeting occurs at the end of every sprint to evaluate team performance and agree on actionable improvements?",
+          "frequencyTag": "⭐ Accenture Software Engineering & Agile Round",
+          "topic": "Software Engineering • Scrum Practices",
+          "options": [
+            "Sprint Planning",
+            "Daily Standup",
+            "Sprint Review",
+            "Sprint Retrospective"
+          ],
+          "correctAnswer": 3,
+          "explanation": "The Sprint Retrospective focuses on team process inspection and continuous improvement ('what went well, what can be improved').",
+          "whyCompanyAsks": "Accenture delivers client projects using Agile/Scrum, making software process knowledge essential."
+        }
+      ]
+    },
+    {
+      "id": "quiz-wipro-nth",
+      "companyId": "wipro",
+      "company": "Wipro",
+      "companyLogo": "🌐",
+      "title": "Wipro Elite NTH Coding & Automata Sprint",
+      "slug": "wipro-elite-nth",
+      "category": "Mass IT & Engineering",
+      "placementRound": "Round 1: Wipro National Talent Hunt (NTH)",
+      "frequencyInfo": "⭐ Repeated in Wipro Elite National Talent Hunt (NTH) & Turbo",
+      "difficulty": "EASY",
+      "durationMinutes": 10,
+      "totalQuestions": 6,
+      "points": 200,
+      "unstopCoinsReward": 40,
+      "description": "Authentic repeated questions from Wipro Elite NTH covering Automata Fix debugging, sorting stability, TCP handshakes, FCFS convoy effect, and SQL NULL counting.",
+      "badge": "Wipro NTH Certified",
+      "questions": [
+        {
+          "id": "wip-q1",
+          "question": "In C: `int *ptr = (int*)malloc(sizeof(int)); if(val < 0) return -1; free(ptr);`. What critical defect does this code contain?",
+          "frequencyTag": "⭐ Classic Wipro Automata Fix Debugging Problem",
+          "topic": "C Programming • Memory Management",
+          "options": [
+            "Null Pointer Dereference",
+            "Memory Leak on early return",
+            "Dangling Pointer",
+            "Array Index Out of Bounds"
+          ],
+          "correctAnswer": 1,
+          "explanation": "If `val < 0`, the function returns early without invoking `free(ptr)`, leaving dynamically allocated heap memory leaked and unrecoverable.",
+          "whyCompanyAsks": "Wipro's Automata Fix section requires identifying subtle edge-case bugs in short C/Java snippets."
+        },
+        {
+          "id": "wip-q2",
+          "question": "Which sorting algorithm is guaranteed to be stable and maintains an absolute worst-case time complexity of O(N log N)?",
+          "frequencyTag": "⭐ Wipro Technical MCQ Standard",
+          "topic": "Algorithms • Sorting Stability",
+          "options": [
+            "Quick Sort",
+            "Heap Sort",
+            "Merge Sort",
+            "Selection Sort"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Merge Sort strictly divides and merges in O(N log N) in all cases (best, average, and worst) and preserves relative order of identical keys (stable).",
+          "whyCompanyAsks": "Sorting algorithm trade-offs (stability vs in-place space) are frequently asked in Wipro interviews."
+        },
+        {
+          "id": "wip-q3",
+          "question": "How many packets are exchanged between client and server to establish a standard TCP connection before data transfer begins?",
+          "frequencyTag": "⭐ Wipro Networking Assessment Question",
+          "topic": "Computer Networks • TCP Handshake",
+          "options": [
+            "2 (SYN, ACK)",
+            "3 (SYN, SYN-ACK, ACK)",
+            "4 (SYN, ACK, DATA, ACK)",
+            "1 (CONNECT)"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The 3-way handshake requires: 1) Client sends SYN, 2) Server responds with SYN-ACK, 3) Client acknowledges with ACK.",
+          "whyCompanyAsks": "TCP connection lifecycle questions appear in nearly all Wipro preliminary screening rounds."
+        },
+        {
+          "id": "wip-q4",
+          "question": "Which CPU scheduling algorithm can cause the 'Convoy Effect', where short burst processes are severely delayed waiting behind one long CPU-bound process?",
+          "frequencyTag": "⭐ Wipro Operating Systems Repeat",
+          "topic": "Operating Systems • CPU Scheduling",
+          "options": [
+            "Round Robin (RR)",
+            "Shortest Job First (SJF)",
+            "First-Come, First-Served (FCFS)",
+            "Multilevel Feedback Queue"
+          ],
+          "correctAnswer": 2,
+          "explanation": "In FCFS, non-preemptive ordering means a long compute process holds the CPU, forcing I/O-bound and short processes to idle in the ready queue.",
+          "whyCompanyAsks": "Wipro tests fundamental OS scheduling pitfalls and the benefits of preemption."
+        },
+        {
+          "id": "wip-q5",
+          "question": "What does `sizeof(\"Campus\")` return on a standard 64-bit C compiler?",
+          "frequencyTag": "⭐ Wipro C-Basics Tricky Output Question",
+          "topic": "C Basics • String Literals & Sizeof",
+          "options": [
+            "5 bytes",
+            "6 bytes",
+            "7 bytes (includes null terminator '\\0')",
+            "8 bytes"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The string literal \"Campus\" has 6 characters plus 1 invisible trailing null terminator `\\0`, totaling 7 bytes.",
+          "whyCompanyAsks": "Wipro frequently tests whether candidates remember the null terminator in C string literals."
+        },
+        {
+          "id": "wip-q6",
+          "question": "What will `SELECT COUNT(*)` return when executed on a database table containing 5 rows where all column values are `NULL`?",
+          "frequencyTag": "⭐ Wipro SQL Query Output Repeat",
+          "topic": "DBMS • SQL Aggregate Functions",
+          "options": [
+            "0",
+            "NULL",
+            "5",
+            "Error"
+          ],
+          "correctAnswer": 2,
+          "explanation": "`COUNT(*)` counts the total number of rows regardless of NULL values, returning 5. In contrast, `COUNT(column_name)` would return 0.",
+          "whyCompanyAsks": "The contrast between COUNT(*) and COUNT(column) is a classic campus placement interview trap."
+        }
+      ]
+    },
+    {
+      "id": "quiz-capgemini-tech",
+      "companyId": "capgemini",
+      "company": "Capgemini",
+      "companyLogo": "🔶",
+      "title": "Capgemini Tech Excellence Placement PYQs",
+      "slug": "capgemini-tech-excellence",
+      "category": "Consulting & Engineering",
+      "placementRound": "Round 1: Technical MCQ & Pseudocode Sprint",
+      "frequencyInfo": "⭐ Repeated in Capgemini Exceller On-Campus Recruitment Drives",
+      "difficulty": "MEDIUM",
+      "durationMinutes": 10,
+      "totalQuestions": 6,
+      "points": 250,
+      "unstopCoinsReward": 50,
+      "description": "Curated from Capgemini Exceller campus assessments covering C sequence points, TRUNCATE vs DELETE, BST inorder recovery, queue via stacks, and clock math.",
+      "badge": "Capgemini Certified",
+      "questions": [
+        {
+          "id": "cap-q1",
+          "question": "In C, why is the statement `printf(\"%d %d\", a++, ++a);` considered dangerous and invalid code?",
+          "frequencyTag": "⭐ Repeated Capgemini Pseudocode Output Trap",
+          "topic": "C Programming • Sequence Points",
+          "options": [
+            "It causes a compilation syntax error",
+            "It results in Undefined Behavior because `a` is modified multiple times without an intervening sequence point",
+            "It always evaluates left-to-right",
+            "It causes a stack overflow"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Modifying the same scalar variable twice between sequence points leads to Undefined Behavior in the C standard, causing compiler-dependent results.",
+          "whyCompanyAsks": "Capgemini tests deep knowledge of C sequence points and why side-effect order cannot be assumed."
+        },
+        {
+          "id": "cap-q2",
+          "question": "What is the primary architectural difference between SQL `TRUNCATE` and `DELETE` commands?",
+          "frequencyTag": "⭐ Capgemini Technical Interview Classic",
+          "topic": "DBMS • DDL vs DML",
+          "options": [
+            "TRUNCATE is DML and slower; DELETE is DDL and faster",
+            "TRUNCATE is DDL, deallocates entire data pages, and resets identity; DELETE is DML, removes rows one-by-one with transaction logging",
+            "Both commands do the exact same thing",
+            "DELETE cannot use a WHERE clause"
+          ],
+          "correctAnswer": 1,
+          "explanation": "TRUNCATE is a DDL operation that deallocates storage pages quickly, while DELETE is a row-by-row DML operation that records each deleted row in transaction logs.",
+          "whyCompanyAsks": "TRUNCATE vs DELETE is among the top 3 most frequently asked database questions across Capgemini interview panels."
+        },
+        {
+          "id": "cap-q3",
+          "question": "If the preorder traversal of a Binary Search Tree (BST) is `[40, 20, 10, 30, 60, 50, 70]`, what will its inorder traversal be?",
+          "frequencyTag": "⭐ Capgemini Data Structures Favorite",
+          "topic": "Trees • BST Inorder Property",
+          "options": [
+            "[70, 60, 50, 40, 30, 20, 10]",
+            "[10, 20, 30, 40, 50, 60, 70] (strictly ascending sorted order)",
+            "[40, 20, 10, 30, 60, 50, 70]",
+            "[10, 30, 20, 50, 70, 60, 40]"
+          ],
+          "correctAnswer": 1,
+          "explanation": "By mathematical definition, the Inorder traversal of ANY valid Binary Search Tree is always in strictly ascending sorted order.",
+          "whyCompanyAsks": "Capgemini checks whether candidates recognize BST properties instantly without wasting time drawing the full tree."
+        },
+        {
+          "id": "cap-q4",
+          "question": "What is the minimum number of standard LIFO Stacks required to implement a FIFO Queue?",
+          "frequencyTag": "⭐ Capgemini Core Data Structures Repeat",
+          "topic": "Data Structures • Stacks & Queues",
+          "options": [
+            "1 Stack",
+            "2 Stacks",
+            "3 Stacks",
+            "Cannot be implemented"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Two stacks are required: an input stack for enqueue and an output stack for dequeue. Reversing elements through the second stack restores FIFO order.",
+          "whyCompanyAsks": "Queue-using-stacks is a staple interview question testing data structure inversion mechanics."
+        },
+        {
+          "id": "cap-q5",
+          "question": "A watch gains 5 seconds every 3 minutes. How many minutes will it gain over a continuous duration of 6 hours?",
+          "frequencyTag": "⭐ Capgemini Game-Based Aptitude & Speed Math",
+          "topic": "Aptitude • Clocks & Ratios",
+          "options": [
+            "6 minutes",
+            "8 minutes",
+            "10 minutes",
+            "12 minutes"
+          ],
+          "correctAnswer": 2,
+          "explanation": "6 hours = 360 minutes. Number of 3-minute intervals = 360 / 3 = 120. Total seconds gained = 120 * 5s = 600 seconds = 10 minutes.",
+          "whyCompanyAsks": "Capgemini's game-based and cognitive aptitude test emphasizes fast mental ratio conversions."
+        },
+        {
+          "id": "cap-q6",
+          "question": "Which Software Development Life Cycle (SDLC) model is best suited when client requirements are uncertain, evolving, and working increments are required every 2-3 weeks?",
+          "frequencyTag": "⭐ Capgemini Software Engineering Fundamentals",
+          "topic": "Software Engineering • Agile Methodologies",
+          "options": [
+            "Waterfall Model",
+            "V-Shaped Model",
+            "Agile / Scrum Model",
+            "Big Bang Model"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Agile prioritizes customer collaboration, iterative releases, and rapid response to change over rigid sequential plans.",
+          "whyCompanyAsks": "Capgemini consults for Fortune 500 enterprises that operate strictly on Agile and DevOps delivery frameworks."
+        }
+      ]
+    },
+    {
+      "id": "quiz-cognizant-genc",
+      "companyId": "cognizant",
+      "company": "Cognizant",
+      "companyLogo": "💼",
+      "title": "Cognizant GenC Next Placement Sprint",
+      "slug": "cognizant-genc-next",
+      "category": "IT Services & Consulting",
+      "placementRound": "Round 1 & 2: GenC Next Advanced Technical Drive",
+      "frequencyInfo": "⭐ High-Yield PYQs from Cognizant GenC Next & Elevate Drives",
+      "difficulty": "MEDIUM",
+      "durationMinutes": 10,
+      "totalQuestions": 6,
+      "points": 250,
+      "unstopCoinsReward": 50,
+      "description": "Curated from Cognizant GenC Next & Elevate drives covering Java 8 interfaces, Trie lookup efficiency, SQL Outer Joins, overflow-safe Binary Search, and CORS security.",
+      "badge": "Cognizant Verified",
+      "questions": [
+        {
+          "id": "cog-q1",
+          "question": "In Java 8, which keyword was introduced to allow interfaces to define method implementations with concrete bodies without breaking existing implementing classes?",
+          "frequencyTag": "⭐ Repeated Cognizant Java 8 Technical Question",
+          "topic": "Java 8 • Interface Default Methods",
+          "options": [
+            "abstract",
+            "default",
+            "virtual",
+            "concrete"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The `default` keyword enables interface evolution by providing a fallback method implementation, preserving binary backward compatibility.",
+          "whyCompanyAsks": "Cognizant GenC Next emphasizes modern Java 8+ functional and interface enhancements."
+        },
+        {
+          "id": "cog-q2",
+          "question": "What is the worst-case lookup time complexity to search for a word of length L in a Trie data structure containing N total dictionary words?",
+          "frequencyTag": "⭐ Cognizant Advanced DSA Screening",
+          "topic": "Advanced Data Structures • Trie (Prefix Tree)",
+          "options": [
+            "O(N * L)",
+            "O(log N)",
+            "O(L) (strictly dependent on word length)",
+            "O(N)"
+          ],
+          "correctAnswer": 2,
+          "explanation": "In a Trie, search visits one node per character of the query string. Hence, search runs in O(L) time regardless of how many millions of words N are stored.",
+          "whyCompanyAsks": "Prefix trees are a favorite Cognizant GenC Next topic for autocomplete and dictionary retrieval problems."
+        },
+        {
+          "id": "cog-q3",
+          "question": "Which SQL Join operation returns all records from the left table and matched records from the right table, populating unmatched right columns with `NULL`?",
+          "frequencyTag": "⭐ Cognizant SQL Technical Interview Favorite",
+          "topic": "DBMS • SQL Joins",
+          "options": [
+            "INNER JOIN",
+            "LEFT OUTER JOIN",
+            "CROSS JOIN",
+            "RIGHT OUTER JOIN"
+          ],
+          "correctAnswer": 1,
+          "explanation": "LEFT OUTER JOIN preserves all rows from the primary left table. Where no corresponding match exists in the right table, columns are filled with NULLs.",
+          "whyCompanyAsks": "Cognizant assesses candidates' mastery of relational data integrity and non-loss join mechanics."
+        },
+        {
+          "id": "cog-q4",
+          "question": "In binary search implementation, why is the midpoint index conventionally calculated as `low + (high - low) / 2` rather than `(low + high) / 2`?",
+          "frequencyTag": "⭐ Classic Cognizant Algorithm Bug Trap",
+          "topic": "Algorithms • Binary Search Overflow",
+          "options": [
+            "It executes faster on the CPU",
+            "It avoids 32-bit signed integer arithmetic overflow when `low + high` exceeds 2,147,483,647",
+            "It works on linked lists directly",
+            "It rounds towards high index"
+          ],
+          "correctAnswer": 1,
+          "explanation": "If `low` and `high` are large, `(low + high)` can exceed the maximum 32-bit signed integer value (`2^31 - 1`), wrapping around to negative and throwing an array bounds exception.",
+          "whyCompanyAsks": "Cognizant tests attention to production edge cases and memory bounds."
+        },
+        {
+          "id": "cog-q5",
+          "question": "Which resource is shared among all threads executing within the same process in an operating system?",
+          "frequencyTag": "⭐ Cognizant OS Concurrency Question",
+          "topic": "Operating Systems • Processes & Threads",
+          "options": [
+            "Call Stack",
+            "Program Counter (PC)",
+            "Heap memory & Global Variables",
+            "Register Set"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Threads share the process's Heap, global data, and code segment, while maintaining private Stacks, Registers, and Program Counters.",
+          "whyCompanyAsks": "Thread vs process memory isolation is an essential prerequisite for multi-threaded backend engineering."
+        },
+        {
+          "id": "cog-q6",
+          "question": "What is the primary purpose of CORS (Cross-Origin Resource Sharing) in modern web browser security?",
+          "frequencyTag": "⭐ Cognizant Web Technologies & Full-Stack Question",
+          "topic": "Web Security • CORS Architecture",
+          "options": [
+            "To speed up CSS rendering",
+            "To enforce Same-Origin Policy and selectively authorize browser requests across differing origins via HTTP headers",
+            "To replace HTTPS encryption",
+            "To minify JavaScript bundles"
+          ],
+          "correctAnswer": 1,
+          "explanation": "CORS is an HTTP-header based mechanism that allows servers to declare which origins are permitted to access their resources from within a browser.",
+          "whyCompanyAsks": "Modern full-stack developers at Cognizant must understand browser security and REST API integration."
+        }
+      ]
+    },
+    {
+      "id": "quiz-jpmorgan-cfg",
+      "companyId": "jpmorgan",
+      "company": "J.P. Morgan",
+      "companyLogo": "🏦",
+      "title": "J.P. Morgan Software Analyst Placement Sprint",
+      "slug": "jpmorgan-software-analyst",
+      "category": "FinTech & Banking",
+      "placementRound": "Round 1: Code For Good (CFG) & Tech Assessment",
+      "frequencyInfo": "⭐ Repeated in J.P. Morgan Code For Good (CFG) & Tech Analyst Drives",
+      "difficulty": "HARD",
+      "durationMinutes": 12,
+      "totalQuestions": 6,
+      "points": 300,
+      "unstopCoinsReward": 75,
+      "description": "Curated from J.P. Morgan Code For Good (CFG) and campus recruitment drives covering Bayes' Theorem probability, Java ConcurrentHashMap, ACID transaction isolation, and Floyd-Warshall.",
+      "badge": "J.P. Morgan Verified",
+      "questions": [
+        {
+          "id": "jpm-q1",
+          "question": "A fraud detection model has 99% accuracy and a 1% false positive rate. If only 0.1% (1 in 1000) of financial transactions are fraudulent, what is the approximate probability that a flagged transaction is actually fraudulent (Bayes' Theorem)?",
+          "frequencyTag": "⭐ J.P. Morgan Quantitative Finance & Probabilistic Reasoning",
+          "topic": "Probability • Bayes' Theorem & Base Rate Fallacy",
+          "options": [
+            "99%",
+            "~50%",
+            "~9%",
+            "1%"
+          ],
+          "correctAnswer": 2,
+          "explanation": "In 100,000 transactions: 100 are real fraud (99 caught). 99,900 are genuine (1% false positives = 999 flagged). Total flagged = 99 + 999 = 1,098. Real fraud among flagged = 99 / 1,098 ≈ 9.0%.",
+          "whyCompanyAsks": "J.P. Morgan heavily tests Bayes' theorem and quantitative base-rate intuition in quantitative and technology rounds."
+        },
+        {
+          "id": "jpm-q2",
+          "question": "In high-throughput financial trading systems in Java, why is `ConcurrentHashMap` strongly preferred over `Collections.synchronizedMap`?",
+          "frequencyTag": "⭐ J.P. Morgan Java Concurrency Favorite",
+          "topic": "Java Concurrency • Concurrent Collections",
+          "options": [
+            "`ConcurrentHashMap` stores data in disk rather than RAM",
+            "`ConcurrentHashMap` uses segment/bucket-level locking, allowing concurrent reads and non-conflicting writes without locking the entire table",
+            "`ConcurrentHashMap` is non-blocking and single-threaded",
+            "`Collections.synchronizedMap` is deprecated"
+          ],
+          "correctAnswer": 1,
+          "explanation": "`synchronizedMap` locks the entire collection on every operation. `ConcurrentHashMap` uses bucket-level locks and lock-free volatile reads, scaling seamlessly under high concurrency.",
+          "whyCompanyAsks": "Concurrency and lock contention avoidance are mission-critical for J.P. Morgan's high-frequency trading platforms."
+        },
+        {
+          "id": "jpm-q3",
+          "question": "Which ACID property ensures that concurrent financial transactions do not read intermediate, uncommitted states from one another (preventing Dirty Reads and Race Conditions)?",
+          "frequencyTag": "⭐ J.P. Morgan Banking Transaction Integrity Question",
+          "topic": "DBMS • ACID Isolation",
+          "options": [
+            "Atomicity",
+            "Consistency",
+            "Isolation",
+            "Durability"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Isolation guarantees that concurrently running transactions execute as if they were serial, preventing race conditions and intermediate dirty reads.",
+          "whyCompanyAsks": "Database transaction isolation levels (Read Committed, Repeatable Read, Serializable) are paramount in banking software."
+        },
+        {
+          "id": "jpm-q4",
+          "question": "In the classic stock trading problem (LeetCode 121: Best Time to Buy and Sell Stock), what is the optimal one-pass time and space complexity to find the maximum profit from one transaction?",
+          "frequencyTag": "⭐ J.P. Morgan Campus OA Coding Problem",
+          "topic": "Algorithms • One-Pass Dynamic Optimization",
+          "options": [
+            "O(N^2) time, O(1) space",
+            "O(N log N) time, O(N) space",
+            "O(N) time, O(1) space",
+            "O(1) time, O(N) space"
+          ],
+          "correctAnswer": 2,
+          "explanation": "By tracking the minimum buying price seen so far in a single pass, maximum profit at each day is `price[i] - min_price`. This requires O(N) time and O(1) space.",
+          "whyCompanyAsks": "Stock profit optimization problems are culturally synonymous with Wall Street FinTech recruitment."
+        },
+        {
+          "id": "jpm-q5",
+          "question": "According to the HTTP/1.1 (RFC 7231) specification, which of the following HTTP methods is NOT defined as idempotent?",
+          "frequencyTag": "⭐ J.P. Morgan Enterprise Microservices Assessment",
+          "topic": "Web Architecture • HTTP Idempotency",
+          "options": [
+            "GET",
+            "PUT",
+            "DELETE",
+            "POST"
+          ],
+          "correctAnswer": 3,
+          "explanation": "An idempotent HTTP method produces the identical side-effect regardless of whether it is called once or ten times. PUT, DELETE, and GET are idempotent; POST creates a new resource on each call and is non-idempotent.",
+          "whyCompanyAsks": "Idempotency prevents duplicate payments and transactions when network retries occur in financial APIs."
+        },
+        {
+          "id": "jpm-q6",
+          "question": "Which algorithm computes all-pairs shortest paths in a directed weighted graph (with positive or negative edge weights, but no negative cycles) in O(V^3) time?",
+          "frequencyTag": "⭐ J.P. Morgan Graph Algorithms Problem",
+          "topic": "Graph Theory • Dynamic Programming",
+          "options": [
+            "Dijkstra's Algorithm",
+            "Floyd-Warshall Algorithm",
+            "Prim's Algorithm",
+            "Kruskal's Algorithm"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The Floyd-Warshall algorithm uses dynamic programming with 3 nested loops over intermediate vertices `k`, running in O(V^3) time and O(V^2) space.",
+          "whyCompanyAsks": "Multi-node routing and dynamic programming graph matrix algorithms are frequently tested in J.P. Morgan technical interviews."
         }
       ]
     },

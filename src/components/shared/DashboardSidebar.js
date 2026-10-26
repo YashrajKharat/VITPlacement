@@ -6,7 +6,7 @@ import { useAppStore } from "@/hooks/useAppStore";
 import { 
   LayoutDashboard, User, Briefcase, Sparkles, Calendar, 
   LogOut, Shield, Users, BarChart3, Building, Database, Send, CheckSquare, Brain,
-  Award, FileCheck, ClipboardCheck, GraduationCap, Trophy, HelpCircle, Flame, PlusCircle
+  Award, FileCheck, ClipboardCheck, GraduationCap, Trophy, HelpCircle, Flame, PlusCircle, Bot
 } from "lucide-react";
 import { logoutAction } from "@/actions/auth";
 
@@ -27,6 +27,7 @@ export default function DashboardSidebar({ user }) {
           { label: "Code Arena (DSA)", icon: Brain, href: "/dashboard/student/code-arena", badge: "OA" },
           { label: "1:1 Mentorship", icon: GraduationCap, href: "/dashboard/student/mentorship", badge: "FAANG" },
           { label: "Jobs & Internships", icon: Briefcase, href: "/dashboard/student/jobs" },
+          { label: "AI Placement Coach", icon: Bot, href: "/dashboard/student/ai-coach", badge: "ADVISOR" },
           { label: "AI Voice Simulator", icon: Sparkles, href: "/dashboard/student/interviews/simulator", badge: "AI 2.0" },
           { label: "AI Resume Optimizer", icon: Sparkles, href: "/dashboard/student/resume-optimizer", badge: "ATS 95%" },
           { label: "AI GD Simulator", icon: Users, href: "/dashboard/student/gd-simulator", badge: "VOICE GD" },

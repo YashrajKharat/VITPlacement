@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:db": "node --env-file=.env scripts/test-db-connection.mjs",
+    "migrate:db": "node --env-file=.env scripts/migrate-local-to-mongodb.mjs"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.9.1",

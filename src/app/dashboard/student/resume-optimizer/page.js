@@ -12,12 +12,13 @@ import {
   Sparkles, CheckCircle2, ArrowLeft, Copy, Check, 
   Zap, ArrowRight, TrendingUp, AlertTriangle, FileText, 
   RefreshCw, Briefcase, ChevronRight, Layers, Sliders,
-  Terminal, ExternalLink, Award, BadgeCheck
+  Terminal, ExternalLink, Award, BadgeCheck, Bot, MapPin, DollarSign, Building2, Tag, ChevronDown
 } from "lucide-react";
 
 export default function ResumeOptimizerPage() {
   const [jobDescription, setJobDescription] = useState("");
-  const [selectedPreset, setSelectedPreset] = useState("");
+  const [selectedDriveId, setSelectedDriveId] = useState("");
+  const [selectedDrive, setSelectedDrive] = useState(null);
   const [sampleJobs, setSampleJobs] = useState([]);
   const [resumeData, setResumeData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -37,7 +38,8 @@ export default function ResumeOptimizerPage() {
         ]);
         setSampleJobs(jobs || []);
         if (jobs && jobs.length > 0) {
-          setSelectedPreset(jobs[0].id);
+          setSelectedDriveId(jobs[0].id);
+          setSelectedDrive(jobs[0]);
           setJobDescription(jobs[0].description);
         }
         if (profileRes?.success && profileRes.student) {
@@ -52,10 +54,11 @@ export default function ResumeOptimizerPage() {
     init();
   }, []);
 
-  const handleSelectPreset = (id) => {
-    setSelectedPreset(id);
+  const handleSelectDrive = (id) => {
+    setSelectedDriveId(id);
     const found = sampleJobs.find(j => j.id === id);
     if (found) {
+      setSelectedDrive(found);
       setJobDescription(found.description);
       setResult(null);
       setAppliedSuccess(false);
@@ -168,72 +171,157 @@ export default function ResumeOptimizerPage() {
 
       {/* Main Grid: Input Column vs Output Column */}
       <div className="grid lg:grid-cols-12 gap-8 items-start">
-        {/* LEFT COLUMN: Job Description Input & Presets */}
+        {/* LEFT COLUMN: Target Campus Drive Dropdown & Auto-Extracted Details */}
         <div className="lg:col-span-5 space-y-5">
-          <div className="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-xs space-y-4">
-            <h3 className="font-bold text-xs text-slate-900 uppercase tracking-wider flex items-center gap-2">
-              <Briefcase className="h-4 w-4 text-[#1C4980]" />
-              1. Select Preset or Paste Job Description (JD)
-            </h3>
+          <div className="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-sm space-y-5">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+              <h3 className="font-bold text-xs text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                <Briefcase className="h-4 w-4 text-[#1C4980]" />
+                Select Target Campus Drive / Internship
+              </h3>
+              <span className="text-[10px] font-bold bg-blue-50 text-[#1C4980] px-2.5 py-0.5 rounded-full">
+                Auto-Extract JD
+              </span>
+            </div>
 
-            {/* Presets */}
+            {/* Dropdown Selector */}
             <div className="space-y-1.5">
-              <label className="block text-[10px] font-bold uppercase text-slate-500">Quick Campus Presets</label>
-              <div className="grid grid-cols-1 gap-2">
-                {sampleJobs.map((job) => (
-                  <button
-                    key={job.id}
-                    onClick={() => handleSelectPreset(job.id)}
-                    className={`p-3 rounded-2xl text-left border transition-all cursor-pointer ${
-                      selectedPreset === job.id 
-                        ? "border-[#1C4980] bg-blue-50/50 shadow-xs ring-1 ring-[#1C4980]" 
-                        : "border-slate-200 hover:bg-slate-50 bg-white"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <p className="text-xs font-bold text-slate-900">{job.company}</p>
-                      <span className="text-[9px] font-extrabold bg-blue-100 text-[#1C4980] px-2 py-0.5 rounded-full">
-                        {job.role}
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-slate-500 mt-0.5 truncate">{job.title}</p>
-                  </button>
-                ))}
+              <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-600">
+                Choose Posted Drive / Opening
+              </label>
+              <div className="relative">
+                <select
+                  value={selectedDriveId}
+                  onChange={(e) => handleSelectDrive(e.target.value)}
+                  className="w-full appearance-none pl-3.5 pr-10 py-3 rounded-2xl border border-slate-300 bg-slate-50/80 text-slate-900 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-[#1C4980]/30 focus:border-[#1C4980] cursor-pointer shadow-xs transition-all"
+                >
+                  <optgroup label="💼 Full-Time Campus Placement Drives">
+                    {sampleJobs.filter(j => j.type !== "INTERNSHIP").map((job) => (
+                      <option key={job.id} value={job.id}>
+                        {job.company} — {job.title}
+                      </option>
+                    ))}
+                  </optgroup>
+                  <optgroup label="🎓 Campus Internship Drives">
+                    {sampleJobs.filter(j => j.type === "INTERNSHIP").map((job) => (
+                      <option key={job.id} value={job.id}>
+                        {job.company} — {job.title}
+                      </option>
+                    ))}
+                  </optgroup>
+                </select>
+                <ChevronDown className="absolute right-3.5 top-3.5 h-4 w-4 text-slate-500 pointer-events-none" />
               </div>
             </div>
 
-            {/* Custom Input */}
-            <div className="space-y-1.5">
-              <label className="block text-[10px] font-bold uppercase text-slate-500">Target Job Description Text</label>
-              <textarea
-                rows={10}
-                value={jobDescription}
-                onChange={(e) => {
-                  setJobDescription(e.target.value);
-                  setSelectedPreset("");
-                }}
-                placeholder="Paste any target job description here (e.g. Data Analyst, SDE 1, Frontend Developer, DevOps, Business Analyst)..."
-                className="w-full p-3.5 rounded-2xl border border-slate-200 bg-slate-50 text-xs text-slate-800 leading-relaxed font-mono focus:outline-none focus:ring-2 focus:ring-[#1C4980]/30"
-              />
-            </div>
+            {/* Auto-Extracted Details Card */}
+            {selectedDrive && (
+              <div className="space-y-3.5 p-4 rounded-2xl bg-gradient-to-br from-slate-50 to-blue-50/40 border border-slate-200/90 text-left animate-in fade-in duration-200">
+                {/* Company & Role Header */}
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-slate-900">
+                      <span className="text-base">{selectedDrive.companyLogo || "🏢"}</span>
+                      <span>{selectedDrive.company}</span>
+                    </div>
+                    <p className="text-xs font-extrabold text-[#1C4980] mt-0.5">
+                      {selectedDrive.title}
+                    </p>
+                  </div>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 shrink-0">
+                    {selectedDrive.categoryLabel || (selectedDrive.type === "INTERNSHIP" ? "Internship" : "Full-Time")}
+                  </span>
+                </div>
 
-            <button
-              onClick={handleOptimize}
-              disabled={optimizing || !jobDescription}
-              className="w-full py-3.5 rounded-2xl bg-[#1C4980] hover:bg-[#153862] text-white font-extrabold text-xs shadow-md shadow-[#1C4980]/20 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-50"
-            >
-              {optimizing ? (
-                <>
-                  <RefreshCw className="h-4 w-4 animate-spin" />
-                  <span>Analyzing Skills & Rewriting Bullets...</span>
-                </>
-              ) : (
-                <>
-                  <Zap className="h-4 w-4 text-amber-300" />
-                  <span>Scan JD & Rewrite Bullets to ATS 95%+</span>
-                </>
+                {/* Location & Package Badges */}
+                <div className="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-medium text-slate-600">
+                  <span className="flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-slate-200/80">
+                    <MapPin className="h-3.5 w-3.5 text-slate-400" />
+                    <span>{selectedDrive.location}</span>
+                  </span>
+                  <span className="flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 font-bold text-emerald-700">
+                    <DollarSign className="h-3.5 w-3.5 text-emerald-600" />
+                    <span>{selectedDrive.package}</span>
+                  </span>
+                </div>
+
+                {/* Extracted Key Skills */}
+                {selectedDrive.extractedSkills && selectedDrive.extractedSkills.length > 0 && (
+                  <div className="space-y-1.5 pt-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1">
+                      <Tag className="h-3 w-3 text-[#1C4980]" />
+                      Target Skills Extracted:
+                    </span>
+                    <div className="flex flex-wrap gap-1">
+                      {selectedDrive.extractedSkills.map((sk, idx) => (
+                        <span key={idx} className="text-[10px] font-bold bg-white text-[#1C4980] border border-blue-200/80 px-2 py-0.5 rounded-md shadow-2xs">
+                          {sk}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Extracted Requirements Preview */}
+                {selectedDrive.requirements && selectedDrive.requirements.length > 0 && (
+                  <div className="space-y-1 pt-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                      Key Eligibility & Requirements:
+                    </span>
+                    <ul className="space-y-1 pl-1 text-[11px] text-slate-600 leading-snug">
+                      {selectedDrive.requirements.slice(0, 3).map((req, idx) => (
+                        <li key={idx} className="flex items-start gap-1.5">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                          <span>{req}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Full Extracted Description Drawer/Preview */}
+                <div className="space-y-1 pt-1">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                    Auto-Extracted Description:
+                  </span>
+                  <div className="p-3 bg-white rounded-xl border border-slate-200/80 max-h-36 overflow-y-auto text-[11px] text-slate-600 leading-relaxed font-mono">
+                    {selectedDrive.description}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Action Buttons */}
+            <div className="space-y-2 pt-1">
+              <button
+                onClick={handleOptimize}
+                disabled={optimizing || !jobDescription}
+                className="w-full py-3.5 rounded-2xl bg-[#1C4980] hover:bg-[#153862] text-white font-extrabold text-xs shadow-md shadow-[#1C4980]/20 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-50"
+              >
+                {optimizing ? (
+                  <>
+                    <RefreshCw className="h-4 w-4 animate-spin" />
+                    <span>Extracting Keywords & Rewriting Bullets...</span>
+                  </>
+                ) : (
+                  <>
+                    <Zap className="h-4 w-4 text-amber-300" />
+                    <span>Scan JD & Rewrite Bullets to ATS 95%+</span>
+                  </>
+                )}
+              </button>
+
+              {/* Consult AI Placement Coach Button */}
+              {selectedDrive && (
+                <Link
+                  href={`/dashboard/student/ai-coach?jobId=${selectedDrive.id}&company=${encodeURIComponent(selectedDrive.company)}&role=${encodeURIComponent(selectedDrive.title)}`}
+                  className="w-full py-2.5 px-3 rounded-2xl bg-amber-50 hover:bg-amber-100/80 text-amber-900 border border-amber-200 font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-2xs"
+                >
+                  <Bot className="h-4 w-4 text-amber-600" />
+                  <span>Ask AI Placement Coach About This Drive</span>
+                </Link>
               )}
-            </button>
+            </div>
           </div>
         </div>
 

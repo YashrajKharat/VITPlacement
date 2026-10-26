@@ -2,6 +2,8 @@ import { prisma, isPrismaHealthy } from "./prisma.js";
 import { getMongoDb, seedMongoDbIfEmpty } from "./mongodb.js";
 import fs from "fs";
 import path from "path";
+import { COMPANY_QUIZZES } from "./company-quizzes-data.js";
+import { ALL_CODING_CHALLENGES } from "./coding-challenges-data.js";
 
 const MOCK_STORAGE_FILE = path.join(process.cwd(), ".mockdb.json");
 
@@ -11,12 +13,168 @@ function getInitialMockData() {
       { id: "faculty-1", email: "faculty@college.edu", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "FACULTY_MENTOR", name: "Faculty Mentor" },
       { id: "coordinator-1", email: "coordinator@college.edu", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "INTERNSHIP_COORDINATOR", name: "Internship Coordinator" },
       { id: "tpo-1", email: "tpo@college.edu", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "TPO", name: "Training & Placement Officer" },
-      { id: "admin-1", email: "admin@portal.com", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "ADMIN", name: "System Admin" }
+      { id: "admin-1", email: "admin@portal.com", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "ADMIN", name: "System Admin" },
+      { id: "recruiter-1", email: "recruiter@company.com", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "RECRUITER", name: "Google HR / Campus Talent Partner", companyId: "company-google" },
+      { id: "recruiter-2", email: "hr@tcs.com", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "RECRUITER", name: "TCS Lead Talent Acquisition", companyId: "company-tcs" },
+      { id: "student-1", email: "student@college.edu", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "STUDENT", name: "Aarav Sharma (CMPN Candidate)" }
     ],
-    students: [],
-    recruiters: [],
-    companies: [],
-    jobs: [],
+    students: [
+      {
+        id: "student-profile-student-1",
+        userId: "student-1",
+        name: "Aarav Sharma",
+        rollNumber: "22102A0045",
+        department: "CMPN",
+        year: "Third Year",
+        division: "A",
+        cgpa: 8.85,
+        skills: ["React", "Node.js", "Python", "Data Structures", "TypeScript"],
+        isPlaced: false,
+        createdAt: new Date("2026-01-01")
+      }
+    ],
+    recruiters: [
+      {
+        id: "recruiter-profile-recruiter-1",
+        userId: "recruiter-1",
+        name: "Google HR / Campus Talent Partner",
+        email: "recruiter@company.com",
+        designation: "Lead University Recruiter",
+        companyId: "company-google",
+        isVerified: true,
+        createdAt: new Date("2026-01-01")
+      },
+      {
+        id: "recruiter-profile-recruiter-2",
+        userId: "recruiter-2",
+        name: "TCS Lead Talent Acquisition",
+        email: "hr@tcs.com",
+        designation: "Senior Campus Hiring Manager",
+        companyId: "company-tcs",
+        isVerified: true,
+        createdAt: new Date("2026-01-01")
+      }
+    ],
+    companies: [
+      {
+        id: "company-google",
+        name: "Google India",
+        website: "https://careers.google.com",
+        industry: "Cloud & AI Engineering",
+        location: "Mumbai / Bengaluru / Hyderabad",
+        description: "Global technology pioneer in search, generative AI, cloud computing, and developer systems.",
+        isVerified: true,
+        logo: "🔍"
+      },
+      {
+        id: "company-tcs",
+        name: "Tata Consultancy Services (TCS)",
+        website: "https://www.tcs.com",
+        industry: "IT Services & Consulting",
+        location: "Mumbai / Pune",
+        description: "India's premier multinational information technology and engineering enterprise.",
+        isVerified: true,
+        logo: "🏢"
+      },
+      {
+        id: "company-microsoft",
+        name: "Microsoft India",
+        website: "https://careers.microsoft.com",
+        industry: "Cloud Software & AI Systems",
+        location: "Bengaluru / Noida / Hyderabad",
+        description: "Leading technology enterprise developing Azure, Windows, developer tools, and enterprise cloud solutions.",
+        isVerified: true,
+        logo: "💻"
+      },
+      {
+        id: "company-amazon",
+        name: "Amazon India",
+        website: "https://amazon.jobs",
+        industry: "E-Commerce & AWS Cloud",
+        location: "Bengaluru / Hyderabad",
+        description: "World leader in customer-centric e-commerce platforms and AWS distributed cloud infrastructure.",
+        isVerified: true,
+        logo: "📦"
+      }
+    ],
+    jobs: [
+      {
+        id: "job-google-frontend",
+        title: "Frontend Software Engineer (Web & UI Systems)",
+        companyId: "company-google",
+        companyName: "Google India",
+        location: "Bengaluru / Hyderabad (Hybrid)",
+        type: "FULL_TIME",
+        salaryRange: "26 - 34 LPA",
+        description: "Google is hiring Frontend Engineers to build intuitive, lightning-fast web applications and interfaces used by billions of people across Google Cloud, YouTube, and Workspace.\n\nKey Responsibilities:\n• Build modular, accessible (WCAG 2.1 AA), and ultra-responsive web applications using React, Next.js, and TypeScript.\n• Optimize client-side performance, measuring Core Web Vitals (LCP < 2.0s, INP < 150ms, CLS < 0.05) and reducing JavaScript bundle size.\n• Implement state management architectures, real-time WebSockets / SSE data streaming, and client-side caching.\n• Write comprehensive unit, integration, and end-to-end tests using Jest, React Testing Library, and Playwright.\n• Collaborate with UX designers, product managers, and backend systems engineers to craft world-class web experiences.",
+        requirements: [
+          "Proficiency in JavaScript (ES6+), TypeScript, React, and Next.js",
+          "Deep understanding of browser DOM APIs, Event Loop, CSS Grid/Flexbox, and Web Performance",
+          "Experience with state management (Redux Toolkit, Zustand, or TanStack Query)",
+          "Understanding of Data Structures & Algorithms in JavaScript/TypeScript",
+          "B.Tech/BE in CS/IT/CMPN/EXTC with minimum 7.5 CGPA"
+        ],
+        status: "ACTIVE",
+        applicantsCount: 38,
+        createdAt: new Date("2026-02-01")
+      },
+      {
+        id: "job-1",
+        title: "Software Development Engineer (SDE-1)",
+        companyId: "company-google",
+        companyName: "Google India",
+        location: "Bengaluru / Mumbai (Hybrid)",
+        type: "FULL_TIME",
+        salaryRange: "24 - 32 LPA",
+        description: "Join Google's Core Engineering team building scalable distributed systems and cloud services.",
+        requirements: ["Proficiency in C++, Java, or Go", "Strong Data Structures and Algorithms", "B.Tech/BE in CS/IT/CMPN with 7.5+ CGPA"],
+        status: "ACTIVE",
+        applicantsCount: 42,
+        createdAt: new Date("2026-01-15")
+      },
+      {
+        id: "job-2",
+        title: "Systems Engineer (Digital & Prime)",
+        companyId: "company-tcs",
+        companyName: "Tata Consultancy Services (TCS)",
+        location: "Mumbai / Pune",
+        type: "FULL_TIME",
+        salaryRange: "7.5 - 11.5 LPA",
+        description: "Architect cutting-edge enterprise cloud transformations and full-stack solutions for global clients.",
+        requirements: ["Full stack development with Node.js/React", "Good algorithmic problem-solving", "Consistent 60%+ throughout academics"],
+        status: "ACTIVE",
+        applicantsCount: 128,
+        createdAt: new Date("2026-01-20")
+      },
+      {
+        id: "job-ms-fullstack",
+        title: "Software Engineer (Full Stack & Cloud)",
+        companyId: "company-microsoft",
+        companyName: "Microsoft India",
+        location: "Bengaluru / Noida",
+        type: "FULL_TIME",
+        salaryRange: "22 - 28 LPA",
+        description: "Build enterprise cloud applications, Azure services, and modern responsive developer portals.",
+        requirements: ["Strong React/TypeScript & C# or Node.js", "System Design & Distributed Cloud Concepts", "7.0+ CGPA"],
+        status: "ACTIVE",
+        applicantsCount: 56,
+        createdAt: new Date("2026-02-05")
+      },
+      {
+        id: "intern-google-frontend",
+        title: "Frontend & Web Technologies Summer Intern",
+        companyId: "company-google",
+        companyName: "Google India",
+        location: "Bengaluru / Remote",
+        type: "INTERNSHIP",
+        salaryRange: "₹1,10,000 / month",
+        description: "8-week high-impact engineering internship building experimental web applications with Google engineering mentors.",
+        requirements: ["Solid foundation in JavaScript/TypeScript and React", "Creative project portfolio showcasing interactive web apps", "Eligible for 2026/2027 graduation"],
+        status: "ACTIVE",
+        applicantsCount: 89,
+        createdAt: new Date("2026-02-10")
+      }
+    ],
     applications: [],
     interviews: [],
     offerLetters: [],
@@ -801,159 +959,8 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
       }
     ],
 
-    // UNSTOP INTERACTIVE QUIZZES
-    quizzes: [
-      {
-        id: "quiz-tcs-nqt",
-        title: "TCS NQT Advanced Technical Sprint",
-        slug: "tcs-nqt-technical-sprint",
-        category: "Placement Technical",
-        difficulty: "MEDIUM",
-        durationMinutes: 10,
-        totalQuestions: 5,
-        points: 250,
-        unstopCoinsReward: 50,
-        description: "Test your core computer science fundamentals, DSA time complexity, memory management, and SQL query prediction based on actual TCS Digital NQT papers.",
-        badge: "TCS Certified",
-        questions: [
-          {
-            id: "q1",
-            question: "What is the worst-case time complexity of searching an element in a Balanced Binary Search Tree (AVL / Red-Black Tree) containing N nodes?",
-            options: ["O(1)", "O(log N)", "O(N)", "O(N log N)"],
-            correctAnswer: 1,
-            explanation: "In a balanced BST, tree height is strictly bounded by O(log N). Hence lookup, insertion, and deletion all run in O(log N) worst-case time."
-          },
-          {
-            id: "q2",
-            question: "In Python, what is the output of: `print(type(lambda x: x + 1))`?",
-            options: ["<class 'lambda'>", "<class 'function'>", "<class 'expression'>", "<class 'builtin_function'>"],
-            correctAnswer: 1,
-            explanation: "Lambda expressions in Python construct instances of the standard `<class 'function'>` type."
-          },
-          {
-            id: "q3",
-            question: "Which database isolation level prevents 'Dirty Reads', 'Non-Repeatable Reads', and 'Phantom Reads' simultaneously?",
-            options: ["Read Committed", "Read Uncommitted", "Repeatable Read", "Serializable"],
-            correctAnswer: 3,
-            explanation: "SERIALIZABLE is the highest ANSI SQL isolation level. It guarantees completely serializable execution, eliminating phantom reads, dirty reads, and non-repeatable reads."
-          },
-          {
-            id: "q4",
-            question: "What will `[1, 2, 3] + [4, 5]` produce in JavaScript?",
-            options: ["[1, 2, 3, 4, 5]", "'1,2,34,5'", "NaN", "TypeError"],
-            correctAnswer: 1,
-            explanation: "In JavaScript, the `+` operator coerces both arrays to strings ('1,2,3' and '4,5') and concatenates them to produce the string '1,2,34,5'."
-          },
-          {
-            id: "q5",
-            question: "Which data structure is primarily used to implement Breadth-First Search (BFS) graph traversal?",
-            options: ["Stack", "Queue (FIFO)", "Priority Queue", "Disjoint Set"],
-            correctAnswer: 1,
-            explanation: "BFS explores vertices layer by layer in First-In-First-Out order using a standard FIFO Queue."
-          }
-        ]
-      },
-      {
-        id: "quiz-google-dsa",
-        title: "Google DSA & Algorithmic Speed Sprint",
-        slug: "google-dsa-speed-sprint",
-        category: "DSA & Problem Solving",
-        difficulty: "HARD",
-        durationMinutes: 10,
-        totalQuestions: 5,
-        points: 300,
-        unstopCoinsReward: 75,
-        description: "Solve high-yield algorithmic trivia, recursion stack bounds, bitwise manipulation tricks, and amortized complexity benchmarks.",
-        badge: "Google Elite",
-        questions: [
-          {
-            id: "gq1",
-            question: "What is the result of evaluating `(n & (n - 1)) == 0` for any positive integer `n > 0`?",
-            options: ["Checks if n is odd", "Checks if n is a power of 2", "Checks if n is prime", "Checks if n is divisible by 4"],
-            correctAnswer: 1,
-            explanation: "Subtracting 1 flips all bits after the lowest set bit. Bitwise ANDing `n & (n - 1)` clears the lowest set bit. If the result is 0, exactly one bit was set, meaning `n` is a power of 2."
-          },
-          {
-            id: "gq2",
-            question: "What is the amortized time complexity of inserting N elements into a dynamic array (like C++ `std::vector` or Java `ArrayList`) that doubles capacity upon filling?",
-            options: ["O(N^2)", "O(N log N)", "O(1) amortized per insert, O(N) total", "O(N) per insert"],
-            correctAnswer: 2,
-            explanation: "Although resizing takes O(K) when triggered, geometric doubling distributes the copy cost across past insertions, resulting in O(1) amortized time per insertion."
-          },
-          {
-            id: "gq3",
-            question: "In Dijkstra's Shortest Path Algorithm with a Min-Heap (Binary Heap), what is the overall time complexity for a graph with V vertices and E edges?",
-            options: ["O(V + E)", "O((V + E) log V)", "O(V^2)", "O(V * E)"],
-            correctAnswer: 1,
-            explanation: "Using a binary min-heap, extracting min takes O(V log V) and decreasing keys / pushing edges takes O(E log V), yielding O((V + E) log V)."
-          },
-          {
-            id: "gq4",
-            question: "Which algorithmic paradigm does the '0/1 Knapsack' problem solve using?",
-            options: ["Greedy Algorithm", "Dynamic Programming", "Divide & Conquer", "Randomized Sampling"],
-            correctAnswer: 1,
-            explanation: "0/1 Knapsack exhibits overlapping subproblems and optimal substructure where items cannot be broken, requiring 2D/1D Dynamic Programming."
-          },
-          {
-            id: "gq5",
-            question: "What is the space complexity of a recursive Inorder traversal on a skewed binary tree with N nodes?",
-            options: ["O(1)", "O(log N)", "O(N)", "O(N^2)"],
-            correctAnswer: 2,
-            explanation: "On a degenerated (skewed) tree, recursion depth reaches N, consuming O(N) call-stack memory."
-          }
-        ]
-      },
-      {
-        id: "quiz-quant-aptitude",
-        title: "Quantitative Aptitude & Speed Math Master",
-        slug: "quant-aptitude-speed-math",
-        category: "Aptitude & Reasoning",
-        difficulty: "EASY",
-        durationMinutes: 8,
-        totalQuestions: 5,
-        points: 200,
-        unstopCoinsReward: 40,
-        description: "Ace speed math, time & work, probability, percentages, and ratios required in campus placement preliminary screening rounds.",
-        badge: "Aptitude Pro",
-        questions: [
-          {
-            id: "aq1",
-            question: "A can complete a project in 12 days and B can complete it in 24 days. Working together, how many days will they take to complete the project?",
-            options: ["6 days", "8 days", "10 days", "16 days"],
-            correctAnswer: 1,
-            explanation: "Combined 1-day work = 1/12 + 1/24 = (2 + 1)/24 = 3/24 = 1/8. Hence, together they take 8 days."
-          },
-          {
-            id: "aq2",
-            question: "A train 180 meters long is traveling at 72 km/h. How long will it take to cross an electric pole?",
-            options: ["7 seconds", "9 seconds", "12 seconds", "15 seconds"],
-            correctAnswer: 1,
-            explanation: "Speed in m/s = 72 * (5/18) = 20 m/s. Time = Distance / Speed = 180 / 20 = 9 seconds."
-          },
-          {
-            id: "aq3",
-            question: "What is the probability of rolling a sum of 7 when two fair 6-sided dice are thrown simultaneously?",
-            options: ["1/6", "1/12", "5/36", "7/36"],
-            correctAnswer: 0,
-            explanation: "Pairs yielding 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 outcomes out of 36 total. Probability = 6/36 = 1/6."
-          },
-          {
-            id: "aq4",
-            question: "If a product is sold at ₹960 with a 20% profit, what was its original cost price (CP)?",
-            options: ["₹768", "₹800", "₹820", "₹840"],
-            correctAnswer: 1,
-            explanation: "Selling Price = CP * 1.20 => 960 = CP * 1.20 => CP = 960 / 1.20 = ₹800."
-          },
-          {
-            id: "aq5",
-            question: "Find the missing number in the sequence: 2, 6, 12, 20, 30, ?",
-            options: ["40", "42", "44", "48"],
-            correctAnswer: 1,
-            explanation: "Differences are +4, +6, +8, +10. Next difference is +12 => 30 + 12 = 42 (or n^2 + n formula: 1*2, 2*3, 3*4, 4*5, 5*6, 6*7 = 42)."
-          }
-        ]
-      }
-    ],
+    // UNSTOP INTERACTIVE QUIZZES (COMPANY-SPECIFIC HIGH-YIELD PYQs)
+    quizzes: COMPANY_QUIZZES,
     quizAttempts: [],
 
     // UNSTOP 1-ON-1 MENTORSHIP ROSTER
@@ -1372,9 +1379,18 @@ export const db = {
   users: {
     async findByEmail(email) {
       if (!email) return null;
+      const normalizedEmail = email.trim().toLowerCase();
+
       const mongo = await checkMongoConnection();
       if (mongo) {
-        const user = await mongo.collection("users").findOne({ email: new RegExp("^" + email.trim() + "$", "i") });
+        let user = await mongo.collection("users").findOne({ email: new RegExp("^" + email.trim() + "$", "i") });
+        if (!user) {
+          const seedUser = getInitialMockData().users.find(u => u.email.toLowerCase() === normalizedEmail);
+          if (seedUser) {
+            await mongo.collection("users").insertOne({ ...seedUser, createdAt: new Date() });
+            user = await mongo.collection("users").findOne({ email: new RegExp("^" + email.trim() + "$", "i") });
+          }
+        }
         if (!user) return null;
         const result = { ...user };
         if (user.role === "STUDENT") {
@@ -1412,7 +1428,7 @@ export const db = {
               name: user.name || "Recruiter",
               email: user.email,
               designation: "Recruiter",
-              companyId: "company-stripe",
+              companyId: user.companyId || "company-google",
               isVerified: true,
               createdAt: new Date()
             };
@@ -1433,14 +1449,57 @@ export const db = {
           where: { email },
           include: { student: true, recruiter: true, tpo: true, admin: true }
         });
-        return toPlain(u);
+        if (u) return toPlain(u);
       }
 
-      const user = mockDb.users.find(u => u.email.toLowerCase() === email.toLowerCase());
+      // Check in-memory mockDb users
+      let user = (mockDb.users || []).find(u => u.email.toLowerCase() === normalizedEmail);
+      if (!user) {
+        // Fallback 1: check disk file
+        try {
+          if (fs.existsSync(MOCK_STORAGE_FILE)) {
+            const diskData = JSON.parse(fs.readFileSync(MOCK_STORAGE_FILE, "utf-8"));
+            user = (diskData.users || []).find(u => u.email.toLowerCase() === normalizedEmail);
+            if (user) {
+              if (!mockDb.users) mockDb.users = [];
+              if (!mockDb.users.some(u => u.email.toLowerCase() === normalizedEmail)) {
+                mockDb.users.push(user);
+              }
+            }
+          }
+        } catch (e) {}
+      }
+      if (!user) {
+        // Fallback 2: check seed users from getInitialMockData()
+        const seedUser = getInitialMockData().users.find(u => u.email.toLowerCase() === normalizedEmail);
+        if (seedUser) {
+          if (!mockDb.users) mockDb.users = [];
+          mockDb.users.push(seedUser);
+          saveMockDbToFile();
+          user = seedUser;
+        }
+      }
       if (!user) return null;
+
       const result = { ...user };
-      if (user.role === "STUDENT") result.student = mockDb.students.find(s => s.userId === user.id) || { id: `student-profile-${user.id}`, userId: user.id, name: user.name || "Student", email: user.email };
-      if (user.role === "RECRUITER") result.recruiter = mockDb.recruiters.find(r => r.userId === user.id) || { id: `recruiter-profile-${user.id}`, userId: user.id, name: user.name || "Recruiter", companyId: "company-stripe", email: user.email };
+      if (user.role === "STUDENT") result.student = (mockDb.students || []).find(s => s.userId === user.id) || { id: `student-profile-${user.id}`, userId: user.id, name: user.name || "Student", email: user.email };
+      if (user.role === "RECRUITER") {
+        let rec = (mockDb.recruiters || []).find(r => r.userId === user.id);
+        if (!rec) {
+          rec = {
+            id: `recruiter-profile-${user.id}`,
+            userId: user.id,
+            name: user.name || "Recruiter",
+            companyId: user.companyId || "company-google",
+            email: user.email,
+            isVerified: true
+          };
+          if (!mockDb.recruiters) mockDb.recruiters = [];
+          mockDb.recruiters.push(rec);
+          saveMockDbToFile();
+        }
+        result.recruiter = rec;
+      }
       if (user.role === "FACULTY_MENTOR") result.faculty = { id: user.id, userId: user.id, name: user.name || "Faculty Mentor", email: user.email };
       if (user.role === "INTERNSHIP_COORDINATOR") result.coordinator = { id: user.id, userId: user.id, name: user.name || "Internship Coordinator", email: user.email };
       if (user.role === "TPO") result.tpo = { id: "tpo-profile-1", userId: user.id, name: user.name || "Placement Officer TPO", email: user.email };
@@ -1492,11 +1551,16 @@ export const db = {
       }
       return toPlain(mockDb.users.find(u => u.id === id) || null);
     },
-    async create({ email, passwordHash, role, name, companyId }) {
+    async create({ 
+      email, passwordHash, role, name, companyId,
+      department, rollNumber, batch, cgpa, division,
+      designation, companyName, employeeId
+    }) {
+      const normalizedEmail = email.trim().toLowerCase();
       const mongo = await checkMongoConnection();
       if (mongo) {
         const id = `${role.toLowerCase()}-${Date.now()}`;
-        const newUser = { id, email, passwordHash, role, name, createdAt: new Date() };
+        const newUser = { id, email: normalizedEmail, passwordHash, role, name, companyId: companyId || null, createdAt: new Date() };
         await mongo.collection("users").insertOne(newUser);
 
         if (role === "STUDENT") {
@@ -1504,19 +1568,22 @@ export const db = {
             id: `student-profile-${Date.now()}`,
             userId: id,
             name: name || "Student",
-            email,
-            department: "CMPN",
-            batch: "2026",
-            cgpa: null,
+            email: normalizedEmail,
+            department: department || "CMPN",
+            rollNumber: rollNumber || "",
+            division: division || "A",
+            batch: batch || "2026",
+            cgpa: cgpa ? parseFloat(cgpa) : null,
             education: [],
             experience: [],
             projects: [],
-            skills: [],
+            skills: ["Data Structures", "Algorithms", "Web Development"],
             achievements: [],
             certificates: [],
-            placementReadinessScore: 0,
-            atsScore: 0,
-            skillGapScore: 0,
+            placementReadinessScore: 70,
+            atsScore: 72,
+            skillGapScore: 28,
+            isPlaced: false,
             createdAt: new Date()
           });
         } else if (role === "RECRUITER") {
@@ -1524,10 +1591,39 @@ export const db = {
             id: `recruiter-profile-${Date.now()}`,
             userId: id,
             name: name || "Recruiter",
-            email,
-            designation: "Recruiting Coordinator",
-            companyId: companyId || "company-stripe",
+            email: normalizedEmail,
+            designation: designation || "Corporate Talent Partner",
+            companyId: companyId || "company-google",
             isVerified: true,
+            createdAt: new Date()
+          });
+        } else if (role === "TPO") {
+          await mongo.collection("tpos").insertOne({
+            id: `tpo-profile-${Date.now()}`,
+            userId: id,
+            name: name || "Placement Officer",
+            email: normalizedEmail,
+            designation: designation || "Training & Placement Officer",
+            department: department || "Central TPO Cell",
+            createdAt: new Date()
+          });
+        } else if (role === "FACULTY_MENTOR") {
+          await mongo.collection("faculties").insertOne({
+            id: `faculty-profile-${Date.now()}`,
+            userId: id,
+            name: name || "Faculty Mentor",
+            email: normalizedEmail,
+            department: department || "CMPN",
+            employeeId: employeeId || `EMP-${Date.now().toString().slice(-4)}`,
+            createdAt: new Date()
+          });
+        } else if (role === "INTERNSHIP_COORDINATOR") {
+          await mongo.collection("coordinators").insertOne({
+            id: `coordinator-profile-${Date.now()}`,
+            userId: id,
+            name: name || "Internship Coordinator",
+            email: normalizedEmail,
+            department: department || "CMPN",
             createdAt: new Date()
           });
         }
@@ -1538,7 +1634,7 @@ export const db = {
       if (isConnected) {
         const u = await prisma.$transaction(async (tx) => {
           const user = await tx.user.create({
-            data: { email, passwordHash, role }
+            data: { email: normalizedEmail, passwordHash, role }
           });
           if (role === "STUDENT") {
             await tx.student.create({ data: { userId: user.id, name } });
@@ -1554,44 +1650,92 @@ export const db = {
         return toPlain(u);
       }
 
-      // Mock create
+      // Mock create with resilient in-memory and disk persistence
       const mockId = `${role.toLowerCase()}-${Date.now()}`;
-      const mockNewUser = { id: mockId, email, passwordHash, role, name, createdAt: new Date() };
+      const mockNewUser = { 
+        id: mockId, 
+        email: normalizedEmail, 
+        passwordHash, 
+        role, 
+        name, 
+        companyId: companyId || null,
+        createdAt: new Date() 
+      };
+      if (!mockDb.users) mockDb.users = [];
       mockDb.users.push(mockNewUser);
 
       if (role === "STUDENT") {
+        if (!mockDb.students) mockDb.students = [];
         mockDb.students.push({
           id: `student-profile-${Date.now()}`,
           userId: mockId,
           name: name || "Student",
-          email,
-          department: "CMPN",
-          batch: "2026",
-          cgpa: null,
+          email: normalizedEmail,
+          department: department || "CMPN",
+          rollNumber: rollNumber || "",
+          division: division || "A",
+          batch: batch || "2026",
+          cgpa: cgpa ? parseFloat(cgpa) : 8.5,
           education: [],
           experience: [],
           projects: [],
-          skills: [],
+          skills: ["Data Structures", "Algorithms", "Web Development"],
           achievements: [],
           certificates: [],
-          placementReadinessScore: 0,
-          atsScore: 0,
-          skillGapScore: 0
+          placementReadinessScore: 75,
+          atsScore: 78,
+          skillGapScore: 22,
+          isPlaced: false,
+          createdAt: new Date()
         });
       } else if (role === "RECRUITER") {
+        if (!mockDb.recruiters) mockDb.recruiters = [];
         mockDb.recruiters.push({
           id: `recruiter-profile-${Date.now()}`,
-          userId: id,
+          userId: mockId,
           name: name || "Recruiter",
-          email,
-          designation: "Recruiting Coordinator",
-          companyId: companyId || mockDb.companies?.[0]?.id || "company-stripe",
-          isVerified: true
+          email: normalizedEmail,
+          designation: designation || "Corporate Talent Partner",
+          companyId: companyId || (mockDb.companies?.[0]?.id) || "company-google",
+          isVerified: true,
+          createdAt: new Date()
+        });
+      } else if (role === "TPO") {
+        if (!mockDb.tpos) mockDb.tpos = [];
+        mockDb.tpos.push({
+          id: `tpo-profile-${Date.now()}`,
+          userId: mockId,
+          name: name || "Placement Officer",
+          email: normalizedEmail,
+          designation: designation || "Training & Placement Officer",
+          department: department || "Central TPO Cell",
+          createdAt: new Date()
+        });
+      } else if (role === "FACULTY_MENTOR") {
+        if (!mockDb.faculties) mockDb.faculties = [];
+        mockDb.faculties.push({
+          id: `faculty-profile-${Date.now()}`,
+          userId: mockId,
+          name: name || "Faculty Mentor",
+          email: normalizedEmail,
+          department: department || "CMPN",
+          employeeId: employeeId || `EMP-${Date.now().toString().slice(-4)}`,
+          createdAt: new Date()
+        });
+      } else if (role === "INTERNSHIP_COORDINATOR") {
+        if (!mockDb.coordinators) mockDb.coordinators = [];
+        mockDb.coordinators.push({
+          id: `coordinator-profile-${Date.now()}`,
+          userId: mockId,
+          name: name || "Internship Coordinator",
+          email: normalizedEmail,
+          department: department || "CMPN",
+          createdAt: new Date()
         });
       }
 
       saveMockDbToFile();
-      return toPlain(newUser);
+      return toPlain(mockNewUser);
     }
   },
 
@@ -1875,9 +2019,32 @@ export const db = {
         }
         return null;
       }
-      const rec = mockDb.recruiters.find(r => r.userId === userId);
+      let rec = (mockDb.recruiters || []).find(r => r.userId === userId);
+      const user = (mockDb.users || []).find(u => u.id === userId);
+      if (!rec && user && user.role === "RECRUITER") {
+        rec = {
+          id: `recruiter-profile-${user.id}`,
+          userId: user.id,
+          name: user.name || "Recruiter",
+          email: user.email,
+          designation: "Recruiting Coordinator",
+          companyId: user.companyId || "company-google",
+          isVerified: true,
+          createdAt: new Date()
+        };
+        if (!mockDb.recruiters) mockDb.recruiters = [];
+        mockDb.recruiters.push(rec);
+        saveMockDbToFile();
+      }
       if (rec) {
-        return toPlain({ ...rec, company: mockDb.companies.find(c => c.id === rec.companyId) });
+        const comp = (mockDb.companies || []).find(c => c.id === rec.companyId) || {
+          id: rec.companyId || "company-google",
+          name: "Google India",
+          industry: "Cloud & AI",
+          location: "Mumbai",
+          isVerified: true
+        };
+        return toPlain({ ...rec, company: comp });
       }
       return null;
     },
@@ -1961,9 +2128,31 @@ export const db = {
     async list() {
       const mongo = await checkMongoConnection();
       if (mongo) {
-        const list = await mongo.collection("jobs").find().sort({ createdAt: -1 }).toArray();
-        const comps = await mongo.collection("companies").find().toArray();
-        const mapped = list.map(j => ({ ...j, company: comps.find(c => c.id === j.companyId) }));
+        let list = await mongo.collection("jobs").find().sort({ createdAt: -1 }).toArray();
+        const initialJobs = getInitialMockData().jobs;
+        for (const initJ of initialJobs) {
+          if (!list.find(j => j.id === initJ.id)) {
+            await mongo.collection("jobs").insertOne(initJ).catch(() => {});
+            list.unshift(initJ);
+          }
+        }
+        let comps = await mongo.collection("companies").find().toArray();
+        const initialComps = getInitialMockData().companies;
+        for (const initC of initialComps) {
+          if (!comps.find(c => c.id === initC.id)) {
+            await mongo.collection("companies").insertOne(initC).catch(() => {});
+            comps.push(initC);
+          }
+        }
+        const mapped = list.map(j => {
+          const comp = comps.find(c => c.id === j.companyId) || {
+            id: j.companyId || "company-corp",
+            name: j.companyName || "Corporate Partner",
+            industry: "Technology & Software",
+            logo: "🏢"
+          };
+          return { ...j, company: comp };
+        });
         return toPlain(mapped);
       }
       const isConnected = await checkConnection();
@@ -1971,17 +2160,40 @@ export const db = {
         const list = await prisma.job.findMany({ include: { company: true }, orderBy: { createdAt: "desc" } });
         return toPlain(list);
       }
+      if (!mockDb.jobs || mockDb.jobs.length === 0) {
+        mockDb.jobs = getInitialMockData().jobs;
+        saveMockDbToFile();
+      }
       return toPlain(mockDb.jobs.map(j => ({
         ...j,
-        company: mockDb.companies.find(c => c.id === j.companyId)
+        company: mockDb.companies?.find(c => c.id === j.companyId) || {
+          id: j.companyId || "company-corp",
+          name: j.companyName || "Corporate Partner",
+          industry: "Technology & Software",
+          logo: "🏢"
+        }
       })));
     },
     async getById(id) {
       const mongo = await checkMongoConnection();
       if (mongo) {
-        const job = await mongo.collection("jobs").findOne({ id });
+        let job = await mongo.collection("jobs").findOne({ id });
+        if (!job) {
+          job = getInitialMockData().jobs.find(j => j.id === id);
+          if (job) {
+            await mongo.collection("jobs").insertOne(job).catch(() => {});
+          }
+        }
         if (!job) return null;
-        const company = await mongo.collection("companies").findOne({ id: job.companyId });
+        let company = await mongo.collection("companies").findOne({ id: job.companyId });
+        if (!company) {
+          company = getInitialMockData().companies.find(c => c.id === job.companyId) || {
+            id: job.companyId || "company-corp",
+            name: job.companyName || "Corporate Partner",
+            industry: "Technology & Software",
+            logo: "🏢"
+          };
+        }
         return toPlain({ ...job, company });
       }
       const isConnected = await checkConnection();
@@ -1989,9 +2201,18 @@ export const db = {
         const job = await prisma.job.findUnique({ where: { id }, include: { company: true } });
         return toPlain(job);
       }
-      const job = mockDb.jobs.find(j => j.id === id);
+      let job = (mockDb.jobs || []).find(j => j.id === id);
+      if (!job) {
+        job = getInitialMockData().jobs.find(j => j.id === id);
+      }
       if (!job) return null;
-      return toPlain({ ...job, company: mockDb.companies.find(c => c.id === job.companyId) });
+      const company = (mockDb.companies || []).find(c => c.id === job.companyId) || {
+        id: job.companyId || "company-corp",
+        name: job.companyName || "Corporate Partner",
+        industry: "Technology & Software",
+        logo: "🏢"
+      };
+      return toPlain({ ...job, company });
     },
     async create(data) {
       const mongo = await checkMongoConnection();
@@ -3321,7 +3542,7 @@ export const db = {
     }
   },
 
-  // 3. UNSTOP INTERACTIVE QUIZZES & ASSESSMENTS
+  // 3. UNSTOP INTERACTIVE QUIZZES & ASSESSMENTS (COMPANY PLACEMENT PYQs)
   quizzes: {
     async list(category = "ALL") {
       const mongo = await checkMongoConnection();
@@ -3331,19 +3552,35 @@ export const db = {
       } else {
         list = mockDb.quizzes || [];
       }
-      if (!list || list.length === 0) {
-        list = getInitialMockData().quizzes || [];
-        if (mockDb) {
-          mockDb.quizzes = list;
-          saveMockDbToFile();
-        }
+
+      // Merge and prioritize latest company-specific PYQ quizzes
+      const quizMap = new Map();
+      COMPANY_QUIZZES.forEach(q => quizMap.set(q.id, q));
+      (list || []).forEach(q => {
+        if (!quizMap.has(q.id)) quizMap.set(q.id, q);
+      });
+      list = Array.from(quizMap.values());
+
+      if (mockDb && (!mockDb.quizzes || mockDb.quizzes.length < COMPANY_QUIZZES.length)) {
+        mockDb.quizzes = list;
+        saveMockDbToFile();
       }
+
       if (category && category !== "ALL") {
-        list = list.filter(q => q.category.toLowerCase().includes(category.toLowerCase()));
+        const catLower = category.toLowerCase();
+        list = list.filter(q => 
+          (q.category && q.category.toLowerCase().includes(catLower)) ||
+          (q.company && q.company.toLowerCase().includes(catLower)) ||
+          (q.companyId && q.companyId.toLowerCase() === catLower)
+        );
       }
       return toPlain(list);
     },
     async getById(id) {
+      // Prioritize exact match from verified company quiz dataset
+      const fromCompany = COMPANY_QUIZZES.find(q => q.id === id || q.slug === id);
+      if (fromCompany) return toPlain(fromCompany);
+
       const mongo = await checkMongoConnection();
       if (mongo) {
         const item = await mongo.collection("quizzes").findOne({ $or: [{ id }, { slug: id }] });
@@ -3530,6 +3767,63 @@ export const db = {
     async getRewardsStore() {
       const list = mockDb.rewardsStore || getInitialMockData().rewardsStore || [];
       return toPlain(list);
+    }
+  },
+
+  // 9. CODING CHALLENGES (100 Authentic Placement Coding Questions)
+  codingChallenges: {
+    async list(filters = {}) {
+      let list = [...ALL_CODING_CHALLENGES];
+      if (filters.company && filters.company !== "all") {
+        list = list.filter(c => c.companyId === filters.company || c.company.toLowerCase() === filters.company.toLowerCase());
+      }
+      if (filters.difficulty && filters.difficulty !== "ALL") {
+        list = list.filter(c => c.difficulty.toUpperCase() === filters.difficulty.toUpperCase());
+      }
+      if (filters.search) {
+        const q = filters.search.toLowerCase();
+        list = list.filter(c =>
+          c.title.toLowerCase().includes(q) ||
+          c.company.toLowerCase().includes(q) ||
+          c.category.toLowerCase().includes(q) ||
+          c.tags.some(t => t.toLowerCase().includes(q))
+        );
+      }
+      return toPlain(list);
+    },
+    async getById(id) {
+      const challenge = ALL_CODING_CHALLENGES.find(c => c.id === id);
+      return challenge ? toPlain(challenge) : null;
+    }
+  },
+
+  // 10. CODE SUBMISSIONS
+  codeSubmissions: {
+    async listByStudent(studentId) {
+      const mongo = await checkMongoConnection();
+      let list = [];
+      if (mongo) {
+        list = await mongo.collection("code_submissions").find({ studentId }).sort({ createdAt: -1 }).toArray();
+      } else {
+        list = (mockDb.codeSubmissions || []).filter(s => s.studentId === studentId);
+      }
+      return toPlain(list);
+    },
+    async create(data) {
+      const sub = {
+        id: `sub-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+        createdAt: new Date(),
+        ...data
+      };
+      const mongo = await checkMongoConnection();
+      if (mongo) {
+        await mongo.collection("code_submissions").insertOne(sub);
+      } else {
+        if (!mockDb.codeSubmissions) mockDb.codeSubmissions = [];
+        mockDb.codeSubmissions.unshift(sub);
+        saveMockDbToFile();
+      }
+      return toPlain(sub);
     }
   }
 };

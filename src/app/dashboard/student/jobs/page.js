@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { getStudentJobsAction } from "@/actions/dashboard";
 import { applyToJobAction, bookmarkJobAction } from "@/actions/jobs";
 import { predictPlacementProbabilityAction } from "@/actions/ai";
 import { 
   Search, Briefcase, MapPin, DollarSign, Bookmark, 
-  Sparkles, CheckCircle2, AlertCircle, Eye
+  Sparkles, CheckCircle2, AlertCircle, Eye, Bot
 } from "lucide-react";
 
 export default function StudentJobsPage() {
@@ -373,6 +374,20 @@ export default function StudentJobsPage() {
                         </ul>
                       </div>
                     )}
+
+                    {/* Bridge Match Gap via Dynamic AI Career Coach */}
+                    <div className="pt-2.5 mt-2 border-t border-slate-200/80 dark:border-zinc-800 space-y-1">
+                      <Link
+                        href={`/dashboard/student/ai-coach?jobId=${selectedJob.id}&company=${encodeURIComponent(selectedJob.company?.name || selectedJob.companyName || "")}&role=${encodeURIComponent(selectedJob.title)}`}
+                        className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-blue-900 to-[#1C4980] hover:from-blue-950 hover:to-indigo-950 text-white font-extrabold text-[11px] flex items-center justify-center gap-2 shadow-xs transition-all"
+                      >
+                        <Bot className="h-4 w-4 text-amber-300 animate-pulse" />
+                        <span>🤖 Consult AI Placement Coach for this Drive</span>
+                      </Link>
+                      <p className="text-[9.5px] text-slate-500 text-center font-medium">
+                        Get tailored projects, certifications & genuine interview answers to maximize selection odds
+                      </p>
+                    </div>
                   </div>
                 ) : (
                   <p className="text-[10px] text-slate-400 py-1">Select a candidate profile and drive to calculate match.</p>

@@ -32,6 +32,8 @@ export async function getMongoClient() {
     return globalForMongo._mongoClient;
   }
 
+  const COOLDOWN_MS = 10000; // 10 seconds cooldown between reconnection attempts if offline
+
   // Circuit breaker: If previous connection failed recently, avoid blocking queries
   const now = Date.now();
   if (globalForMongo._mongoFailureTime && (now - globalForMongo._mongoFailureTime < COOLDOWN_MS)) {
@@ -40,9 +42,9 @@ export async function getMongoClient() {
 
   if (!globalForMongo._mongoClientPromise) {
     const client = new MongoClient(uri, {
-      serverSelectionTimeoutMS: 2000,
-      connectTimeoutMS: 2000,
-      socketTimeoutMS: 3000,
+      serverSelectionTimeoutMS: 8000,
+      connectTimeoutMS: 8000,
+      socketTimeoutMS: 10000,
       maxPoolSize: 10,
     });
 
@@ -60,7 +62,7 @@ export async function getMongoClient() {
         globalForMongo._mongoClient = null;
 
         if (!globalForMongo._mongoWarned) {
-          console.warn(" MongoDB Atlas notice: Cluster unreachable (check IP Whitelist 0.0.0.0/0 in Atlas Network Access or network connection). Using local persistent database.");
+          console.warn(" MongoDB Atlas notice:", err?.message || "Cluster unreachable. Verify IP whitelist in MongoDB Atlas.");
           globalForMongo._mongoWarned = true;
         }
         return null;

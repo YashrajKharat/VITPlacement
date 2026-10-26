@@ -17,12 +17,38 @@ const initialData = {
     { id: "faculty-1", email: "faculty@college.edu", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "FACULTY_MENTOR", name: "Faculty Mentor" },
     { id: "coordinator-1", email: "coordinator@college.edu", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "INTERNSHIP_COORDINATOR", name: "Internship Coordinator" },
     { id: "tpo-1", email: "tpo@college.edu", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "TPO", name: "Training & Placement Officer" },
-    { id: "admin-1", email: "admin@portal.com", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "ADMIN", name: "System Admin" }
+    { id: "admin-1", email: "admin@portal.com", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "ADMIN", name: "System Admin" },
+    { id: "recruiter-1", email: "recruiter@company.com", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "RECRUITER", name: "Google HR / Campus Talent Partner", companyId: "company-google" },
+    { id: "recruiter-2", email: "hr@tcs.com", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "RECRUITER", name: "TCS Lead Talent Acquisition", companyId: "company-tcs" },
+    { id: "student-1", email: "student@college.edu", passwordHash: "$2a$10$abcdefghijklmnopqrstuv", role: "STUDENT", name: "Aarav Sharma (CMPN Candidate)" }
   ],
-  students: [],
-  companies: [],
-  recruiters: [],
-  jobs: [],
+  students: [
+    {
+      id: "student-profile-student-1",
+      userId: "student-1",
+      name: "Aarav Sharma",
+      rollNumber: "22102A0045",
+      department: "CMPN",
+      year: "Third Year",
+      division: "A",
+      cgpa: 8.85,
+      skills: ["React", "Node.js", "Python", "Data Structures", "TypeScript"],
+      isPlaced: false,
+      createdAt: new Date("2026-01-01")
+    }
+  ],
+  companies: [
+    { id: "company-google", name: "Google India", website: "https://careers.google.com", industry: "Cloud & AI Engineering", location: "Mumbai / Bengaluru / Hyderabad", description: "Global technology pioneer.", isVerified: true, logo: "🔍" },
+    { id: "company-tcs", name: "Tata Consultancy Services (TCS)", website: "https://www.tcs.com", industry: "IT Services & Consulting", location: "Mumbai / Pune", description: "Premier IT services enterprise.", isVerified: true, logo: "🏢" }
+  ],
+  recruiters: [
+    { id: "recruiter-profile-recruiter-1", userId: "recruiter-1", name: "Google HR / Campus Talent Partner", email: "recruiter@company.com", designation: "Lead University Recruiter", companyId: "company-google", isVerified: true, createdAt: new Date() },
+    { id: "recruiter-profile-recruiter-2", userId: "recruiter-2", name: "TCS Lead Talent Acquisition", email: "hr@tcs.com", designation: "Senior Campus Hiring Manager", companyId: "company-tcs", isVerified: true, createdAt: new Date() }
+  ],
+  jobs: [
+    { id: "job-1", title: "Software Development Engineer (SDE-1)", companyId: "company-google", companyName: "Google India", location: "Bengaluru / Mumbai (Hybrid)", type: "FULL_TIME", salaryRange: "24 - 32 LPA", description: "Core Engineering team.", requirements: ["C++", "DSA", "7.5+ CGPA"], status: "ACTIVE", applicantsCount: 42, createdAt: new Date() },
+    { id: "job-2", title: "Systems Engineer (Digital & Prime)", companyId: "company-tcs", companyName: "Tata Consultancy Services (TCS)", location: "Mumbai / Pune", type: "FULL_TIME", salaryRange: "7.5 - 11.5 LPA", description: "Enterprise cloud fullstack solutions.", requirements: ["React", "Node.js", "60%+"], status: "ACTIVE", applicantsCount: 128, createdAt: new Date() }
+  ],
   internshipRequirements: [
     {
       id: "req-sem6-2026",

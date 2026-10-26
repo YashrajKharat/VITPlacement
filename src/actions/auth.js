@@ -32,32 +32,40 @@ export async function loginAction(formData) {
 }
 
 export async function registerAction(data) {
-  const { email, password, name, role, companyId, newCompanyName } = data;
+  const { 
+    email, password, name, role, 
+    department, rollNumber, batch, cgpa, division,
+    companyId, newCompanyName, companyIndustry, companyLocation, companyWebsite, designation,
+    employeeId
+  } = data;
 
   if (!email || !password || !name || !role) {
-    return { error: "Missing required registration details." };
+    return { error: "Please provide your name, email address, password, and role." };
+  }
+
+  if (password.length < 6) {
+    return { error: "Password must be at least 6 characters long." };
   }
 
   try {
-    // Check if email already exists
     const existing = await db.users.findByEmail(email);
     if (existing) {
-      return { error: "An account with this email already exists." };
+      return { error: "An account with this email already exists. Please log in instead." };
     }
 
     let finalCompanyId = companyId;
     if (role === "RECRUITER") {
       if (companyId === "new-company" && newCompanyName) {
-        // Create new company dynamically!
         const newComp = await db.companies.create({
           name: newCompanyName,
-          website: `https://${newCompanyName.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
-          industry: "Software Engineering",
-          location: "Mumbai",
+          website: companyWebsite || `https://${newCompanyName.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`,
+          industry: companyIndustry || "Technology & Software",
+          location: companyLocation || "Mumbai / Hybrid",
+          description: `Corporate recruiting partner ${newCompanyName}.`
         });
         finalCompanyId = newComp.id;
       } else if (!companyId || companyId === "") {
-        return { error: "Please select or enter a corporate partner company." };
+        return { error: "Please select your company or register a new company profile." };
       }
     }
 
@@ -67,23 +75,30 @@ export async function registerAction(data) {
       passwordHash,
       role,
       name,
-      companyId: finalCompanyId
+      companyId: finalCompanyId,
+      department,
+      rollNumber,
+      batch,
+      cgpa,
+      division,
+      designation,
+      employeeId
     });
 
     // Automatically sign in the user after registering
     const result = await signIn(email, password);
     if (result.success) {
-      const role = result.role;
+      const userRole = result.role;
       let target = "/dashboard/student";
-      if (role === "FACULTY_MENTOR") target = "/dashboard/faculty/internships";
-      if (role === "INTERNSHIP_COORDINATOR") target = "/dashboard/coordinator/internships";
-      if (role === "RECRUITER") target = "/dashboard/recruiter";
-      if (role === "TPO") target = "/dashboard/tpo";
-      if (role === "ADMIN") target = "/dashboard/admin";
+      if (userRole === "FACULTY_MENTOR") target = "/dashboard/faculty/internships";
+      if (userRole === "INTERNSHIP_COORDINATOR") target = "/dashboard/coordinator/internships";
+      if (userRole === "RECRUITER") target = "/dashboard/recruiter";
+      if (userRole === "TPO") target = "/dashboard/tpo";
+      if (userRole === "ADMIN") target = "/dashboard/admin";
       return { success: true, redirectUrl: target };
     }
   } catch (err) {
-    return { error: err.message || "Registration failed. Please try again." };
+    return { error: err.message || "Registration failed. Please check your details and try again." };
   }
 }
 

@@ -3,83 +3,86 @@
 import { auth } from "@/lib/auth";
 import { db, toPlain } from "@/lib/db";
 
-// Pre-defined Sample Job Descriptions for quick 1-click student testing
-export async function getSampleJobDescriptionsAction() {
-  return [
-    {
-      id: "deloitte-data-analyst",
-      title: "Deloitte — Associate Data Analyst & BI Specialist",
-      company: "Deloitte India",
-      location: "Mumbai / Bangalore",
-      role: "Data Analytics & BI",
-      description: `Role Overview:
-We are looking for a detail-oriented Data Analyst to join our enterprise analytics team. You will work closely with cross-functional teams to collect, process, and analyze data, turning raw numbers into clear, actionable insights that support business growth and operational efficiency.
+// Fetch all actively posted campus drives and internship requirements from DB
+export async function getPostedDrivesAndInternshipsAction() {
+  try {
+    const rawJobs = await db.jobs.list();
+    const rawReqs = await db.internships.requirements.list();
 
-Key Responsibilities:
-• Data Collection & Management: Gather data from primary and secondary sources, maintain databases, and ensure data integrity and quality.
-• Data Cleaning & Preparation: Clean, filter, and transform raw data sets to remove errors, duplicates, and inconsistencies.
-• Analysis & Interpretation: Apply statistical techniques and analytical methods to identify trends, patterns, and correlations.
-• Visualization & Reporting: Build and maintain interactive dashboards, charts, and reports using tools like Tableau or Power BI.
-• Stakeholder Communication: Present findings and strategic recommendations clearly to both technical and non-technical business leaders.
-• Process Improvement: Collaborate with management and engineering teams to define Key Performance Indicators (KPIs) and optimize data workflows.
+    const formattedList = [];
 
-Required Skills & Qualifications:
-• Proficiency in SQL for querying databases and running aggregations.
-• Advanced command of Excel (Pivot Tables, VLOOKUP, INDEX-MATCH) for data manipulation.
-• Hands-on experience with visualization tools such as Tableau or Power BI.
-• Familiarity with programming or scripting languages like Python or R for data analysis.
-• Strong analytical mindset, numerical reasoning, and critical-thinking skills.`
-    },
-    {
-      id: "google-sde",
-      title: "Google — Software Development Engineer I (SDE 1)",
-      company: "Google India",
-      location: "Bangalore / Hyderabad",
-      role: "Backend & Systems",
-      description: `Role Overview:
-We are looking for a Software Development Engineer (SDE 1) to join Google's Core Infrastructure & Cloud engineering teams. 
+    // 1. Format full-time placement drives and internships from db.jobs
+    if (Array.isArray(rawJobs)) {
+      for (const j of rawJobs) {
+        const companyName = j.company?.name || j.companyName || "Corporate Partner";
+        const isIntern = j.type === "INTERNSHIP" || (j.title || "").toLowerCase().includes("intern");
+        
+        // Extract key technical skill tags from requirements and description
+        const combinedText = `${j.title} ${j.description} ${(j.requirements || []).join(" ")}`.toLowerCase();
+        const extractedSkills = [];
+        if (combinedText.includes("react")) extractedSkills.push("React.js");
+        if (combinedText.includes("typescript")) extractedSkills.push("TypeScript");
+        if (combinedText.includes("next.js") || combinedText.includes("nextjs")) extractedSkills.push("Next.js");
+        if (combinedText.includes("node")) extractedSkills.push("Node.js");
+        if (combinedText.includes("python")) extractedSkills.push("Python");
+        if (combinedText.includes("sql") || combinedText.includes("postgres")) extractedSkills.push("PostgreSQL / SQL");
+        if (combinedText.includes("docker")) extractedSkills.push("Docker");
+        if (combinedText.includes("cloud") || combinedText.includes("aws") || combinedText.includes("gcp")) extractedSkills.push("Cloud (AWS/GCP)");
+        if (combinedText.includes("performance") || combinedText.includes("vitals")) extractedSkills.push("Core Web Vitals");
+        if (combinedText.includes("data structure") || combinedText.includes("algorithms")) extractedSkills.push("DSA");
+        if (combinedText.includes("tableau") || combinedText.includes("power bi")) extractedSkills.push("Tableau / Power BI");
 
-Requirements & Core Competencies:
-- Strong foundations in Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP), and System Architecture.
-- Hands-on experience developing backend microservices in Go, Java, C++, or Node.js/TypeScript.
-- Experience with relational and distributed databases (PostgreSQL, Spanner, Redis, MongoDB).
-- Familiarity with Cloud Computing (GCP, AWS), Docker containers, Kubernetes, and CI/CD automation pipelines.
-- Knowledge of high-throughput distributed systems, gRPC, asynchronous messaging (Kafka/PubSub), and latency optimization.
-- Proven track record of testing modular code with unit tests, integration testing, and performance profiling.`
-    },
-    {
-      id: "barclays-developer",
-      title: "Barclays — Graduate Technology Developer",
-      company: "Barclays Global Service Centre",
-      location: "Pune / Mumbai",
-      role: "Full Stack Engineering",
-      description: `Role Overview:
-Barclays is hiring Graduate Technology Developers to build mission-critical banking and payment transaction gateways.
-
-Requirements & Core Competencies:
-- Proficiency in Full Stack Web Engineering: React.js, Next.js, Node.js, Express, and Spring Boot.
-- Solid understanding of SQL, PostgreSQL, indexing, query optimization, and ACID transactions.
-- Experience building RESTful APIs with secure authentication (OAuth2, JWT, Role-Based Access Control).
-- Knowledge of Automated testing (Jest, JUnit), Git version control, and GitHub Actions.
-- Strong analytical skills, low-latency API design, data security compliance, and financial transaction processing.`
-    },
-    {
-      id: "amazon-sde",
-      title: "Amazon — SDE 1 (AWS Cloud & Distributed Systems)",
-      company: "Amazon Web Services (AWS)",
-      location: "Mumbai / Bangalore",
-      role: "Cloud Engineering",
-      description: `Role Overview:
-Amazon AWS is looking for talented SDE-1 engineers to scale customer-facing cloud storage and database APIs.
-
-Requirements & Core Competencies:
-- Strong proficiency in Java, Python, C++, or TypeScript.
-- Strong understanding of distributed key-value storage, caching (Redis, Memcached), and concurrency primitives.
-- Familiarity with AWS services (EC2, S3, DynamoDB, Lambda, CloudWatch).
-- Deep appreciation for Amazon Leadership Principles, writing clean testable code, and customer-centric deliverables.
-- Experience measuring and reducing p95/p99 query latencies under high request volumes.`
+        formattedList.push({
+          id: j.id,
+          title: j.title,
+          company: companyName,
+          companyLogo: j.company?.logo || (companyName.toLowerCase().includes("google") ? "🔍" : companyName.toLowerCase().includes("tcs") ? "🏢" : companyName.toLowerCase().includes("microsoft") ? "💻" : "📦"),
+          type: isIntern ? "INTERNSHIP" : "JOB",
+          categoryLabel: isIntern ? "🎓 Campus Internship Drive" : "💼 Full-Time Campus Placement",
+          location: j.location || "Mumbai / Bengaluru",
+          package: j.salaryRange || (isIntern ? "₹45,000 – ₹1,10,000 / month" : "Competitive"),
+          requirements: Array.isArray(j.requirements) && j.requirements.length > 0 ? j.requirements : [
+            "Strong foundation in core technical competencies",
+            "Clear understanding of data structures and problem solving",
+            "Minimum 60%+ / 7.0+ CGPA in degree coursework"
+          ],
+          description: j.description || `${j.title} role at ${companyName}`,
+          role: j.title,
+          extractedSkills: extractedSkills.length > 0 ? extractedSkills : ["Computer Engineering", "Problem Solving", "Modern Web"]
+        });
+      }
     }
-  ];
+
+    // 2. Format internship requirements from db.internships.requirements
+    if (Array.isArray(rawReqs)) {
+      for (const req of rawReqs) {
+        formattedList.push({
+          id: req.id,
+          title: `${req.department} — ${req.internshipType} (${req.semester})`,
+          company: "Academic & Industry Internship Cell",
+          companyLogo: "🎓",
+          type: "INTERNSHIP",
+          categoryLabel: "🎓 Mandatory Academic Internship Drive",
+          location: "College Campus / Industry Partner",
+          package: `${req.requiredCredits} Credits (${req.minDurationWeeks}–${req.maxDurationWeeks} Weeks)`,
+          requirements: req.requiredDocuments || ["CERTIFICATE", "REPORT", "OFFER_LETTER"],
+          description: `Accredited academic internship requirement for ${req.department} engineering students (${req.year}, ${req.semester}). Required duration is ${req.minDurationWeeks} to ${req.maxDurationWeeks} weeks with mandatory document verification and mentor evaluation.`,
+          role: req.internshipType,
+          extractedSkills: ["Technical Report Writing", "Industrial Exposure", "Software Development", "Corporate Conduct"]
+        });
+      }
+    }
+
+    return toPlain(formattedList);
+  } catch (err) {
+    console.error("Error fetching posted drives:", err);
+    return [];
+  }
+}
+
+// Backward-compatible alias for existing consumers
+export async function getSampleJobDescriptionsAction() {
+  return await getPostedDrivesAndInternshipsAction();
 }
 
 // Master Technical Skill Taxonomy across Multiple Job Families
@@ -125,19 +128,19 @@ const MASTER_SKILLS = [
 
 // Helper to detect primary domain from JD
 function detectJobDomain(jdText) {
+  const frontKeywords = ["frontend", "front-end", "ui engineer", "react", "next.js", "nextjs", "web developer", "typescript", "css", "html5", "web vitals", "dom", "tailwind", "lighthouse"];
   const dataKeywords = ["data analyst", "analytics", "tableau", "power bi", "powerbi", "excel", "data cleaning", "kpi", "kpis", "dashboard", "dashboards", "business intelligence", "statistical", "insights"];
-  const sdeKeywords = ["software development engineer", "sde", "full stack", "backend", "microservices", "docker", "kubernetes", "react", "next.js", "grpc", "distributed systems", "ci/cd"];
+  const sdeKeywords = ["software development engineer", "sde", "full stack", "backend", "microservices", "docker", "kubernetes", "grpc", "distributed systems", "ci/cd"];
 
+  let frontScore = 0;
   let dataScore = 0;
   let sdeScore = 0;
 
-  dataKeywords.forEach(kw => {
-    if (jdText.includes(kw)) dataScore += 2;
-  });
-  sdeKeywords.forEach(kw => {
-    if (jdText.includes(kw)) sdeScore += 2;
-  });
+  frontKeywords.forEach(kw => { if (jdText.includes(kw)) frontScore += 2; });
+  dataKeywords.forEach(kw => { if (jdText.includes(kw)) dataScore += 2; });
+  sdeKeywords.forEach(kw => { if (jdText.includes(kw)) sdeScore += 2; });
 
+  if (frontScore > dataScore && frontScore >= sdeScore) return "FRONTEND_ENGINEERING";
   return dataScore >= sdeScore ? "DATA_ANALYTICS" : "SOFTWARE_ENGINEERING";
 }
 
@@ -293,6 +296,97 @@ export async function optimizeResumeAgainstJobAction({ jobDescription, resumeDat
         return {
           ...proj,
           title: proj.title || `Data Analytics Project ${idx + 1}`,
+          tech: techStack,
+          link: proj.link || "https://github.com/...",
+          bullets: newBullets,
+          formulaTag: "Google XYZ Formula"
+        };
+      });
+
+    } else if (domain === "FRONTEND_ENGINEERING") {
+      // --- FRONTEND & UI SYSTEMS SUITE (GOOGLE / META / MICROSOFT) ---
+      optimizedSummary = `Frontend Software Engineering undergraduate at Vidyalankar Institute of Technology specializing in React 19, Next.js, and TypeScript web architectures. Experienced in building accessible (WCAG 2.1 AA) component design systems, optimizing Core Web Vitals (LCP < 1.1s, zero CLS), real-time WebSockets synchronization, and automated testing with Jest and Playwright.`;
+
+      const rawExp = Array.isArray(resumeData?.experience) && resumeData.experience.length > 0
+        ? resumeData.experience
+        : [
+            {
+              role: "Frontend Engineering Intern",
+              company: "Cloud & Web Applications Hub",
+              duration: "May 2025 – Nov 2025",
+              location: "Mumbai / Remote"
+            },
+            {
+              role: "UI Systems & Web Developer Intern",
+              company: "NextGen Software Labs",
+              duration: "Jan 2025 – Apr 2025",
+              location: "Mumbai, India"
+            }
+          ];
+
+      optimizedExperience = rawExp.map((exp, idx) => {
+        let newBullets = [];
+        if (idx === 0) {
+          newBullets = [
+            `Architected responsive enterprise web application in React 19, TypeScript, and Next.js, accelerating client-side rendering speed by 44% (sub-1.1s LCP) across 15,000+ monthly active users. [Google XYZ Formula: Action + Quantified Metric + Technical Stack]`,
+            `Engineered real-time state synchronization pipeline utilizing WebSockets and client-side caching (Zustand & TanStack Query), reducing server network roundtrips by 52% with sub-35ms latency.`,
+            `Implemented automated accessibility auditing (WCAG 2.1 AA) and component unit tests using Jest and React Testing Library, achieving 95% test coverage and zero visual regression bugs.`
+          ];
+        } else {
+          newBullets = [
+            `Constructed 12+ modular design system components in TypeScript and TailwindCSS, reducing cross-team frontend development cycle time by 30%.`,
+            `Diagnosed and resolved critical main-thread JavaScript bottlenecks using Chrome DevTools Performance Profiler, eliminating frame drops during heavy list virtualizations.`
+          ];
+        }
+
+        return {
+          ...exp,
+          role: exp.role || "Frontend Engineering Intern",
+          company: exp.company || "Web Applications Partner",
+          duration: exp.duration || "2025",
+          location: exp.location || "Mumbai, India",
+          bullets: newBullets,
+          formulaTag: "Google XYZ Formula"
+        };
+      });
+
+      const rawProj = Array.isArray(resumeData?.projects) && resumeData.projects.length > 0
+        ? resumeData.projects
+        : [
+            {
+              title: "Real-Time Collaborative Canvas & Interactive Code Board",
+              tech: "React 19, TypeScript, WebSockets, Canvas API, Zustand, TailwindCSS",
+              link: "https://github.com/vit-student/collaborative-canvas"
+            },
+            {
+              title: "High-Performance E-Commerce Micro-Frontend (Lighthouse 99+)",
+              tech: "Next.js 16 (App Router), TypeScript, TanStack Query, Redis, Playwright",
+              link: "https://github.com/vit-student/ecommerce-webvitals"
+            }
+          ];
+
+      optimizedProjects = rawProj.map((proj, idx) => {
+        let newBullets = [];
+        let techStack = proj.tech || "React 19, Next.js, TypeScript, WebSockets";
+
+        if (idx === 0) {
+          techStack = "React 19, TypeScript, WebSockets, Canvas API, Zustand, Node.js";
+          newBullets = [
+            `Engineered a real-time collaborative vector canvas utilizing React 19 and WebSockets, supporting 50+ concurrent users with sub-40ms peer synchronization. [Google XYZ Formula]`,
+            `Implemented off-screen vector rendering and collision detection algorithms with Web Workers, maintaining constant 60 FPS under complex multi-user draw operations.`,
+            `Integrated infinite canvas zooming, pan controls, and vector SVG export with zero UI thread blocking.`
+          ];
+        } else {
+          techStack = "Next.js 16, TypeScript, TanStack Query, Redis, TailwindCSS, Playwright";
+          newBullets = [
+            `Developed modular storefront in Next.js 16 achieving a perfect 99/100 Google Lighthouse performance score with zero cumulative layout shift (CLS < 0.02).`,
+            `Constructed virtualized list rendering 50,000+ catalog products seamlessly, decreasing client initial memory consumption by 36%.`
+          ];
+        }
+
+        return {
+          ...proj,
+          title: proj.title || `Frontend Project ${idx + 1}`,
           tech: techStack,
           link: proj.link || "https://github.com/...",
           bullets: newBullets,
