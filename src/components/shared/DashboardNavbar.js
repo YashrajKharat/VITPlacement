@@ -74,7 +74,7 @@ export default function DashboardNavbar({ user }) {
   };
 
   return (
-    <header className="sticky top-0 z-30 h-16 w-full border-b border-black/5 bg-white/60 backdrop-blur-xl flex items-center justify-between px-6">
+    <header className="sticky top-0 z-30 h-16 w-full border-b border-black/5 bg-white/60 backdrop-blur-xl flex items-center justify-between px-6 print:hidden">
       {/* Toggle button */}
       <div className="flex items-center gap-4">
         <button

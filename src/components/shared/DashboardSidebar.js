@@ -90,7 +90,7 @@ export default function DashboardSidebar({ user }) {
 
   return (
     <aside 
-      className={`fixed top-0 left-0 z-40 h-screen max-h-screen transition-all duration-300 ease-in-out border-r border-black/5 bg-white/95 backdrop-blur-xl flex flex-col overflow-hidden
+      className={`fixed top-0 left-0 z-40 h-screen max-h-screen transition-all duration-300 ease-in-out border-r border-black/5 bg-white/95 backdrop-blur-xl flex flex-col overflow-hidden print:hidden
         ${sidebarOpen ? "w-64" : "w-20"}
       `}
     >

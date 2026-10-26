@@ -222,7 +222,15 @@ export default function ResumeBuilderPage() {
   };
 
   const handlePrint = () => {
-    window.print();
+    if (typeof window !== "undefined") {
+      const originalTitle = document.title;
+      const cleanName = resumeData?.name ? resumeData.name.trim().replace(/\s+/g, '_') : 'Student';
+      document.title = `${cleanName}_Resume`;
+      window.print();
+      setTimeout(() => {
+        document.title = originalTitle;
+      }, 1000);
+    }
   };
 
   // Helper functions for dynamic lists
@@ -452,7 +460,7 @@ export default function ResumeBuilderPage() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto space-y-6 text-left pb-16">
+    <div className="resume-builder-page max-w-7xl mx-auto space-y-6 text-left pb-16 print:max-w-none print:w-full print:m-0 print:p-0 print:space-y-0 print:pb-0">
       {/* Top Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-black/5 pb-4 print:hidden">
         <div>
@@ -547,7 +555,7 @@ export default function ResumeBuilderPage() {
       </div>
 
       {/* Main Split Screen */}
-      <div className="grid lg:grid-cols-12 gap-8 items-start">
+      <div className="grid lg:grid-cols-12 gap-8 items-start print:block print:w-full print:gap-0">
         {/* LEFT COLUMN: Comprehensive Multi-Section Editor (Hidden on Print) */}
         <div className="lg:col-span-5 space-y-4 print:hidden">
           {/* Section Navigation Tabs */}
@@ -1173,12 +1181,12 @@ export default function ResumeBuilderPage() {
         </div>
 
         {/* RIGHT COLUMN: Live Rendered Resume Document */}
-        <div className="lg:col-span-7 bg-white rounded-3xl border border-slate-200/80 p-8 shadow-xl print:p-0 print:border-0 print:shadow-none min-h-[950px]">
+        <div id="printable-resume-container" className="lg:col-span-7 bg-white rounded-3xl border border-slate-200/80 p-8 shadow-xl print:p-0 print:m-0 print:border-0 print:shadow-none print:w-full print:max-w-none print:rounded-none min-h-[950px] print:min-h-0">
           {/* =========================================================================
               1. HARVARD CLASSIC ATS TEMPLATE (Default industry gold standard)
              ========================================================================= */}
           {template === "harvard" && (
-            <div className="font-serif text-slate-900 space-y-3.5 text-xs leading-relaxed max-w-[800px] mx-auto print:text-black">
+            <div id="printable-resume-document" className="font-serif text-slate-900 space-y-3.5 text-xs leading-relaxed max-w-[800px] mx-auto print:max-w-none print:w-full print:text-black print:space-y-2">
               {/* Header */}
               <div className="text-center space-y-1 border-b border-black pb-2.5">
                 <h1 className="text-2xl font-bold tracking-tight uppercase">{resumeData.name}</h1>
@@ -1330,7 +1338,7 @@ export default function ResumeBuilderPage() {
               2. TECH MODERN TEMPLATE (Sleek modern styling with bold typography)
              ========================================================================= */}
           {template === "tech_modern" && (
-            <div className="font-sans text-slate-900 space-y-4 text-xs leading-relaxed max-w-[800px] mx-auto">
+            <div id="printable-resume-document" className="font-sans text-slate-900 space-y-4 text-xs leading-relaxed max-w-[800px] mx-auto print:max-w-none print:w-full print:text-black print:space-y-2">
               <div className="flex justify-between items-start border-b-2 border-slate-900 pb-3">
                 <div>
                   <h1 className="text-2xl font-extrabold tracking-tight text-slate-900">{resumeData.name}</h1>
@@ -1425,7 +1433,7 @@ export default function ResumeBuilderPage() {
               3. EXECUTIVE PRO TEMPLATE (Clean high-contrast layout)
              ========================================================================= */}
           {template === "executive_pro" && (
-            <div className="font-sans text-slate-900 space-y-3.5 text-xs leading-relaxed max-w-[800px] mx-auto">
+            <div id="printable-resume-document" className="font-sans text-slate-900 space-y-3.5 text-xs leading-relaxed max-w-[800px] mx-auto print:max-w-none print:w-full print:text-black print:space-y-2">
               <div className="bg-[#1C4980] text-white p-4 rounded-xl flex justify-between items-center print:bg-black">
                 <div>
                   <h1 className="text-xl font-bold tracking-wide uppercase">{resumeData.name}</h1>

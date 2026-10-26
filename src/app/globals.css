@@ -211,3 +211,88 @@ h1, h2, h3, h4, h5, h6 {
   animation: fillUp 2s cubic-bezier(0.76, 0, 0.24, 1) infinite;
 }
 
+/* =========================================================================
+   PURE RESUME PRINT-TO-PDF STYLESHEET
+   Ensures that only the resume document is printed, hiding all dashboard UI.
+   ========================================================================= */
+@media print {
+  /* 1. Hide all application chrome, navigation, sidebars, headers, floating widgets */
+  aside,
+  header,
+  nav,
+  footer,
+  .print\:hidden,
+  [data-print-hidden="true"],
+  .glow-mesh,
+  button:not(.allow-print),
+  .no-print {
+    display: none !important;
+  }
+
+  /* 2. Reset base elements to pure white background and full viewport */
+  html,
+  body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 3. Strip layout container offsets */
+  .dashboard-root,
+  .dashboard-content-area,
+  .dashboard-main,
+  .resume-builder-page {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    display: block !important;
+  }
+
+  /* 4. Target the printable resume specifically */
+  #printable-resume-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    min-height: auto !important;
+    background: transparent !important;
+    display: block !important;
+  }
+
+  #printable-resume-document {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    color: #000000 !important;
+  }
+
+  /* Prevent awkward page breaks inside experience/project/education cards */
+  .resume-section-item,
+  .avoid-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* 5. Set standard A4 page dimensions and clean page margins */
+  @page {
+    size: A4 portrait;
+    margin: 8mm 12mm 8mm 12mm;
+  }
+}
+
