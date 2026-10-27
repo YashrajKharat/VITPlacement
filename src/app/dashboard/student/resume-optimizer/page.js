@@ -72,6 +72,8 @@ export default function ResumeOptimizerPage() {
     try {
       const res = await optimizeResumeAgainstJobAction({
         jobDescription,
+        targetRole: selectedDrive?.role || selectedDrive?.title || "",
+        targetCompany: selectedDrive?.company || "",
         resumeData
       });
       if (res?.success) {
@@ -350,7 +352,7 @@ export default function ResumeOptimizerPage() {
                       <span className={`text-[9px] font-extrabold px-2.5 py-0.5 rounded-full uppercase ${
                         result.domain === "DATA_ANALYTICS" ? "bg-amber-100 text-amber-800" : "bg-blue-100 text-[#1C4980]"
                       }`}>
-                        {result.domain === "DATA_ANALYTICS" ? "📊 Data Analytics & BI Role" : "💻 Software & Cloud Engineering"}
+                        {result.domainLabel || (result.domain === "DATA_ANALYTICS" ? "📊 Data Analytics & BI Role" : "💻 Software & Cloud Engineering")}
                       </span>
                     </div>
                     <h3 className="text-base font-bold text-slate-900 mt-0.5">Automated Parser Compatibility</h3>
